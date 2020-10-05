@@ -1,0 +1,69 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: fr
+
+# pipeline: pretrained_embeddings_spacy
+pipeline:
+  - name: SpacyNLP
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: "CRFEntityExtractor"
+    # BILOU_flag determines whether to use BILOU tagging or not.
+    "BILOU_flag": True
+    # features to extract in the sliding window
+    "features": [
+      ["low", "title", "upper"],
+      [
+        "bias",
+        "low",
+        "prefix5",
+        "prefix2",
+        "suffix5",
+        "suffix3",
+        "suffix2",
+        "upper",
+        "title",
+        "digit",
+        "pattern",
+      ],
+      ["low", "title", "upper"],
+    ]
+    # The maximum number of iterations for optimization algorithms.
+    "max_iterations": 50
+    # weight of the L1 regularization
+    "L1_c": 0.1
+    # weight of the L2 regularization
+    "L2_c": 0.1
+    # Name of dense featurizers to use.
+    # If list is empty all available dense features are used.
+    "featurizers": []
+  # - name: "SpacyEntityExtractor"
+  # # dimensions to extract
+  #   dimensions: ["PERSON", "LOC", "ORG", "PRODUCT"]
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+  - name: MappingPolicy
+  - name: FallbackPolicy
+    nlu_threshold: 0.3
+    ambiguity_threshold: 0.2
+    core_threshold: 0.3
+    fallback_action_name: action_default_fallback
+  - name: FormPolicy

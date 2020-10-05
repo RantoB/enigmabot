@@ -1,0 +1,8 @@
+# Models
+*.tar.gz
+
+# Data bases
+*db*
+
+# __pycache__
+__pycache__/
