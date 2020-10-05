@@ -301,6 +301,7 @@
 - président
 - politique
 - médias
+- jupyter
 
 ## intent:other_language
 - english speaking ?
