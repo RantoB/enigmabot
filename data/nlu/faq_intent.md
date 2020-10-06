@@ -1,75 +1,4 @@
-## intent:greet
-- hey
-- hello
-- hi
-- bonjour
-- bonsoir
-- salut
-- Coucou
-- hello !
-
-## intent:goodbye
-- au revoir
-- ciao
-- tcho
-- salut
-- à bientôt
-- a+
-- à toute
-
-## intent:inform
-- [Bertrand](person)
-- je m'appelle [Damien](person)
-- je suis [Clémence](person)
-- mon nom est [Jean](person)
-- je suis [Georges](person)
-- C'est [Nicolas](person)
-- on m'appelle [Arthur]
-- [Alain](person)
-- [Mathieu](person)
-- [Léo](person)
-- [Léa](person)
-- [Thierry](person)
-- [Mélanie](person)
-- [Pierre](person)
-- [Lily](person)
-- [Raymond](person)
-- [Sylvie](person)
-- [Florence](person)
-- [Alxandre](person)
-- [Claire](person)
-- [bertrand](person)
-
-## intent:affirm
-- oui
-- en effet
-- bien-sûr
-- cela me semble bien
-- c'est correcte
-
-## intent:deny
-- non
-- jamais
-- je ne pense pas
-- pas de cette manière
-- c'est n'est pas possible
-- pas possible
-- pas vraiment
-- c'est faux
-
-## intent:bot_challenge
-- es-tu un chatbot ?
-- es-tu un robot ?
-- es-tu un humain ?
-- est-ce que je parle à un robot ?
-- est-ce que je parle à une machine ?
-- est-ce que je parle à un humain ?
-
-## intent:thanks
-- merci
-- merci beaucoup
-
-## intent:question_ENIGMA_Strasbourg
+## intent:faq/ENIGMA_Strasbourg
 - C'est quoi ENIGMA Strasbourg ?
 - Que propose ENIGMA Strasbourg ?
 - Qu'est-ce que ENIGMA Strasbourg ?
@@ -84,19 +13,7 @@
 - de quoi s'agit-il ?
 - il s'agit de quoi ?
 
-## intent:question_pitch
-- Quels sont les jeux
-- quels sont les scénario
-- quels sont les scénari
-- c'est quoi l'histoire
-- le pitch
-- c'est quoi le pitch
-- de quoi parlent les jeux
-- il y a une histoire
-- quelles sont les histoires
-- quels sont les pitch
-
-## intent:question_price
+## intent:faq/price
 - Combien ca coûte
 - Combien ca coûte ?
 - Combien ?
@@ -108,7 +25,7 @@
 - fric
 - combien ca coute
 
-## intent:question_general_sequence_of_the_game
+## intent:faq/general_sequence_of_the_game
 - Comment est-ce que cela se déroule ?
 - Comment ca se passe ?
 - Comment est-ce que cela se passe ?
@@ -118,7 +35,7 @@
 - comment on joue
 - qu'est ce qu'on doit faire
 
-## intent:question_where
+## intent:faq/where
 - où est-ce que cela se déroule ?
 - Quel est le périmètre de déroulement du jeu ?
 - ca se passe où ?
@@ -128,7 +45,7 @@
 - où irons-nous ?
 - c'est où ?
 
-## intent:question_how_much_time
+## intent:faq/how_much_time
 - Combien de temps est-ce que cela dure ?
 - Combien de temps faut-il prévoir ?
 - Combien de temps ?
@@ -139,7 +56,7 @@
 - Est-ce qu'il faut marcher longtemps ?
 - il faut marcher beaucoup
 
-## intent:question_who
+## intent:faq/who
 - Qui peut faire les jeux de piste ?
 - Qui peut faire les jeux ENIGMA Strasbourg ?
 - C'est pour qui ?
@@ -151,7 +68,7 @@
 - Est-ce accessible aux personnes en chaises roulantes ?
 - Est-ce accessible aux personnes en fauteuil roulants ?
 
-## intent:question_how_difficult
+## intent:faq/how_difficult
 - Quelle est la difficulté des énigmes ?
 - Est-ce que c'est difficile ?
 - A quel point est-ce que c'est difficile ?
@@ -160,7 +77,7 @@
 - difficile ?
 - Difficulté
 
-## intent:question_how_many_people
+## intent:faq/how_many_people
 - Combien de participants ?
 - Combien de joueurs ?
 - Combien de personnes ?
@@ -170,7 +87,7 @@
 - Est-il possible de jouer seul ?
 - Est-il possible de jouer à [2](number_of_players) ?
 
-## intent:question_smartphone
+## intent:faq/smartphone
 - Je n’ai pas de smartphone, est-ce que je peux jouer ?
 - Je n'ai pas de smartphone.
 - Avons-nous besoin d'un smartphone
@@ -183,7 +100,7 @@
 - faut-il un téléphone
 - on peut utiliser son téléphone ?
 
-## intent:question_not_from_Strasbourg
+## intent:faq/not_from_Strasbourg
 - Je ne suis pas strasbourgeois, est-ce que je vais m’en sortir ?
 - Je ne connais pas Strasbourg, est-ce qu'il est possible de faire le jeu ?
 - je ne connais pas bien Strasbourg.
@@ -196,14 +113,14 @@
 - je suis de passage à strasbourgeois
 - si on connaît pas la ville c'est grave
 
-## intent:question_break
+## intent:faq/break
 - est-il possible de faire une pause ?
 - on peut s'arrêter ?
 - est-il possible de s'arrêter ?
 - peut-on faire une pause ?
 - faire un arrêt
 
-## intent:question_payment
+## intent:faq/payment
 - Comment est-il possible de payer ?
 - on paye comment ?
 - comment peut-on payer ?
@@ -212,28 +129,14 @@
 - le paiement
 - payer
 
-## intent:question_La_societe_mysterieuse
-- C'est quoi  [société mystérieuse de Strasbourg](game)
-- La [Société Mystérieuse de Strasbourg](game)
-- [Société Mystérieuse de Strasbourg](game)
-- [Société Mystérieuse](game)
-
-## intent:question_meurtre_krutenau
-- C'est quoi [meurtre à la Krutenau](game)
-- [Meurtre à la Krutenau](game)
-- 1913, [Meurtre à la Krutenau](game)
-- meurte
-- [Meurtre a la Krutenau](game)
-- meurtre
-
-## intent:question_start
+## intent:faq/start
 - d'où partent les jeux
 - où est-ce que cela commence ?
 - ou est le début
 - d'où partons-nous
 - où commençons nous ?
 
-## intent:question_toilet
+## intent:faq/toilet
 - où peut on faire pipi ?
 - où peut on faire pisser ?
 - où peut on faire nos besoins ?
@@ -241,11 +144,14 @@
 - toilettes
 - pipi
 - caca
-- aller au toilettes
 - besoins urgents
 - chier
+- uriner
+- WC
+- aller aux toilettes
+- comment on fait pour aller aux toilettes
 
-## intent:question_weather
+## intent:faq/weather
 - et s'il pleut
 - il pleut
 - mauvaise météo
@@ -261,74 +167,52 @@
 - le temps est mauvais
 - la météo
 
-## intent:question_cancel
+## intent:faq/cancel
 - Est-il possible d'annuler ?
 - Annuler
 - Comment ça se passe pour l'annulation ?
 - pour annuler
 - Annulation
 
-## intent:question_reimbursment
+## intent:faq/reimbursment
 - Est-il possible de se faire rembourser ?
 - Peut-on se faire rembourser ?
 - Remboursement ?
 - J'aimerais être rembourser
 
-## intent:question_animal
+## intent:faq/animal
 - je peux venir avec mon animal
 - je peux être accompagné d'un animal ?
 - je peux être accompagné d'un chien ?
 - j'ai un chien
 
-## intent:question_kids
+## intent:faq/kids
 - avec une poussette ?
 - Est-ce possible de jouer avec des enfant ?
 - j'ai un bébé
 - mes enfants sont très jeunes
 - avec des gamins
 
-## intent:out_of_scope
-- la mayonnaise est bonne
-- tire bouchon
-- si je veux chier un coup ?
-- zeub
-- frtfrtgljhuoaubh
-- lumière
-- la forêt
-- les fleurs
-- menuiserie
-- chou croute
-- président
-- politique
-- médias
-- jupyter
-
-## intent:other_language
-- english speaking ?
-- do you speak english ?
-- tu aprles anglais ?
-- allemand ?
-- german ?
-- italian
-- espagnol
-- tu parles une autre langues ?
-
-## intent:question_who_is_bertrand
+## intent:faq/who_is_bertrand
 - c'est qui monsieur Bertrand ?
 - Qui est bertrand
 
-## synonym: meurtre à la Krutenau
+## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau
 - meurtre à la Krutenau
 - meurtre a la Krutenau
+- meurtre
+- 1913
 
-## synonym: société mystérieuse de Strasbourg
+## synonym:société mystérieuse de Strasbourg
 - societe mysterieuse de strasbourg
 - societe mysterieuse
 - société mystérieuse
 - la société mystérieuse de strasbourg
 - la societe mysterieuse de strasbourg
 - Société Mystérieuse
+- Société
+- societe
 
 ## regex:number_of_players
 - [0-15]

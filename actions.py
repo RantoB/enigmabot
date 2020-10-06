@@ -14,11 +14,59 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormAction
 import numpy as np
+from pprint import pprint
 
-class ActionQuelJeu(Action):
+# class ActionIntroduction(Action):
+#
+#     def name(self) -> Text:
+#         return "action_introduction"
+#
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         name = tracker.get_slot("person")
+#
+#         if name == None:
+#             latest_message = tracker.latest_message['text']
+#             dispatcher.utter_message(f"Désolé, je ne connais pas ce prénom.\n Tu t'appelles {latest_message} ?")
+#
+#             return [SlotSet("person", latest_message)]
+#
+#         else:
+#             dispatcher.utter_message(template="utter_introduce_greet_answer")
+#             return []
+#
+# class ActionIntroductionInputToConfirm(Action):
+#
+#     def name(self) -> Text:
+#         return "action_introduction_input_to_confirm"
+#
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         deny_or_affirm = tracker.latest_message['intent'].get('name')
+#
+#         if deny_or_affirm == "affirm":
+#             dispatcher.utter_message("Ok")
+#             dispatcher.utter_message(template="utter_introduce_greet_answer")
+#             return []
+#         elif deny_or_affirm == "deny":
+#             dispatcher.utter_message("Comment est-ce que je peux t'appeler ?")
+#             return [SlotSet("person", None)]
+#
+# class ActionForceIntroduction(Action):
+#
+#     def name(self) -> Text:
+#         return "action_force_introduction"
+#
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         latest_message = tracker.latest_message['text']
+#         SlotSet("person", latest_message)
+#         dispatcher.utter_message(template="utter_introduce_greet_answer")
+#
+#         return [SlotSet("person", latest_message)]
+
+class ActionWhichGame(Action):
 
     def name(self) -> Text:
-        return "action_quel_jeu"
+        return "action_which_game"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
@@ -30,6 +78,49 @@ class ActionQuelJeu(Action):
             {"title": game_2, "payload": game_2}]
 
         dispatcher.utter_button_message(which_game, buttons)
+
+        return []
+
+class ActionRequestedGame(Action):
+
+    def name(self) -> Text:
+        return "action_requested_game"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        game = tracker.get_slot("game")
+
+        if game.lower() == "société mystérieuse de Strasbourg".lower():
+            dispatcher.utter_message(template="utter_societe_musterieuse")
+            dispatcher.utter_message(template="utter_next_game")
+        else :
+            dispatcher.utter_message(template="utter_meurtre_krutenau")
+            dispatcher.utter_message(template="utter_next_game")
+
+        return []
+
+class ActionNextGame(Action):
+
+    def name(self) -> Text:
+        return "action_next_game"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        deny_or_affirm = tracker.latest_message['intent'].get('name')
+
+        if deny_or_affirm == 'affirm':
+
+            game = tracker.get_slot("game")
+
+            if game.lower() == "société mystérieuse de Strasbourg".lower():
+                dispatcher.utter_message(template="utter_meurtre_krutenau")
+                dispatcher.utter_message(template="utter_sth_else")
+            else :
+                dispatcher.utter_message(template="utter_societe_musterieuse")
+                dispatcher.utter_message(template="utter_sth_else")
+
+        elif deny_or_affirm == 'deny':
+            dispatcher.utter_message("Ok,")
+            dispatcher.utter_message(template="utter_sth_else")
 
         return []
 
@@ -47,6 +138,8 @@ class ActionDefaultFallback(Action):
         message = np.random.choice(np.array([m1, m2, m3]))
 
         dispatcher.utter_message(message)
+
+        pprint(tracker.latest_message)
 
         return []
 
