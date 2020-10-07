@@ -14,6 +14,8 @@ intents:
 - meurtre_krutenau
 - faq:
     use_entities: []
+- out_of_scope:
+    use_entities: []
 entities:
 - person
 - number_of_players
@@ -75,7 +77,7 @@ responses:
   - text: As-tu une autre question ?
   utter_question:
   - text: Quelle est ta question ?
-  - text: Quel souhaites-tu savoir ?
+  - text: Que souhaites-tu savoir ?
   - text: Comment est-ce que je peux te renseigner ?
 
 

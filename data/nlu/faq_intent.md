@@ -150,6 +150,7 @@
 - WC
 - aller aux toilettes
 - comment on fait pour aller aux toilettes
+- - si je veux chier un coup ?
 
 ## intent:faq/weather
 - et s'il pleut
@@ -192,6 +193,19 @@
 - j'ai un bébé
 - mes enfants sont très jeunes
 - avec des gamins
+- enfant
+- gamins
+- enfants
+
+## intent:faq/booking
+- Réserver
+- Réservation
+- je souhaite réserver
+- j'aimerais faire un réservation
+- bloque une date
+- réserver un créneaux
+- Comment fait-on pour réserver ?
+- faire une réservation
 
 ## intent:faq/who_is_bertrand
 - c'est qui monsieur Bertrand ?

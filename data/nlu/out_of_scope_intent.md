@@ -1,7 +1,6 @@
-## intent:out_of_scope
+## intent:out_of_scope/other
 - la mayonnaise est bonne
 - tire bouchon
-- si je veux chier un coup ?
 - zeub
 - frtfrtgljhuoaubh
 - lumière
@@ -13,8 +12,11 @@
 - politique
 - médias
 - jupyter
+- poulet
+- pizzas
+- restaurants
 
-## intent:other_language
+## intent:out_of_scope/other_language
 - english speaking ?
 - do you speak english ?
 - tu aprles anglais ?
@@ -22,4 +24,4 @@
 - german ?
 - italian
 - espagnol
-- tu parles une autre langues ?
+- tu parles une autre langue ?

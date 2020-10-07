@@ -20,11 +20,11 @@
 
 ## faq
   * faq/how_difficult
-    - "Un système d'indice est mis en place si la difficulté est insurmontable. Les jeux sont donc accessibles à tous. \nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion."
+    - Un système d'indice est mis en place si la difficulté est insurmontable. Les jeux sont donc accessibles à tous. \nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
 
 ## faq
   * faq/how_many_people
-    - "Un groupe composé de 3 à 6 personnes est l’idéal pour profiter pleinement du jeu. \nVous pouvez aussi jouer à 2. \nVous pouvez aussi être plus nombreux que 6 mais l'expérience pourrait être moins fun."
+    - Un groupe composé de 3 à 6 personnes est l’idéal pour profiter pleinement du jeu. \nVous pouvez aussi jouer à 2. \nVous pouvez aussi être plus nombreux que 6 mais l'expérience pourrait être moins fun.
 
 ## faq
   * faq/smartphone
@@ -32,12 +32,11 @@
 
 ## faq
   * faq/not_from_Strasbourg
-    - "Les visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème."
+    - Les visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème.
 
 ## faq
   * faq/price
-  - Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel
-      pendant toute la journée où vous réaliserez le parcour.
+  - Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcour.
 
 ## faq
 * faq/break
@@ -45,7 +44,7 @@
 
 ## faq
 * faq/payment
-  - "Le paiement se fait un ligne, par carte bancaire. \n[lien à créer]\nAprès avoir payer, vous pourrez alors réserver le jour où vous souhaitez jouer. \nPous pouvez déjà vérifier les disponibilités à ce lien [lien à créer]."
+  - Le paiement se fait un ligne, par carte bancaire. \n[lien à créer]\nAprès avoir payer, vous pourrez alors réserver le jour où vous souhaitez jouer. \nPous pouvez déjà vérifier les disponibilités à ce lien [lien à créer].
 
 ## faq
 * faq/start
@@ -53,7 +52,7 @@
 
 ## faq
 * faq/toilet
-  - Vous pourrez trouver des toilettes publiques à la place du chateau (cathédrale), à la place Kléber, au parking Brogli, au barage Vauban.\n Vous avez aussi la liberté de faire une pause café.
+  - Vous pourrez trouver des toilettes publiques à la place du chateau (cathédrale), à la place Kléber, au parking Brogli, au barage Vauban.\nVous avez aussi la liberté de faire une pause café.
 
 ## faq
 * faq/weather
@@ -79,18 +78,6 @@
 * faq/animal
 - Vous pouvez évidemment être accompagné de vos animaux de compagnie.
 
-## out_of_scope
-* out_of_scope/other
-- text: J'ai bien peur de ne pas avoir compris... Est-ce bien en rapport avec ENIGMA
-    Strasbourg ?
-- text: Mhm, j'essaie pourtant de comprendre mais je ne suis pas sûr de bien sairir ce que tu
-    cherches à me demander.
-- text: Je ne vois pas bien le rapport avec ENIGMA Strasbourg, je suis confus. As-tu
-    autres choses à de demander ?
-- text: Euh, là c'est chaud ! Moi mon domaine c'est ENIGMA Strasbourg, je ne suis pas sûr de pouvoir t'aider.
-- text: De quoi ? C'est censé avoir un rapport avec ENIGMA Strasbourg ?
-- text: J'essaie de comprendre mais s'il n'y a pas de rapport avec ENIGMA Strasbourg je ne vais pas pouvoir répondre
-
-## other_language
-* other_language/not_french
-  - Sorry, I only speak French.
+## faq
+* faq/booking
+- La réservation n'a pas encore été mise en place, il faudra attendre encore un peu que le bot Enigmabot soit déployé sur www.enigmastrasbourg.com et interfacé avec un calendrier qui n'existe pas encore !

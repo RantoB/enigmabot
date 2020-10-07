@@ -131,15 +131,21 @@ class ActionDefaultFallback(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        m1 = "Je ne suis pas sûr de comprendre, pourrais-tu reformuler ?"
-        m2 = "Je suis désolé, je n'ai pas compris. Est-il possible de reformuler la requête ?"
-        m3 = "Excuse-moi mais je n'ai pas compris ce que tu demandes, est-ce que tu pourrais reformuler ?"
+        messages = []
 
-        message = np.random.choice(np.array([m1, m2, m3]))
+        messages.append("Je ne suis pas sûr de comprendre, pourrais-tu reformuler ?")
+        messages.append("Je suis désolé, je n'ai pas compris. Est-il possible de reformuler la quesion ?")
+        messages.append("Excuse-moi mais je n'ai pas compris ce que tu demandes, est-ce que tu pourrais reformuler ?")
+        messages.append("Attends voir... \nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si tu reformules ça pourrait m'aider.")
+        messages.append("J'ai bien peur de ne pas avoir compris... Est-ce bien en rapport avec ENIGMA Strasbourg ?")
+        messages.append("Mhm, j'essaie pourtant de comprendre mais je ne suis pas sûr de bien sairir ce que tu cherches à me demander. Peut-être qu'en reformulant j'arriverai à comprendre.")
+        # "Je ne vois pas bien le rapport avec ENIGMA Strasbourg, je suis confus. As-tu autres choses à de demander ?"
+        # "De quoi ? C'est censé avoir un rapport avec ENIGMA Strasbourg ?"
+        # "J'essaie de comprendre mais s'il n'y a pas de rapport avec ENIGMA Strasbourg je ne vais pas pouvoir répondre"
+
+        message = np.random.choice(np.array(messages))
 
         dispatcher.utter_message(message)
-
-        pprint(tracker.latest_message)
 
         return []
 

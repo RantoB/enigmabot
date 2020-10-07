@@ -33,7 +33,6 @@
 - hello !
 - helo
 
-
 ## intent:goodbye
 - au revoir
 - ciao
@@ -50,6 +49,15 @@
 - cela me semble bien
 - c'est correcte
 - correct
+- ok
+- okay
+- oki
+- oki dok
+- okidok
+- c'est exact
+- wé
+- ouai
+- ouais 
 
 ## intent:deny
 - non
@@ -61,6 +69,9 @@
 - pas vraiment
 - c'est faux
 - rien
+-  no
+- nan
+- pas du tout
 
 ## intent:bot_challenge
 - es-tu un chatbot ?
