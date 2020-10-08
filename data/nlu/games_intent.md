@@ -9,6 +9,9 @@
 - il y a une histoire
 - quelles sont les histoires
 - quels sont les pitch
+- combien existe t'il de scénarios ?
+- quel type de jeu
+- combien y a t'il d'histoires ?
 
 ## intent:societe_mysterieuse
 - C'est quoi  [société mystérieuse de Strasbourg](game)

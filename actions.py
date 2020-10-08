@@ -70,7 +70,7 @@ class ActionWhichGame(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        which_game = "Par quel jeu es-tu intéressé ?"
+        which_game = "Il existe deux parcours, par quel jeu es-tu intéressé ?"
         game_1 = "La Société Mystérieuse de Strasbourg"
         game_2 = "1913, Meurte à la Krutenau"
 

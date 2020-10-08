@@ -29,10 +29,10 @@ responses:
   utter_greet:
   - text: Bonjour, comment est-ce que je peux te renseigner sur les activités proposées
       par ENIGMA Strasbourg ?
-  - text: Hello, je peux te renseigner sur les activités proposées par ENIGMA
-      Strasbourg, que souhaites-tu savoir ?
-  - text: Bienvenue, quel renseignement cherches-tu concernant les activités
-      ENIGMA Strasbourg ?
+  - text: Hello, je peux te renseigner sur les activités proposées par ENIGMA Strasbourg,
+      que souhaites-tu savoir ?
+  - text: Bienvenue, quel renseignement cherches-tu concernant les activités ENIGMA
+      Strasbourg ?
   utter_before_end:
   - text: Merci à toi de m'avoir sollicité.
   - text: J'espre avoir répondu à toutes tes questions.
@@ -48,8 +48,8 @@ responses:
   - text: Bonjour, je suis ENIGMA Bot. Et toi, comment t'appelles-tu ?
   - text: "Hello ! je me présente: ENIGMA Bot. Toi, comment t'appelles-tu ?"
   utter_introduce_greet_answer:
-  - text: Bonjour {person}. Comment est-ce que je peux te renseigner sur les activités proposées
-      par ENIGMA Strasbourg ?
+  - text: Bonjour {person}. Comment est-ce que je peux te renseigner sur les activités
+      proposées par ENIGMA Strasbourg ?
   - text: Hello {person}. Je peux te renseigner sur les activités proposées par ENIGMA
       Strasbourg, que souhaites-tu savoir ?
   - text: Bienvenue {person}. Quel renseignement cherches-tu concernant les activités
@@ -79,8 +79,6 @@ responses:
   - text: Quelle est ta question ?
   - text: Que souhaites-tu savoir ?
   - text: Comment est-ce que je peux te renseigner ?
-
-
 actions:
 - action_which_game
 - action_default_fallback

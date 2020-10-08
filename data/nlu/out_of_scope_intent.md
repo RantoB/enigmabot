@@ -7,14 +7,10 @@
 - la forêt
 - les fleurs
 - menuiserie
-- chou croute
 - président
 - politique
 - médias
 - jupyter
-- poulet
-- pizzas
-- restaurants
 
 ## intent:out_of_scope/other_language
 - english speaking ?

@@ -36,7 +36,7 @@
 
 ## faq
   * faq/price
-  - Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcour.
+  - Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcours.
 
 ## faq
 * faq/break
@@ -81,3 +81,23 @@
 ## faq
 * faq/booking
 - La réservation n'a pas encore été mise en place, il faudra attendre encore un peu que le bot Enigmabot soit déployé sur www.enigmastrasbourg.com et interfacé avec un calendrier qui n'existe pas encore !
+
+## faq
+*faq/reduced_fee
+- Le prix de 50€ est un prix unique pour un groupe. Pour le moment il n'y a pas encore de tarif particulier.
+
+## faq
+* faq/lost
+- A priori si vous savez lire un plan vous ne devriez pas vous perdre. Si vous n'êtes plus sur le plan c'est que vous êtes parti déjà trop loin ! \nQuoi qu'il en soit, n'ayez pas peur, c'est en se perdant qu'on fait les meilleurs rencontres...
+
+## faq
+* faq/food
+- Nous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt intéressante concernant la restauration, n'hésitez pas à en profiter.
+
+## faq
+* faq/equipment
+- Prévoyez exactement la même chose que lorsque vous faites une après-midi en ville.
+
+## faq
+* faq/schedule
+-  Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h.

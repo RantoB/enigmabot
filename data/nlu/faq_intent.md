@@ -12,6 +12,7 @@
 - présentez moi enigma strasbourg
 - de quoi s'agit-il ?
 - il s'agit de quoi ?
+- est ce que nous visiterons des monuments remarquables ?
 
 ## intent:faq/price
 - Combien ca coûte
@@ -55,6 +56,7 @@
 - Quelle est la distance à parcourir ?
 - Est-ce qu'il faut marcher longtemps ?
 - il faut marcher beaucoup
+- combien de temps dure le jeu ?
 
 ## intent:faq/who
 - Qui peut faire les jeux de piste ?
@@ -67,6 +69,7 @@
 - Est-ce accessible aux personnes en mobilité réduite ?
 - Est-ce accessible aux personnes en chaises roulantes ?
 - Est-ce accessible aux personnes en fauteuil roulants ?
+- pouvons nous jouer avec une personne a mobilité réduite ?
 
 ## intent:faq/how_difficult
 - Quelle est la difficulté des énigmes ?
@@ -76,6 +79,10 @@
 - facile ?
 - difficile ?
 - Difficulté
+- est-ce qu'on sera aider ?
+- aura-t-on une assistance ?
+- pour se faire aider
+- nous avons besoin d'aide
 
 ## intent:faq/how_many_people
 - Combien de participants ?
@@ -86,6 +93,8 @@
 - Peut-on jouer à [2](number_of_players) ?
 - Est-il possible de jouer seul ?
 - Est-il possible de jouer à [2](number_of_players) ?
+- j'aimerais venir avec [4](number_of_players) amis c'est possible ?
+- quel est le nombre maximum pour un groupe ?
 
 ## intent:faq/smartphone
 - Je n’ai pas de smartphone, est-ce que je peux jouer ?
@@ -128,6 +137,7 @@
 - ca se passe comment pour le paiement ?
 - le paiement
 - payer
+- peux t'on payer par cb ?
 
 ## intent:faq/start
 - d'où partent les jeux
@@ -180,6 +190,7 @@
 - Peut-on se faire rembourser ?
 - Remboursement ?
 - J'aimerais être rembourser
+- est ce que si j'annule je peux être remboursé ?
 
 ## intent:faq/animal
 - je peux venir avec mon animal
@@ -196,6 +207,7 @@
 - enfant
 - gamins
 - enfants
+- est ce que c'est difficile pour un enfant de 10 ans ?
 
 ## intent:faq/booking
 - Réserver
@@ -206,14 +218,77 @@
 - réserver un créneaux
 - Comment fait-on pour réserver ?
 - faire une réservation
+- j'aimerais venir le 20 octobre ya t'il de la place ?
+- puis je réserver pour demain ?
+- demain
+- lundi
+- mardi
+- mercredi
+- jeudi
+- vendredi
+- samedi
+- dimanche
+- janvier
+- fevrier
+- mars
+- avril
+- mai
+- juin
+- juillet
+- août
+- septembre
+- octobre
+- novembre
+- décembre
+- après-demain
+- weekend
+- weekend prochain
+- semaine prochaine
+- dans 15 jours
+- est-ce qu'il est possible de réserver ?
 
 ## intent:faq/who_is_bertrand
 - c'est qui monsieur Bertrand ?
 - Qui est bertrand
 
+## intent:faq/lost
+- si je suis perdue
+- si je suis perdue quelqu'un viendra m'aider ?
+- si nous nous perdons
+- si nous nous égarons
+- nous ne savons pas où nous sommes
+
+## intent:faq/food
+- est ce que nous devons emmener un casse croute ?
+- poulet
+- pizzas
+- restaurants
+- faut-il prévoir à manger
+- si nous avons faim
+- chou croute
+
+## intent:faq/equipment
+- est ce qu'il faut prévoir une tenue sportive ?
+- que faut-il prévoir ?
+- faut-il prévoir quelque chose en particulier ?
+- que faut-il emporter ?
+
+## intent:faq/schedule
+- sur quels horaires puis je venir ?
+- à quel moment de la journée est-il possible de jouer ?
+- matin
+- Après-midi
+- soirée
+- quels sont les créneaux horaire de jeux
+
+## intent:faq/reduced_fee
+- y a til un tarif réduit pour les personnes a mobilité réduite ?
+- tarif réduit tarif étudiant
+- demandeur d'emploi
+- demi-tarif
+
 ## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau
-- meurtre à la Krutenau
 - meurtre a la Krutenau
 - meurtre
 - 1913
