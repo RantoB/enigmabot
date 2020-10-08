@@ -83,7 +83,7 @@
 - La réservation n'a pas encore été mise en place, il faudra attendre encore un peu que le bot Enigmabot soit déployé sur www.enigmastrasbourg.com et interfacé avec un calendrier qui n'existe pas encore !
 
 ## faq
-*faq/reduced_fee
+* faq/reduced_fee
 - Le prix de 50€ est un prix unique pour un groupe. Pour le moment il n'y a pas encore de tarif particulier.
 
 ## faq
