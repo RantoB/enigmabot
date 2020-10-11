@@ -16,15 +16,27 @@ intents:
     use_entities: []
 - out_of_scope:
     use_entities: []
+- ask_for_riddle
+- inform_kind_of_riddle
+- answer_the_riddle
 entities:
 - person
 - number_of_players
 - game
+- riddle_category
+- riddle_solution
+- user_riddle_solution
 slots:
   game:
     type: text
   person:
     type: text
+  riddle_category:
+    type: unfeaturized
+  riddle_solution:
+    type: unfeaturized
+  user_riddle_solution:
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Bonjour, comment est-ce que je peux te renseigner sur les activités proposées
@@ -79,6 +91,10 @@ responses:
   - text: Quelle est ta question ?
   - text: Que souhaites-tu savoir ?
   - text: Comment est-ce que je peux te renseigner ?
+  utter_give_answer:
+  - text: Voici la réponse:\n {riddle_solution}
+  utter_ask_riddle_category:
+  - text: Quelle genre d'énigme ?
 actions:
 - action_which_game
 - action_default_fallback
@@ -89,3 +105,7 @@ actions:
 - action_force_introduction
 - respond_faq
 - respond_out_of_scope
+- action_make_riddle
+- action_check_answer
+forms:
+  - form_riddle

@@ -13,8 +13,12 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormAction
+import logging
+logger = logging.getLogger(__name__)
+
 import numpy as np
-from pprint import pprint
+import pickle
+import pandas as pd
 
 # class ActionIntroduction(Action):
 #
@@ -62,6 +66,25 @@ from pprint import pprint
 #         dispatcher.utter_message(template="utter_introduce_greet_answer")
 #
 #         return [SlotSet("person", latest_message)]
+
+def get_riddle(enigma_df: pd.core.frame.DataFrame, category: str):
+    enigma_cat = enigma_df[enigma_df['Category'] == category]
+    e = np.random.randint(0, enigma_cat.shape[0])
+    riddle_name = enigma_cat['Title'].iloc[e]
+    riddle = enigma_cat['Riddle'].iloc[e]
+    solution = enigma_cat['Solution'].iloc[e]
+    return (riddle_name, riddle, solution)
+
+import spacy
+from spacy.attrs import IS_ALPHA, IS_STOP, IS_PUNCT
+from spacy.lang.en import English
+nlp = spacy.load("fr_core_news_md")
+
+def preprocess_spacy(sent):
+    doc = nlp(sent)
+    tokens = np.char.lower(np.array([token.text for token in doc]))
+    return tokens[~doc.to_array([IS_STOP]).astype(bool) * \
+~doc.to_array([IS_PUNCT]).astype(bool)]
 
 class ActionWhichGame(Action):
 
@@ -148,6 +171,95 @@ class ActionDefaultFallback(Action):
         dispatcher.utter_message(message)
 
         return []
+
+class FormRiddle(FormAction):
+    """Custom form action to fill the user riddle answer."""
+
+    def name(self) -> Text:
+        """Unique identifier of the form"""
+
+        return "form_riddle"
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        """A list of required slots that the form has to fill"""
+
+        return ["riddle_category", "user_riddle_solution"]
+
+    def request_next_slot(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        """Request the next slot and utter template if needed,
+            else return None
+            https://legacy-docs.rasa.com/docs/core/_modules/rasa_core_sdk/forms/"""
+
+        with open('enigma.pkl', 'rb') as f:
+            enigma_df = pickle.load(f)
+
+        categories = enigma_df['Category'].unique()
+        buttons = list()
+        for cat in categories:
+            buttons.append({'title':cat, 'payload': cat})
+        """
+        -------------------------------------
+        """
+        for i, slot in enumerate(self.required_slots(tracker)):
+            print("-------------     " + str(i) + "      -----------")
+            if self._should_request_slot(tracker, slot):
+                logger.debug("Request next slot '{}'".format(slot))
+                if slot == "riddle_category":
+                    message = "Quelle genre d'énigme aimes-tu ?\n"
+
+                    dispatcher.utter_button_message(message, buttons)
+                    return [SlotSet("requested_slot", slot)]
+
+                if slot == "user_riddle_solution":
+                    category = tracker.get_slot('riddle_category')
+
+                    riddle_name, riddle, solution = get_riddle(enigma_df, category[0])
+
+                    dispatcher.utter_message( "** " + riddle_name + " **" + "\n" + riddle)
+
+                    return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution)]
+
+        """
+        -------------------------------------
+        """
+
+        return None
+
+    # def slot_mappings(self) -> Dict[Text, Any]:
+    #     return {"riddle_category": self.from_entity(entity="riddle_category",
+    #             intent=["inform_kind_of_riddle"])}
+
+    def submit(self,
+               dispatcher: CollectingDispatcher,
+               tracker: Tracker,
+               domain: Dict[Text, Any]
+               ) -> List[Dict]:
+        """Once required slots are filled, print the message"""
+
+        # m1 = f"Tu as choisi : {tracker.get_slot('riddle_category')[0]}\n"
+        # m2 = f"Ta réponse est :\n{tracker.get_slot('user_riddle_solution')}\n"
+        user_riddle_solution = tracker.get_slot('user_riddle_solution')
+        riddle_solution = tracker.get_slot('riddle_solution')
+
+
+        m3 = f"La bonne réponse est :\n{tracker.get_slot('riddle_solution')}"
+
+        dispatcher.utter_message(m1 + "\n" + m2 + "\n" + m3)
+
+        return []
+
+# class ActionCheckAnswer(Action):
+#
+#     def name(self) -> Text:
+#         return "action_check_answer"
+#
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         solution = tracker.get_slot("riddle_solution")
+#         solution_token =
+#         # TODO : XXXXX
+#
+#         return []
 
 # class NameForm(FormAction):
 #     """Custom form action to fill user name slot."""
