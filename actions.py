@@ -11,7 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, FollowupAction
 from rasa_sdk.forms import FormAction
 import logging
 logger = logging.getLogger(__name__)
@@ -19,6 +19,7 @@ logger = logging.getLogger(__name__)
 import numpy as np
 import pickle
 import pandas as pd
+import re
 
 # class ActionIntroduction(Action):
 #
@@ -77,14 +78,71 @@ def get_riddle(enigma_df: pd.core.frame.DataFrame, category: str):
 
 import spacy
 from spacy.attrs import IS_ALPHA, IS_STOP, IS_PUNCT
-from spacy.lang.en import English
 nlp = spacy.load("fr_core_news_md")
 
-def preprocess_spacy(sent):
+def preprocess_spacy(sent: str) -> np.ndarray:
     doc = nlp(sent)
     tokens = np.char.lower(np.array([token.text for token in doc]))
     return tokens[~doc.to_array([IS_STOP]).astype(bool) * \
 ~doc.to_array([IS_PUNCT]).astype(bool)]
+
+def cosine_test(sentence_1: str, sentence_2: str) -> float:
+    sentence_1 = " ".join(preprocess_spacy(sentence_1))
+    sentence_2 = " ".join(preprocess_spacy(sentence_2))
+
+    vectorizer = TfidfVectorizer()
+    tf_idf = vectorizer.fit_transform([sentence_1, sentence_2]).toarray()
+    pd.DataFrame(data = tf_idf, columns=vectorizer.get_feature_names())
+
+    return cosine_similarity(tf_idf)[1, 0]
+
+def spacy_vec_sim_test(sentence_1: str, sentence_2: str) -> float:
+    sentence_1 = " ".join(preprocess_spacy(sentence_1))
+    sentence_2 = " ".join(preprocess_spacy(sentence_2))
+
+    sentence_1 = nlp(sentence_1)
+    sentence_2 = nlp(sentence_2)
+
+    sim = list()
+    for token_1 in sentence_1:
+        for token_2 in sentence_2:
+            sim.append(token_1.similarity(token_2))
+    sim = np.array(sim)
+
+    if len(sim) == 0:
+        return 0
+    elif len(sim) == 1:
+        return sim[0]
+    else:
+        return (np.sort(sim)[-1] + np.sort(sim)[-2]) / 2
+
+def check_answer(solution: str, user_solution: str) -> bool:
+    try:
+        indicator_1 = cosine_test(solution, user_solution)
+    except:
+        indicator_1 = 0
+
+    indicator_2 = spacy_vec_sim_test(solution, user_solution)
+
+    solution = preprocess_spacy(solution)
+
+    if len(solution) == 1:
+        if indicator_1 > .6 or (indicator_1 > 0 and indicator_2 > .7):
+            return True
+        else:
+            return False
+
+    elif len(solution) == 2:
+        if indicator_1 > .1 or indicator_2 > .45:
+            return True
+        else:
+            return False
+
+    else:
+        if indicator_1 > .5 or indicator_2 > .5:
+            return True
+        else:
+            return False
 
 class ActionWhichGame(Action):
 
@@ -154,23 +212,31 @@ class ActionDefaultFallback(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        messages = []
+        if tracker.active_form.get("name") is not None:
+            logger.debug("The form '{}' is active".format(tracker.active_form))
+            message = "Je n'ai pas bien compris la réponse, pourrais-tu écrire \"Rep:\" puis écrire ta réponse ?"
 
-        messages.append("Je ne suis pas sûr de comprendre, pourrais-tu reformuler ?")
-        messages.append("Je suis désolé, je n'ai pas compris. Est-il possible de reformuler la quesion ?")
-        messages.append("Excuse-moi mais je n'ai pas compris ce que tu demandes, est-ce que tu pourrais reformuler ?")
-        messages.append("Attends voir... \nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si tu reformules ça pourrait m'aider.")
-        messages.append("J'ai bien peur de ne pas avoir compris... Est-ce bien en rapport avec ENIGMA Strasbourg ?")
-        messages.append("Mhm, j'essaie pourtant de comprendre mais je ne suis pas sûr de bien sairir ce que tu cherches à me demander. Peut-être qu'en reformulant j'arriverai à comprendre.")
-        # "Je ne vois pas bien le rapport avec ENIGMA Strasbourg, je suis confus. As-tu autres choses à de demander ?"
-        # "De quoi ? C'est censé avoir un rapport avec ENIGMA Strasbourg ?"
-        # "J'essaie de comprendre mais s'il n'y a pas de rapport avec ENIGMA Strasbourg je ne vais pas pouvoir répondre"
+            dispatcher.utter_message(message)
 
-        message = np.random.choice(np.array(messages))
+            return [] #[FollowupAction("form_riddle")]
 
-        dispatcher.utter_message(message)
+        else:
+            logger.debug("There is no active form")
 
-        return []
+            messages = []
+
+            messages.append("Je ne suis pas sûr de comprendre, pourrais-tu reformuler ?")
+            messages.append("Je suis désolé, je n'ai pas compris. Est-il possible de reformuler la quesion ?")
+            messages.append("Excuse-moi mais je n'ai pas compris ce que tu demandes, est-ce que tu pourrais reformuler ?")
+            messages.append("Attends voir... \nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si tu reformules ça pourrait m'aider.")
+            messages.append("J'ai bien peur de ne pas avoir compris... Est-ce bien en rapport avec ENIGMA Strasbourg ?")
+            messages.append("Mhm, j'essaie pourtant de comprendre mais je ne suis pas sûr de bien sairir ce que tu cherches à me demander. Peut-être qu'en reformulant j'arriverai à comprendre.")
+
+            message = np.random.choice(np.array(messages))
+
+            dispatcher.utter_message(message)
+
+            return []
 
 class FormRiddle(FormAction):
     """Custom form action to fill the user riddle answer."""
@@ -202,7 +268,6 @@ class FormRiddle(FormAction):
         -------------------------------------
         """
         for i, slot in enumerate(self.required_slots(tracker)):
-            print("-------------     " + str(i) + "      -----------")
             if self._should_request_slot(tracker, slot):
                 logger.debug("Request next slot '{}'".format(slot))
                 if slot == "riddle_category":
@@ -216,7 +281,9 @@ class FormRiddle(FormAction):
 
                     riddle_name, riddle, solution = get_riddle(enigma_df, category[0])
 
-                    dispatcher.utter_message( "** " + riddle_name + " **" + "\n" + riddle)
+                    how_to_answer = "\n(Commence par \"Rep:\" puis écris ta réponse.)"
+
+                    dispatcher.utter_message( "** " + riddle_name + " **" + "\n" + riddle + how_to_answer)
 
                     return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution)]
 
@@ -237,17 +304,20 @@ class FormRiddle(FormAction):
                ) -> List[Dict]:
         """Once required slots are filled, print the message"""
 
-        # m1 = f"Tu as choisi : {tracker.get_slot('riddle_category')[0]}\n"
-        # m2 = f"Ta réponse est :\n{tracker.get_slot('user_riddle_solution')}\n"
-        user_riddle_solution = tracker.get_slot('user_riddle_solution')
+        user_answer = tracker.latest_message.get('text')
+        user_riddle_solution = re.sub(r'Rep:.', '', user_answer)
         riddle_solution = tracker.get_slot('riddle_solution')
 
+        if check_answer(riddle_solution, user_riddle_solution):
+            message = f"Sans en être entièrement sûr, je crois que ta réponse est correcte.\
+            \nLa bonne réponse est :\n{riddle_solution}"
+        else:
+            message = f"J'ai bien peur que cela soit une mauvaise réponse.\
+            \nLa bonne réponse est :\n{riddle_solution}"
 
-        m3 = f"La bonne réponse est :\n{tracker.get_slot('riddle_solution')}"
+        dispatcher.utter_message(message)
 
-        dispatcher.utter_message(m1 + "\n" + m2 + "\n" + m3)
-
-        return []
+        return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None)]
 
 # class ActionCheckAnswer(Action):
 #

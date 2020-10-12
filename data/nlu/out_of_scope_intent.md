@@ -11,6 +11,11 @@
 - politique
 - médias
 - jupyter
+- bli bla blououo
+- blablabla
+- bnvjukijre
+- di doud
+
 
 ## intent:out_of_scope/other_language
 - english speaking ?

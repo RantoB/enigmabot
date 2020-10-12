@@ -52,12 +52,10 @@
 - ok
 - okay
 - oki
-- oki dok
-- okidok
 - c'est exact
 - wé
 - ouai
-- ouais 
+- ouais
 
 ## intent:deny
 - non
