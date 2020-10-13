@@ -65,7 +65,7 @@ pipeline:
 policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
-    max_history: 5
+    max_history: 10
     epochs: 200
     batch_size:
     - 32

@@ -45,6 +45,7 @@
 - ca a lieu où ?
 - où irons-nous ?
 - c'est où ?
+- j'aimerais savoir où est-ce que cela se passe
 
 ## intent:faq/how_much_time
 - Combien de temps est-ce que cela dure ?
@@ -90,10 +91,10 @@
 - Combien de personnes ?
 - Peut-on jouer seul ?
 - On peut jouer à combien ?
-- Peut-on jouer à [2](number_of_players) ?
+- Peut-on jouer à 2 ?
 - Est-il possible de jouer seul ?
-- Est-il possible de jouer à [2](number_of_players) ?
-- j'aimerais venir avec [4](number_of_players) amis c'est possible ?
+- Est-il possible de jouer à 2 ?
+- j'aimerais venir avec 4 amis c'est possible ?
 - quel est le nombre maximum pour un groupe ?
 
 ## intent:faq/smartphone
@@ -210,6 +211,7 @@
 - est ce que c'est difficile pour un enfant de 10 ans ?
 
 ## intent:faq/booking
+- quand est-ce qu'on peut jouer ?
 - Réserver
 - Réservation
 - je souhaite réserver
@@ -302,6 +304,3 @@
 - Société Mystérieuse
 - Société
 - societe
-
-## regex:number_of_players
-- [0-15]

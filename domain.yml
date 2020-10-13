@@ -7,7 +7,6 @@ intents:
 - affirm
 - deny
 - bot_challenge
-- inform_name
 - thanks
 - question_pitch
 - societe_mysterieuse
@@ -19,55 +18,80 @@ intents:
 - ask_for_riddle
 - inform_kind_of_riddle
 - answer_the_riddle
+- how_to_subscribe
+- inform_name
+- inform_email
+- WTF
 entities:
-- person
-- number_of_players
+- user_name
+- user_email
 - game
 - riddle_category
 - riddle_solution
-- user_riddle_solution
+- name_prompt
+- email_prompt
 slots:
   game:
     type: text
-  person:
+  user_name:
     type: text
+  user_email:
+    type: unfeaturized
   riddle_category:
     type: unfeaturized
   riddle_solution:
     type: unfeaturized
   user_riddle_solution:
     type: unfeaturized
+  user_asked_faq:
+    type: bool
+  user_asked_riddle:
+    type: bool
+  name_prompt:
+    type: text
 responses:
   utter_greet:
-  - text: Bonjour, comment est-ce que je peux te renseigner sur les activités proposées
+  - text: Bonjour, comment est-ce que je peux vous renseigner sur les activités proposées
       par ENIGMA Strasbourg ?
-  - text: Hello, je peux te renseigner sur les activités proposées par ENIGMA Strasbourg,
-      que souhaites-tu savoir ?
-  - text: Bienvenue, quel renseignement cherches-tu concernant les activités ENIGMA
+  - text: Hello, je peux vous renseigner sur les activités proposées par ENIGMA Strasbourg,
+      que souhaitez-vous savoir ?
+  - text: Bienvenue, quel renseignement cherchez-vous concernant les activités ENIGMA
       Strasbourg ?
-  utter_before_end:
-  - text: Merci à toi de m'avoir sollicité.
-  - text: J'espre avoir répondu à toutes tes questions.
-  - text: Très bien, je te remercie.
+  utter_question:
+  - text: Quelle est votre question ?
+  - text: Que souhaitez-vous savoir ?
+  - text: Comment est-ce que je peux vous renseigner ?
+  utter_question_on_ENIGMA_Stras:
+  - text: Souhaitez-vous avoir une renseignement au sujet d'ENIGMA Strasbourg ?
+  - text: Avez-vous une question concernant ENIGMA Strasbourg ?
+  utter_one_more_question:
+  - text: Souhaitez-vous savoir autre chose ?
+  - text: Avez-vous une autre question ?
+  - text: Avez-vous encore une question ?
+  utter_greet_and_propose_riddle:
+  - text: Bonjour, souhaitez-vous faire une énigme ?
+  - text: Hello, je peux vous soumettre une énigme, est-ce que cela vous intéresse ?
+  - text: Bonsoir, est-ce que vous souhaitez répondre à une énigme ?
+  utter_propose_riddle:
+  - text: souhaitez-vous faire une énigme ?
+  - text: Je peux vous soumettre une énigme, est-ce que cela vous intéresse ?
+  - text: Est-ce que vous souhaitez répondre à une énigme ?
+  utter_one_more_riddle:
+  - text: Est-ce que vous souhaitez faire encore une énigme ?
+  - text: Une énimge de plus ?
+  - text: Encore une énigme ?
+  utter_thanks:
+  - text: Merci à vous de m'avoir sollicité.
+  - text: J'espre avoir répondu à toutes vos questions.
+  - text: Très bien, je vous remercie.
   utter_goodbye:
-  - text: A bientôt
-  - text: Au revoir
-  - text: A la prochaine
+  - text: À bientôt.
+  - text: Au revoir.
+  - text: À la prochaine !
   utter_iamabot:
   - text: Je suis un robot développé par Monsieur Bertrand !
-  utter_greet_and_name:
-  - text: Hello, je suis ENIGMA Bot, et toi, qui es-tu ?
-  - text: Bonjour, je suis ENIGMA Bot. Et toi, comment t'appelles-tu ?
-  - text: "Hello ! je me présente: ENIGMA Bot. Toi, comment t'appelles-tu ?"
-  utter_introduce_greet_answer:
-  - text: Bonjour {person}. Comment est-ce que je peux te renseigner sur les activités
-      proposées par ENIGMA Strasbourg ?
-  - text: Hello {person}. Je peux te renseigner sur les activités proposées par ENIGMA
-      Strasbourg, que souhaites-tu savoir ?
-  - text: Bienvenue {person}. Quel renseignement cherches-tu concernant les activités
-      ENIGMA Strasbourg ?
   utter_societe_musterieuse:
-  - text: "La Société Mystérieuse de Strasbourg compte de nombreux érudits qui ont\
+  - text: "La Société Mystérieuse de Strasbourg compvous de nombreux érudits qui ont\
       \ façonné la ville de Strasbourg. Ils vous ont laissé quelques énigmes afin\
       \ de rencontrer les meilleurs d’entre vous, de vous tester et peut-être même\
       \ de les rejoindre. \nSerez-vous de taille à résoudre les énigmes des grandes\
@@ -77,24 +101,19 @@ responses:
       \ Aidez-moi à fouiller le passé pour le prouver ou le démentir !\"\nJean est\
       \ en possession d’une lettre d’un aïeul contredisant les archives historiques\
       \ qui font de son arrière-grand père l’auteur du Meurtre qui a eu lieu à la\
-      \ Krutenau en 1913. Il vous sollicite pour investiguer et connaître la vérité.\
+      \ Krutenau en 1913. Il vous sollicivous pour investiguer et connaître la vérité.\
       \ \nUne Machine à Immersion Spatio-Temporelle sera mise à votre disposition\
       \ pour vous permettre de revoir certaines scènes et de comprendre ce qu’il s’est\
       \ vraiment passé."
   utter_next_game:
-  - text: Souhaites-tu connaître le pitch du second jeu ?
-  - text: Je te donne le pitch de l'autre jeu ?
-  utter_sth_else:
-  - text: Souhaites-tu savoir autre chose ?
-  - text: As-tu une autre question ?
-  utter_question:
-  - text: Quelle est ta question ?
-  - text: Que souhaites-tu savoir ?
-  - text: Comment est-ce que je peux te renseigner ?
-  utter_give_answer:
-  - text: Voici la réponse:\n {riddle_solution}
-  utter_ask_riddle_category:
-  - text: Quelle genre d'énigme ?
+  - text: souhaitez-vous connaître le pitch du second jeu ?
+  - text: Je vous donne le pitch de l'autre jeu ?
+  utter_ask_user_name:
+  - text: "Entrez votre prénom: écrivez \"prénom:\" puis tapez votre prénom"
+  utter_ask_user_email:
+  - text: "Entrez votre adresse e-mail: écrivez \"email:\" puis tapez votre adresse e-mail"
+  utter_correct_info:
+  - text: "Vous pouvez rentrer vos information une nouvelle fois:"
 actions:
 - action_which_game
 - action_default_fallback
@@ -107,5 +126,9 @@ actions:
 - respond_out_of_scope
 - action_make_riddle
 - action_check_answer
+- action_set_faq_slot
+- action_save_information
+- action_reset_subscribe_slots
 forms:
   - form_riddle
+  - form_subscribe

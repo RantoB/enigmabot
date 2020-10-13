@@ -1,10 +1,10 @@
 ## faq
   * faq/ENIGMA_Strasbourg
-    - Les jeux proposés par ENIGMA Strasbourg sont des jeux de piste au centre-ville de Strasbourg.
+    - Les jeux proposés par ENIGMA Strasbourg sont des jeux de piste au centre-ville de Strasbourg. Immergé dans un scénario qui vous replonge dans l'histoire de la ville de Strasbourg, vous aurez à résoudre un certain nombre d'énigmes afin d'arriver au bout de votre quête.  
 
 ## faq
   * faq/general_sequence_of_the_game
-    - Un set de matériel de jeu vous est confié au départ. Vous avez la première énigmes qui vous mènera à un endroit où vous pourrez trouver les informations qui vous permettrons de débloquer les étapes suivantes et ainsi de suite jusqu'à l'énigme finale.
+    - Un set de matériel de jeu vous est confié au départ. Vous disposez de la première énigmes qui vous mènera à un endroit où vous pourrez trouver les informations qui vous permettrons de débloquer les étapes suivantes et ainsi de suite jusqu'à l'énigme finale.
 
 ## faq
   * faq/where
@@ -16,7 +16,7 @@
 
 ## faq
   * faq/who
-    - Accessibles aux familles, aux amis et aux autres. L’ensemble des parcours est accessible aux personnes à mobilité réduite.
+    - Accessibles aux familles, aux amis et aux autres. \nL’ensemble des parcours est accessible aux personnes à mobilité réduite.
 
 ## faq
   * faq/how_difficult
@@ -44,7 +44,7 @@
 
 ## faq
 * faq/payment
-  - Le paiement se fait un ligne, par carte bancaire. \n[lien à créer]\nAprès avoir payer, vous pourrez alors réserver le jour où vous souhaitez jouer. \nPous pouvez déjà vérifier les disponibilités à ce lien [lien à créer].
+  - Le paiement se fait un ligne, par carte bancaire. \n[lien à créer...]\nAprès avoir payer, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].
 
 ## faq
 * faq/start
@@ -52,7 +52,7 @@
 
 ## faq
 * faq/toilet
-  - Vous pourrez trouver des toilettes publiques à la place du chateau (cathédrale), à la place Kléber, au parking Brogli, au barage Vauban.\nVous avez aussi la liberté de faire une pause café.
+  - Vous pourrez trouver des toilettes publiques à la place du château (cathédrale), à la place Kléber, au parking Brogli, au barage Vauban.\nVous avez aussi la liberté de faire une pause café.
 
 ## faq
 * faq/weather
@@ -60,11 +60,11 @@
 
 ## faq
 * faq/reimbursment
-  - Si vous avez réservé une date, alors vous pouvez éventuellement la modifier. En revanche, il n'est pas possible de se faire rembourser.
+  - Si vous avez réservé une date, alors vous pouvez éventuellement la modifier et reporter. En revanche, il n'est pas possible de se faire rembourser.
 
 ## faq
 * faq/who_is_bertrand
-  - Bertrand est le concepteur des jeux de piste ENIGMA Strasbourg. Il est aussi le développeur de ce chatbot et de bien d'autres choses...
+  - Bertrand est le concepteur des jeux de piste ENIGMA Strasbourg. Il est aussi le développeur de ce chatbot et de bien d'autres choses... [Pour en savoir plus à son sujet](https://www.linkedin.com/in/bertrand-burcker-a6192655/)
 
 ## faq
 * faq/cancel
@@ -72,11 +72,11 @@
 
 ## faq
 * faq/kids
-  - Il est possible de faire le jeux avec des enfants. Les énigmes peuvent s'avérer plutôt difficiles pour eux, mais avec votre aides il s arriveront à en venir à bout. Le parcours se fait entièrement au centre ville, il est donc aussi possible de se déplacer avec une poussette.
+  - Il est possible de faire le jeux avec des enfants. Les énigmes peuvent s'avérer plutôt difficiles pour eux, mais avec votre aides ils arriveront à en venir à bout. Le parcours se fait entièrement au centre ville, il est donc aussi possible de se déplacer avec une poussette.
 
 ## faq
 * faq/animal
-- Vous pouvez évidemment être accompagné de vos animaux de compagnie.
+- Vous pouvez évidemment être accompagné de vos animaux de compagnie !
 
 ## faq
 * faq/booking
@@ -92,7 +92,7 @@
 
 ## faq
 * faq/food
-- Nous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt intéressante concernant la restauration, n'hésitez pas à en profiter.
+- Nous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt salivante concernant la restauration, n'hésitez pas à en profiter.
 
 ## faq
 * faq/equipment

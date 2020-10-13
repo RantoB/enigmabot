@@ -1,32 +1,31 @@
 ## intent:ask_for_riddle
+- je souhaite faire une énigme
 - connais-tu une énigme ?
 - enigme
 - devinettes
 - pose moi une énigme
 
 ## intent:inform_kind_of_riddle
+
 - [logique](riddle_category)
-- [logique mathématiques](riddle_category)
-- [logique paradoxe](riddle_category)      
 - [devinettes](riddle_category)
-- une [devinette](riddle_category)
-- [devinette](riddle_category)
-- [devinettes charade](riddle_category)
-- [devinettes qui suis-je](riddle_category)
+- [charade](riddle_category)
 - [classique](riddle_category)
-- [règles implicites classique](riddle_category)
-- [créativité classique](riddle_category)
-- [lettres classique](riddle_category)
-- [lettres](riddle_category)
-- [lettres charade](riddle_category)
-- [créativité](riddle_category)
-- [lois naturelles](riddle_category)
 - [règles implicites](riddle_category)
-- [stéréotypes règles implicites](riddle_category)
+- [créativité](riddle_category)
+- [lettres](riddle_category)
+- [lois naturelles](riddle_category)
 - [stéréotypes](riddle_category)
 - [junior](riddle_category)
-- [junior charade](riddle_category)
-
+- [devinettes](riddle_category)
+- fais moi une [devinette](riddle_category)
+- j'ai envie de faire une énigme [classique](riddle_category)
+- j'ai envie de faire une énigme [logique](riddle_category)
+- j'ai envie de faire une énigme de [lettres](riddle_category)
+- j'ai envie de faire [créativité](riddle_category)
+- pose moi une [charade](riddle_category)
+- fais moi une enigme [junior](riddle_category)
+- fais moi une énigme [stéréotypes](riddle_category)
 
 ## intent:answer_the_riddle
 - [Rep:](user_riddle_solution) le chat
@@ -41,3 +40,6 @@
 - [Rep:](user_riddle_solution) La réponse est 1100 et non 2000.
 - [Rep:](user_riddle_solution) 28...
 - [Rep:](user_riddle_solution) On ne peut pas doubler le dernier, car par définition il n'y a personne derrière le dernier...
+
+## synonym:devinettes
+- devinette

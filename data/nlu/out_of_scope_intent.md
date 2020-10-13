@@ -1,8 +1,6 @@
 ## intent:out_of_scope/other
 - la mayonnaise est bonne
 - tire bouchon
-- zeub
-- frtfrtgljhuoaubh
 - lumière
 - la forêt
 - les fleurs
@@ -11,11 +9,6 @@
 - politique
 - médias
 - jupyter
-- bli bla blououo
-- blablabla
-- bnvjukijre
-- di doud
-
 
 ## intent:out_of_scope/other_language
 - english speaking ?
@@ -26,3 +19,11 @@
 - italian
 - espagnol
 - tu parles une autre langue ?
+
+## intent:WTF
+- zeub
+- frtfrtgljhuoaubh
+- bli bla blououo
+- blablabla
+- bnvjukijre
+- di doud

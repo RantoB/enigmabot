@@ -1,0 +1,22 @@
+[
+  {
+    "text": "devinettes",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "devinettes",
+        "entity": "riddle_category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "riddle_category",
+        "start": 0,
+        "end": 10,
+        "value": "devinettes",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

@@ -1,34 +1,9 @@
-## intent:inform_name
-- [Bertrand](person)
-- je m'appelle [Damien](person)
-- je suis [Clémence](person)
-- mon nom est [Jean](person)
-- je suis [Georges](person)
-- C'est [Nicolas](person)
-- on m'appelle [Arthur]
-- [Alain](person)
-- [Mathieu](person)
-- [Léo](person)
-- [Léa](person)
-- [Thierry](person)
-- [Mélanie](person)
-- [Pierre](person)
-- [Lily](person)
-- [Raymond](person)
-- [Sylvie](person)
-- [Florence](person)
-- [Alxandre](person)
-- [Claire](person)
-- [bertrand](person)
-- [Tom](person)
-
 ## intent:greet
 - hey
 - hello
 - hi
 - bonjour
 - bonsoir
-- salut
 - Coucou
 - hello !
 - helo
@@ -39,6 +14,7 @@
 - tcho
 - salut
 - à bientôt
+- a bientôt
 - a+
 - à toute
 
@@ -56,6 +32,10 @@
 - wé
 - ouai
 - ouais
+- pourquoi pas
+- aller, vas-y
+- je ne dis pas non
+- vas-y
 
 ## intent:deny
 - non
@@ -67,9 +47,11 @@
 - pas vraiment
 - c'est faux
 - rien
--  no
+- no
 - nan
 - pas du tout
+- pas maintenant
+- non merci
 
 ## intent:bot_challenge
 - es-tu un chatbot ?

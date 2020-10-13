@@ -1,28 +1,50 @@
 ## introduction
 * greet
   - utter_greet
-  <!-- - utter_greet_and_name
-* inform_name{"person":"Bertrand"} OR inform_name
-  - action_introduction
-* deny OR affirm
-  - action_introduction_input_to_confirm
-* inform_name{"person":"Bertrand"} OR inform_name
-  - action_force_introduction -->
+> check_if_question_or_riddle
 
-## general deny
+## introduction and bot propose riddle
+* greet
+  - utter_greet_and_propose_riddle
+> check_answer_about_riddle
+
+## deny riddle proposition and suggest question on ENIGMA Stras
+> check_answer_about_riddle
 * deny
-  - utter_sth_else
+  - utter_question_on_ENIGMA_Stras
+> check_answer_about_ENIGMA_Stras_after_riddle
+
+## deny question on ENIGMA Stras and propose riddle
+> check_answer_about_ENIGMA_Stras
 * deny
-  - utter_before_end
+  - utter_propose_riddle
+> check_answer_about_riddle_after_question_ENIGMA_Stras
+
+## deny question on ENIGMA Stras and bye
+> check_answer_about_ENIGMA_Stras_after_riddle
+* deny
+  - utter_thanks
+  - utter_goodbye
+* goodbye
   - utter_goodbye
 
-## general affirm
-* affirm
-  - utter_question
+## deny riddle proposition and bye
+> check_answer_about_riddle_after_question_ENIGMA_Stras
+* deny
+  - utter_thanks
+  - utter_goodbye
+* goodbye
+  - utter_goodbye
+
+## WTF 
+* WTF
+  - action_default_fallback
 
 ## goodbye
 * goodbye
-  - utter_before_end
+  - utter_thanks
+  - utter_goodbye
+* goodbye
   - utter_goodbye
 
 ## bot challenge
