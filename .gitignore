@@ -1,8 +1,12 @@
 # Models
 *.tar.gz
 
-# Data bases
-*db*
+# events
+rasa.*
+events.*
 
 # __pycache__
 __pycache__/
+
+credentials.yml
+docker-compose.yml

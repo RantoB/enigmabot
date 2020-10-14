@@ -28,6 +28,7 @@ entities:
 - game
 - riddle_category
 - riddle_solution
+- user_riddle_solution
 - name_prompt
 - email_prompt
 slots:
