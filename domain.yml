@@ -43,20 +43,14 @@ slots:
     type: unfeaturized
   user_riddle_solution:
     type: unfeaturized
-  user_asked_faq:
-    type: bool
-  user_asked_riddle:
-    type: bool
   name_prompt:
     type: text
 responses:
   utter_greet:
-  - text: Bonjour, comment est-ce que je peux vous renseigner sur les activités proposées
-      par ENIGMA Strasbourg ?
-  - text: Hello, je peux vous renseigner sur les activités proposées par ENIGMA Strasbourg,
+  - text: "Bonjour, comment est-ce que je peux vous aider : cherchez-vous un renseigner sur les activités proposées par ENIGMA Strasbourg ou souhaitez-vous résoudre une énigme ?"
+  - text: Hello, souhaitez-vous résoudre une éngme ou cherchez-vous quelques chose en particulier concernant les activités proposées par ENIGMA Strasbourg ?
       que souhaitez-vous savoir ?
-  - text: Bienvenue, quel renseignement cherchez-vous concernant les activités ENIGMA
-      Strasbourg ?
+  - text: Bienvenue, je peux vous soumettre une énigme ou vous renseigner au sujet des activités ENIGMA Strasbourg, que souhaitez-vous ?
   utter_question:
   - text: Quelle est votre question ?
   - text: Que souhaitez-vous savoir ?
@@ -68,10 +62,6 @@ responses:
   - text: Souhaitez-vous savoir autre chose ?
   - text: Avez-vous une autre question ?
   - text: Avez-vous encore une question ?
-  utter_greet_and_propose_riddle:
-  - text: Bonjour, souhaitez-vous faire une énigme ?
-  - text: Hello, je peux vous soumettre une énigme, est-ce que cela vous intéresse ?
-  - text: Bonsoir, est-ce que vous souhaitez répondre à une énigme ?
   utter_propose_riddle:
   - text: souhaitez-vous faire une énigme ?
   - text: Je peux vous soumettre une énigme, est-ce que cela vous intéresse ?
@@ -108,12 +98,15 @@ responses:
   utter_next_game:
   - text: souhaitez-vous connaître le pitch du second jeu ?
   - text: Je vous donne le pitch de l'autre jeu ?
+  utter_subscribe:
+  - text: Souhaitez-vous rester informé des prochaines actialités d'ENIGMA Strasbourg ?
+  - text: Souhaitez-vous recevoir les dernières infos d'ENIGMA Strasbourg ?
   utter_ask_user_name:
-  - text: "Entrez votre prénom: écrivez \"prénom:\" puis tapez votre prénom"
+  - text: "Entrez votre prénom:"
   utter_ask_user_email:
-  - text: "Entrez votre adresse e-mail: écrivez \"email:\" puis tapez votre adresse e-mail"
+  - text: "Entrez votre adresse e-mail:"
   utter_correct_info:
-  - text: "Vous pouvez rentrer vos information une nouvelle fois:"
+  - text: "Vous pouvez rentrer vos informations une nouvelle fois:"
 actions:
 - action_which_game
 - action_default_fallback
@@ -129,6 +122,7 @@ actions:
 - action_set_faq_slot
 - action_save_information
 - action_reset_subscribe_slots
+- action_check_active_form
 forms:
   - form_riddle
   - form_subscribe

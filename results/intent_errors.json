@@ -4,7 +4,7 @@
     "intent": "ask_for_riddle",
     "intent_prediction": {
       "name": "inform_kind_of_riddle",
-      "confidence": 0.5863810181617737
+      "confidence": 0.6127734184265137
     }
   }
 ]

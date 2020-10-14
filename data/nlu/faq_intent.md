@@ -209,6 +209,13 @@
 - gamins
 - enfants
 - est ce que c'est difficile pour un enfant de 10 ans ?
+- j'ai des enfants
+- j'accompagne mes enfants
+- je suis avec des enfants
+- est-ce que les enfants peuvent jouer ?
+- pour les enfants
+- mes enfants m'accompagnent
+- je suis avec les mômes
 
 ## intent:faq/booking
 - quand est-ce qu'on peut jouer ?

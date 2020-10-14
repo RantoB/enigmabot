@@ -11,33 +11,5 @@
         "extractor": "DIETClassifier"
       }
     ]
-  },
-  {
-    "text": "Rep: La réponse est : 0.5. Tout nombre différent de 0 divisé par lui-même donne 1.",
-    "entities": [
-      {
-        "start": 0,
-        "end": 4,
-        "value": "Rep:",
-        "entity": "user_riddle_solution"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "user_riddle_solution",
-        "start": 0,
-        "end": 4,
-        "confidence_entity": 0.9832213120911169,
-        "value": "Rep:",
-        "extractor": "CRFEntityExtractor"
-      },
-      {
-        "entity": "user_riddle_solution",
-        "start": 0,
-        "end": 3,
-        "value": "Rep",
-        "extractor": "DIETClassifier"
-      }
-    ]
   }
 ]

@@ -1,24 +1,24 @@
 ## enigmabot make a riddle
 > check_if_question_or_riddle
-* ask_for_riddle OR inform_kind_of_riddle
+* ask_for_riddle OR inform_kind_of_riddle{"riddle_category": "logique"}
   - form_riddle
   - form{"name": "form_riddle"}
   - form{"name": null}
   - utter_propose_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm without question on ENIGMA Stras
+## Bot proposed a riddle and user affirm without FAQ
 > check_answer_about_riddle
-* affirm
+* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
   - form_riddle
   - form{"name": "form_riddle"}
   - form{"name": null}
   - utter_propose_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after question on ENIGMA Stras
+## Bot proposed a riddle and user affirm after FAQ
 > check_answer_about_riddle_after_question_ENIGMA_Stras
-* affirm
+* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
   - form_riddle
   - form{"name": "form_riddle"}
   - form{"name": null}

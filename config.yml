@@ -72,8 +72,8 @@ policies:
     - 64
   - name: MappingPolicy
   - name: FallbackPolicy
-    nlu_threshold: 0.6
-    ambiguity_threshold: 0.3
-    core_threshold: 0.4
+    nlu_threshold: 0.8
+    ambiguity_threshold: 0.4
+    core_threshold: 0.5
     fallback_action_name: action_default_fallback
   - name: FormPolicy

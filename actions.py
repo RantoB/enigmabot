@@ -11,7 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered
+from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered, FollowupAction
 from rasa_sdk.forms import FormAction
 import logging
 logger = logging.getLogger(__name__)
@@ -22,7 +22,15 @@ import pandas as pd
 import re
 import csv
 
+import spacy
+from spacy.attrs import IS_ALPHA, IS_STOP, IS_PUNCT
+nlp = spacy.load("fr_core_news_md")
+
 def get_riddle(enigma_df: pd.core.frame.DataFrame, category: str):
+    """
+    for a given category, will return a random riddle, its name and its solution
+    from the enigma_df dataframe
+    """
     enigma_cat = enigma_df[enigma_df['Category'] == category]
     e = np.random.randint(0, enigma_cat.shape[0])
     riddle_name = enigma_cat['Title'].iloc[e]
@@ -30,17 +38,20 @@ def get_riddle(enigma_df: pd.core.frame.DataFrame, category: str):
     solution = enigma_cat['Solution'].iloc[e]
     return (riddle_name, riddle, solution)
 
-import spacy
-from spacy.attrs import IS_ALPHA, IS_STOP, IS_PUNCT
-nlp = spacy.load("fr_core_news_md")
-
 def preprocess_spacy(sent: str) -> np.ndarray:
+    """string preprocessing function which returns a numpy array of tokens
+    """
     doc = nlp(sent)
     tokens = np.char.lower(np.array([token.text for token in doc]))
     return tokens[~doc.to_array([IS_STOP]).astype(bool) * \
 ~doc.to_array([IS_PUNCT]).astype(bool)]
 
 def cosine_test(sentence_1: str, sentence_2: str) -> float:
+    """
+    return a value which is a similarity indicator to check riddle solutions
+    based on cosine similarity
+    """
+
     sentence_1 = " ".join(preprocess_spacy(sentence_1))
     sentence_2 = " ".join(preprocess_spacy(sentence_2))
 
@@ -51,6 +62,10 @@ def cosine_test(sentence_1: str, sentence_2: str) -> float:
     return cosine_similarity(tf_idf)[1, 0]
 
 def spacy_vec_sim_test(sentence_1: str, sentence_2: str) -> float:
+    """
+    return a value which is a similarity indicator to check riddle solutions
+    based on spacy vector similarity
+    """
     sentence_1 = " ".join(preprocess_spacy(sentence_1))
     sentence_2 = " ".join(preprocess_spacy(sentence_2))
 
@@ -71,6 +86,10 @@ def spacy_vec_sim_test(sentence_1: str, sentence_2: str) -> float:
         return (np.sort(sim)[-1] + np.sort(sim)[-2]) / 2
 
 def check_answer(solution: str, user_solution: str) -> bool:
+    """
+    based on the cosine_test and spacy_vec_sim_test inicators, will returns
+    wether the user answer to the riddle seems to be right or wrong.
+    """
     try:
         indicator_1 = cosine_test(solution, user_solution)
     except:
@@ -97,14 +116,6 @@ def check_answer(solution: str, user_solution: str) -> bool:
             return True
         else:
             return False
-
-class ActionSetFaqSlot(Action):
-
-    def name(self) -> Text:
-        return "action_set_faq_slot"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        return [SlotSet("user_asked_faq", True)]
 
 class ActionWhichGame(Action):
 
@@ -146,13 +157,15 @@ class ActionNextGame(Action):
     def name(self) -> Text:
         return "action_next_game"
 
-    @staticmethod
-    def start_story_events(deny):
-        # type: (Text) -> List[Dict]
-        return [ActionExecuted("action_listen")] + [UserUttered("/" + deny, {
-            "intent": {"name": deny, "confidence": 1.0},
-            "entities": {}
-        })]
+    # @staticmethod
+    # def start_story_events(deny):
+    #     # type: (Text) -> List[Dict]
+    #     return [ActionExecuted("action_listen")] + [UserUttered("/" + deny, {
+    #         "intent": {"name": deny, "confidence": 1.0},
+    #         "entities": {}
+    #     })]
+    # Trigger intent from a custom action:
+    # https://forum.rasa.com/t/trigger-a-story-or-intent-from-a-custom-action/13784
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
@@ -164,14 +177,13 @@ class ActionNextGame(Action):
 
             if game.lower() == "société mystérieuse de Strasbourg".lower():
                 dispatcher.utter_message(template="utter_meurtre_krutenau")
-                return self.start_story_events("deny")
+                dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
             else :
                 dispatcher.utter_message(template="utter_societe_musterieuse")
-                return self.start_story_events("deny")
+                dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
 
         elif deny_or_affirm == 'deny':
-            dispatcher.utter_message("Ok,")
-            return self.start_story_events("deny")
+            dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
 
         return []
 
@@ -183,7 +195,6 @@ class ActionDefaultFallback(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         active_form = tracker.active_form.get("name")
-        print(active_form)
 
         if active_form == "form_riddle":
             logger.debug("The form '{}' is active".format(active_form))
@@ -194,10 +205,19 @@ class ActionDefaultFallback(Action):
             return []
 
         elif active_form == "form_subscribe":
-            logger.debug("The form '{}' is active".format(active_form))
-            message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper ton prénom, afni que je puisse le reconnaître?"
+            requested_slot = tracker.get_slot("requested_slot")
 
-            dispatcher.utter_message(message)
+            if requested_slot == "user_name":
+                logger.debug("The form '{}' is active".format(active_form))
+                message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
+
+                dispatcher.utter_message(message)
+
+            elif requested_slot == "user_email":
+                logger.debug("The form '{}' is active".format(active_form))
+                message = "Je ne reconnais pas le format de l'adresse mail, pourriez-vous écrire \"e-mail:\" puis taper votre adresse e-mail, afni que je puisse la reconnaître?"
+
+                dispatcher.utter_message(message)
 
             return[]
 
@@ -219,18 +239,51 @@ class ActionDefaultFallback(Action):
 
             return []
 
+class ActionCheckActiveForm(Action):
+
+    def name(self) -> Text:
+        return "action_check_active_form"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        active_form = tracker.active_form.get("name")
+
+        if active_form is not None:
+            if active_form == "form_riddle":
+                logger.debug("The form '{}' is active".format(active_form))
+                message = "Je n'ai pas bien compris la réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
+                dispatcher.utter_message(message)
+                return [FollowupAction("action_listen")]
+
+            elif active_form == "form_subscribe":
+                requested_slot = tracker.get_slot("requested_slot")
+
+                if requested_slot == user_name:
+                    logger.debug("The form '{}' is active".format(active_form))
+                    message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
+
+                    dispatcher.utter_message(message)
+                    return [FollowupAction("action_listen")]
+
+                elif requested_slot == user_email:
+                    logger.debug("The form '{}' is active".format(active_form))
+                    message = "Je ne reconnais pas le format de l'adresse mail, pourriez-vous écrire \"e-mail:\" puis taper votre adresse e-mail, afni que je puisse la reconnaître?"
+
+                    dispatcher.utter_message(message)
+                    return [FollowupAction("action_listen")]
+
+            return []
+
 class FormRiddle(FormAction):
     """Custom form action to fill the user riddle answer."""
 
     def name(self) -> Text:
         """Unique identifier of the form"""
-
         return "form_riddle"
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """A list of required slots that the form has to fill"""
-
         return ["riddle_category", "user_riddle_solution"]
 
     def request_next_slot(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -248,17 +301,18 @@ class FormRiddle(FormAction):
         """
         -------------------------------------
         """
-        for i, slot in enumerate(self.required_slots(tracker)):
+        for slot in self.required_slots(tracker):
             if self._should_request_slot(tracker, slot):
                 logger.debug("Request next slot '{}'".format(slot))
                 if slot == "riddle_category":
-                    messages = lis()
+                    messages = list()
                     messages.append("Quelle genre d'énigme aimez-vous ?\n")
                     messages.append("Quelle genre d'énigme ?\n")
                     messages.append("Quelle type d'énigme ?\n")
+                    message = np.random.choice(np.array(messages))
 
                     dispatcher.utter_button_message(message, buttons)
-                    return [SlotSet("requested_slot", slot), SlotSet("user_asked_riddle", True)]
+                    return [SlotSet("requested_slot", slot)]
 
                 if slot == "user_riddle_solution":
                     category = tracker.get_slot('riddle_category')
@@ -368,49 +422,3 @@ class ActionSaveInformation(Action):
         dispatcher.utter_message(message)
 
         return []
-
-# class ActionCheckAnswer(Action):
-#
-#     def name(self) -> Text:
-#         return "action_check_answer"
-#
-#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         solution = tracker.get_slot("riddle_solution")
-#         solution_token =
-#         # TODO : XXXXX
-#
-#         return []
-
-# class NameForm(FormAction):
-#     """Custom form action to fill user name slot."""
-#
-#     def name(self) -> Text:
-#         """Unique identifier of the form"""
-#
-#         return "name_form"
-#
-#     @staticmethod
-#     def required_slots(tracker: Tracker) -> List[Text]:
-#         """A list of required slots that the form has to fill"""
-#
-#         return ["person"]
-#
-#     def slot_mappings(self) -> Dict[Text, Any]:
-#         return {"person": self.from_entity(entity="person",
-#                 intent=["user_introduces_himself"])}
-#
-#     def submit(self,
-#                dispatcher: CollectingDispatcher,
-#                tracker: Tracker,
-#                domain: Dict[Text, Any]
-#                ) -> List[Dict]:
-#         """Once required slots are filled, print buttons for found facilities"""
-#
-#         name = tracker.get_slot('person')
-#
-#         message = f"Bonjour {name}."
-#
-#         # TODO: update rasa core version for configurable `button_type`
-#         dispatcher.utter_message(message)
-#
-#         return []

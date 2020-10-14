@@ -4,6 +4,7 @@
 - enigme
 - devinettes
 - pose moi une énigme
+- t'aurais une bonne énigme ?
 
 ## intent:inform_kind_of_riddle
 
@@ -26,6 +27,7 @@
 - pose moi une [charade](riddle_category)
 - fais moi une enigme [junior](riddle_category)
 - fais moi une énigme [stéréotypes](riddle_category)
+- tu connais une [charade](riddle_category)
 
 ## intent:answer_the_riddle
 - [Rep:](user_riddle_solution) le chat

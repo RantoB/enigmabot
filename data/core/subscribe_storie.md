@@ -1,18 +1,19 @@
 ## subscribe
-* how_to_subscribe
+> check_answer_about_subscribe
+* affirm OR how_to_subscribe
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
   - form{"name": null}
 > user_check_information
 
-## subscribe with information confirmed
+## information confirmed
 > user_check_information
 * affirm
   - action_save_information
   - utter_question_on_ENIGMA_Stras
-> check_answer_about_ENIGMA_Stras
+> check_answer_about_ENIGMA_Stras_after_subscribe
 
-## subscribe with information confirmed
+## information not confirmed
 > user_check_information
 * deny
   - action_reset_subscribe_slots
