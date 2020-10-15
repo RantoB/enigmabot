@@ -45,3 +45,12 @@
 
 ## synonym:devinettes
 - devinette
+
+## synonym:Rep:
+  - rep:
+  - rep :
+  - Rep :
+  - réponse:
+  - Réponse :
+  - re :
+  - Re:

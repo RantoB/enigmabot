@@ -198,7 +198,7 @@ class ActionDefaultFallback(Action):
 
         if active_form == "form_riddle":
             logger.debug("The form '{}' is active".format(active_form))
-            message = "Je n'ai pas bien compris la réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
+            message = "Je n'ai pas pu interprêter votre réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
 
             dispatcher.utter_message(message)
 
@@ -319,7 +319,7 @@ class FormRiddle(FormAction):
 
                     riddle_name, riddle, solution = get_riddle(enigma_df, category[0])
 
-                    how_to_answer = "\n(Commence par \"Rep:\" puis écris ta réponse.)"
+                    how_to_answer = "\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
 
                     dispatcher.utter_message( "** " + riddle_name + " **" + "\n" + riddle + how_to_answer)
 
