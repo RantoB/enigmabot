@@ -1,12 +1,3 @@
-        # This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/core/actions/#custom-actions/
-
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -21,10 +12,24 @@ import pickle
 import pandas as pd
 import re
 import csv
+import os
+
+import smtplib
+from email.mime.text import MIMEText
 
 import spacy
 from spacy.attrs import IS_ALPHA, IS_STOP, IS_PUNCT
 nlp = spacy.load("fr_core_news_md")
+
+
+ENIGMA_PKL = os.path.join("actions", "enigma.pkl")
+
+BOT_USER_INFO = os.path.join("bot_user_info", "bot_user_information.csv")
+
+SERVER = 'ssl0.ovh.net'
+PORT = 465
+SENDER = os.environ.get('LOGIN_ENIGMASTRAS_MAILBOX')
+PSW = os.environ.get('PASSWORD_ENIGMASTRAS_MAILBOX')
 
 def get_riddle(enigma_df: pd.core.frame.DataFrame, category: str):
     """
@@ -116,6 +121,23 @@ def check_answer(solution: str, user_solution: str) -> bool:
             return True
         else:
             return False
+
+def send_mail(receiver: str, subject: str, body: str):
+    msg = MIMEText(body)
+    msg['Subject'] = subject
+    msg['From'] = SENDER
+    msg['To'] = receiver
+
+    with smtplib.SMTP_SSL(SERVER, PORT) as smtp:
+        smtp.login(SENDER, PSW)
+        smtp.sendmail(SENDER, receiver, msg.as_string())
+    return None
+
+def save_information(user_name: str, user_email: str):
+    with open(BOT_USER_INFO, "a") as f:
+        writer = csv.writer(f)
+        writer.writerow([user_name, user_email])
+    return None
 
 class ActionWhichGame(Action):
 
@@ -291,7 +313,7 @@ class FormRiddle(FormAction):
             else return None
             https://legacy-docs.rasa.com/docs/core/_modules/rasa_core_sdk/forms/"""
 
-        with open('enigma.pkl', 'rb') as f:
+        with open(ENIGMA_PKL, 'rb') as f:
             enigma_df = pickle.load(f)
 
         categories = enigma_df['Category'].unique()
@@ -380,8 +402,13 @@ class FormSubscribe(FormAction):
                ) -> List[Dict]:
         """Once required slots are filled, print the message"""
 
-        user_email = tracker.get_slot('user_email')[0]
-        user_name = tracker.get_slot('user_name')[0]
+        user_name = tracker.get_slot('user_name')
+        if type(user_name) == list:
+            user_name = user_name[0]
+
+        user_email = tracker.get_slot('user_email')
+        if type(user_email) == list:
+            user_email = user_email[0]
 
         # if tracker.get_slot('user_name') == None:
         #     user_answer = tracker.latest_message.get('text')
@@ -410,14 +437,22 @@ class ActionSaveInformation(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        user_name = tracker.get_slot('user_name')[0]
-        user_email = tracker.get_slot('user_email')[0]
+        user_name = tracker.get_slot('user_name')
+        if type(user_name) == list:
+            user_name = user_name[0]
 
-        with open("bot_user_info/bot_user_information.csv", "a") as f:
-            writer = csv.writer(f)
-            writer.writerow([user_name, user_email])
+        user_email = tracker.get_slot('user_email')
+        if type(user_email) == list:
+            user_email = user_email[0]
 
-        message = "Votre adresse e-mail est bien enregistrée, vous recevrez par e-mail les dernières infos concernant ENIGMA Strasbourg."
+        subject = "ENIGMA Strasbourg"
+        body = f"\nBienvenue {user_name} !\nVotre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d'ENIGMA Strasbourg.\n\nMystérieusement..."
+
+        send_mail(user_email, subject, body)
+
+        save_information(user_name, user_email)
+
+        message = "Votre adresse e-mail est bien enregistrée, vous allez recevoir un mail de confirmation."
 
         dispatcher.utter_message(message)
 

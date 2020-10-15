@@ -31,14 +31,12 @@
 > check_answer_about_ENIGMA_Stras_after_riddle
 * deny
   - utter_subscribe
-* affirm
 > check_answer_about_subscribe
 
 ## deny riddle proposition, suggest subscribe
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 * deny
   - utter_subscribe
-* affirm
 > check_answer_about_subscribe
 
 ## End

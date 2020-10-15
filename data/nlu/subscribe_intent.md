@@ -8,6 +8,9 @@
 - je souhaiterais m'inscrire
 - j'aimerais m'inscrire
 
+## lookup:user_name
+data/nlu/lookup_tables/prenoms.txt
+
 ## intent:inform_name
 - [Bertrand](user_name)
 - je m'appelle [Damien](user_name)
