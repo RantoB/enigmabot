@@ -1,5 +1,5 @@
 # Models
-*.tar.gz
+model/
 
 # events
 rasa.*
