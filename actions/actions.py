@@ -23,7 +23,7 @@ from spacy.attrs import IS_ALPHA, IS_STOP, IS_PUNCT
 nlp = spacy.load("fr_core_news_md")
 
 
-ENIGMA_PKL = os.path.join("actions", "enigma.pkl")
+ENIGMA_PKL = os.path.join("enigma.pkl")
 
 BOT_USER_INFO = os.path.join("bot_user_info", "bot_user_information.csv")
 
