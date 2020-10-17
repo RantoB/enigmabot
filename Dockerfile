@@ -11,6 +11,7 @@ COPY actions/requirements-actions.txt ./
 USER root
 
 # Install extra requirements for actions code, if necessary (uncomment next line)
+RUN python -m spacy download fr_core_news_md
 RUN pip install -r requirements-actions.txt
 
 # Copy actions folder to working directory
