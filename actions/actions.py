@@ -18,6 +18,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 import spacy
+import fr_core_news_md
 from spacy.attrs import IS_ALPHA, IS_STOP, IS_PUNCT
 nlp = spacy.load("fr_core_news_md")
 
