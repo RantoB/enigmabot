@@ -24,7 +24,7 @@ nlp = spacy.load("fr_core_news_md")
 
 ENIGMA_PKL = os.path.join("enigma.pkl")
 
-BOT_USER_INFO = os.path.join("bot_user_info", "bot_user_information.csv")
+BOT_USER_INFO = os.path.join("action_data", "bot_user_information.csv")
 
 SERVER = 'ssl0.ovh.net'
 PORT = 465
@@ -313,7 +313,7 @@ class FormRiddle(FormAction):
             else return None
             https://legacy-docs.rasa.com/docs/core/_modules/rasa_core_sdk/forms/"""
 
-        with open(ENIGMA_PKL, 'rb') as f:
+        with open("enigma.pkl", 'rb') as f:
             enigma_df = pickle.load(f)
 
         categories = enigma_df['Category'].unique()

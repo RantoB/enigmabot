@@ -282,13 +282,14 @@
 - faut-il prévoir quelque chose en particulier ?
 - que faut-il emporter ?
 
-## intent:faq/schedule
+## intent:faq/when
 - sur quels horaires puis je venir ?
 - à quel moment de la journée est-il possible de jouer ?
 - matin
 - Après-midi
 - soirée
 - quels sont les créneaux horaire de jeux
+- quelle heure
 
 ## intent:faq/reduced_fee
 - y a til un tarif réduit pour les personnes a mobilité réduite ?

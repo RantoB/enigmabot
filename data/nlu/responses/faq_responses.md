@@ -99,5 +99,5 @@
 - Prévoyez exactement la même chose que lorsque vous faites une après-midi en ville.
 
 ## faq
-* faq/schedule
+* faq/when
 -  Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h.

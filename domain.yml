@@ -34,24 +34,26 @@ entities:
 slots:
   game:
     type: text
-  user_name:
-    type: text
-  user_email:
-    type: unfeaturized
   riddle_category:
     type: unfeaturized
   riddle_solution:
     type: unfeaturized
+  user_email:
+    type: unfeaturized
+  user_name:
+    type: unfeaturized
   user_riddle_solution:
     type: unfeaturized
-  name_prompt:
-    type: text
 responses:
   utter_greet:
-  - text: "Bonjour, comment est-ce que je peux vous aider : cherchez-vous un renseigner sur les activités proposées par ENIGMA Strasbourg ou souhaitez-vous résoudre une énigme ?"
-  - text: Hello, souhaitez-vous résoudre une éngme ou cherchez-vous quelques chose en particulier concernant les activités proposées par ENIGMA Strasbourg ?
-      que souhaitez-vous savoir ?
-  - text: Bienvenue, je peux vous soumettre une énigme ou vous renseigner au sujet des activités ENIGMA Strasbourg, que souhaitez-vous ?
+  - text: 'Bonjour, comment est-ce que je peux vous aider : cherchez-vous un renseigner
+      sur les activités proposées par ENIGMA Strasbourg ou souhaitez-vous résoudre
+      une énigme ?'
+  - text: Hello, souhaitez-vous résoudre une éngme ou cherchez-vous quelques chose
+      en particulier concernant les activités proposées par ENIGMA Strasbourg ? que
+      souhaitez-vous savoir ?
+  - text: Bienvenue, je peux vous soumettre une énigme ou vous renseigner au sujet
+      des activités ENIGMA Strasbourg, que souhaitez-vous ?
   utter_question:
   - text: Quelle est votre question ?
   - text: Que souhaitez-vous savoir ?
@@ -82,7 +84,7 @@ responses:
   utter_iamabot:
   - text: Je suis un robot développé par Monsieur Bertrand !
   utter_societe_musterieuse:
-  - text: "La Société Mystérieuse de Strasbourg compvous de nombreux érudits qui ont\
+  - text: "La Société Mystérieuse de Strasbourg compte de nombreux érudits qui ont\
       \ façonné la ville de Strasbourg. Ils vous ont laissé quelques énigmes afin\
       \ de rencontrer les meilleurs d’entre vous, de vous tester et peut-être même\
       \ de les rejoindre. \nSerez-vous de taille à résoudre les énigmes des grandes\
@@ -100,14 +102,15 @@ responses:
   - text: souhaitez-vous connaître le pitch du second jeu ?
   - text: Je vous donne le pitch de l'autre jeu ?
   utter_subscribe:
-  - text: Souhaitez-vous rester informé des prochaines actialités d'ENIGMA Strasbourg ?
+  - text: Souhaitez-vous rester informé des prochaines actialités d'ENIGMA Strasbourg
+      ?
   - text: Souhaitez-vous recevoir les dernières infos d'ENIGMA Strasbourg ?
   utter_ask_user_name:
-  - text: "Entrez votre prénom:"
+  - text: 'Entrez votre prénom:'
   utter_ask_user_email:
-  - text: "Entrez votre adresse e-mail:"
+  - text: 'Entrez votre adresse e-mail:'
   utter_correct_info:
-  - text: "Vous pouvez rentrer vos informations une nouvelle fois:"
+  - text: 'Vous pouvez rentrer vos informations une nouvelle fois:'
 actions:
 - action_which_game
 - action_default_fallback
@@ -125,5 +128,5 @@ actions:
 - action_reset_subscribe_slots
 - action_check_active_form
 forms:
-  - form_riddle
-  - form_subscribe
+- form_riddle
+- form_subscribe
