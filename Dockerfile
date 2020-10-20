@@ -18,6 +18,13 @@ RUN python -m spacy download fr_core_news_md
 # Copy actions folder to working directory
 COPY ./actions /app/actions
 COPY ./enigma.pkl /app/enigma.pkl
+COPY ./action_data /app/action_data
+
+# Make a volume with a folder
+# VOLUME /app/action_data
+
+# Add a user and add permission to this user
+RUN useradd -u 1001 appuser && chown -R appuser:appuser /app
 
 # By best practices, don't run the code with root user
-USER 1001
+USER appuser

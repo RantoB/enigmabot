@@ -9,5 +9,8 @@ events.*
 # __pycache__
 __pycache__/
 
+# jupyter notebook
+.ipynb_checkpoints/
+
 credentials.yml
 docker-compose.yml
