@@ -28,6 +28,10 @@
 - fais moi une enigme [junior](riddle_category)
 - fais moi une énigme [stéréotypes](riddle_category)
 - tu connais une [charade](riddle_category)
+- une [devinette](riddle_category)
+- faire une [devinette](riddle_category)
+- des [devinettes](riddle_category)
+- faire des [devinettes](riddle_category)
 
 ## intent:answer_the_riddle
 - [Rep:](user_riddle_solution) le chat

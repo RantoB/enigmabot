@@ -22,6 +22,8 @@ intents:
 - inform_name
 - inform_email
 - WTF
+- no_question
+- looking_for_something
 entities:
 - user_name
 - user_email
@@ -31,9 +33,15 @@ entities:
 - user_riddle_solution
 - name_prompt
 - email_prompt
+- token_solution_len
+- riddle
 slots:
   game:
     type: text
+  riddle:
+    type: unfeaturized
+  token_solution_len:
+    type: unfeaturized
   riddle_category:
     type: unfeaturized
   riddle_solution:
@@ -46,14 +54,10 @@ slots:
     type: unfeaturized
 responses:
   utter_greet:
-  - text: 'Bonjour, comment est-ce que je peux vous aider : cherchez-vous un renseigner
-      sur les activités proposées par ENIGMA Strasbourg ou souhaitez-vous résoudre
-      une énigme ?'
-  - text: Hello, souhaitez-vous résoudre une éngme ou cherchez-vous quelques chose
-      en particulier concernant les activités proposées par ENIGMA Strasbourg ? que
-      souhaitez-vous savoir ?
-  - text: Bienvenue, je peux vous soumettre une énigme ou vous renseigner au sujet
-      des activités ENIGMA Strasbourg, que souhaitez-vous ?
+  - text: Bonjour, je peux vous aider à trouver une info sur les activités d'ENIGMA Strasbourg, posez-moi vos questions  ?
+  - text: Bonjour, cherchez-vous un renseigner sur les activités proposées par ENIGMA Strasbourg ?
+  - text: Hello, que souhaitez-vous savoir sur les activités proposées par ENIGMA Strasbourg ?
+  - text: Bienvenue, comment est-ce que je peux vous renseigner sur les jeux de piste d'ENIGMA Strasbourg ?
   utter_question:
   - text: Quelle est votre question ?
   - text: Que souhaitez-vous savoir ?
@@ -71,7 +75,7 @@ responses:
   - text: Est-ce que vous souhaitez répondre à une énigme ?
   utter_one_more_riddle:
   - text: Est-ce que vous souhaitez faire encore une énigme ?
-  - text: Une énimge de plus ?
+  - text: Une énigme de plus ?
   - text: Encore une énigme ?
   utter_thanks:
   - text: Merci à vous de m'avoir sollicité.
@@ -83,7 +87,7 @@ responses:
   - text: À la prochaine !
   utter_iamabot:
   - text: Je suis un robot développé par Monsieur Bertrand !
-  utter_societe_musterieuse:
+  utter_societe_mysterieuse:
   - text: "La Société Mystérieuse de Strasbourg compte de nombreux érudits qui ont\
       \ façonné la ville de Strasbourg. Ils vous ont laissé quelques énigmes afin\
       \ de rencontrer les meilleurs d’entre vous, de vous tester et peut-être même\
@@ -94,7 +98,7 @@ responses:
       \ Aidez-moi à fouiller le passé pour le prouver ou le démentir !\"\nJean est\
       \ en possession d’une lettre d’un aïeul contredisant les archives historiques\
       \ qui font de son arrière-grand père l’auteur du Meurtre qui a eu lieu à la\
-      \ Krutenau en 1913. Il vous sollicivous pour investiguer et connaître la vérité.\
+      \ Krutenau en 1913. Il vous sollicite pour investiguer et connaître la vérité.\
       \ \nUne Machine à Immersion Spatio-Temporelle sera mise à votre disposition\
       \ pour vous permettre de revoir certaines scènes et de comprendre ce qu’il s’est\
       \ vraiment passé."
@@ -102,7 +106,7 @@ responses:
   - text: souhaitez-vous connaître le pitch du second jeu ?
   - text: Je vous donne le pitch de l'autre jeu ?
   utter_subscribe:
-  - text: Souhaitez-vous rester informé des prochaines actialités d'ENIGMA Strasbourg
+  - text: Souhaitez-vous rester informé des prochaines actualités d'ENIGMA Strasbourg
       ?
   - text: Souhaitez-vous recevoir les dernières infos d'ENIGMA Strasbourg ?
   utter_ask_user_name:

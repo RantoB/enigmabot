@@ -26,6 +26,8 @@ ENIGMA_PKL = os.path.join("enigma.pkl")
 
 BOT_USER_INFO = os.path.join("action_data", "bot_user_information.csv")
 
+RIDDLE_RESULTS = os.path.join("action_data", "riddle_results.csv")
+
 SERVER = 'ssl0.ovh.net'
 PORT = 465
 SENDER = os.environ.get('LOGIN_ENIGMASTRAS_MAILBOX')
@@ -36,15 +38,20 @@ def get_riddle(enigma_df: pd.core.frame.DataFrame, category: str):
     for a given category, will return a random riddle, its name and its solution
     from the enigma_df dataframe
     """
+
     enigma_cat = enigma_df[enigma_df['Category'] == category]
     e = np.random.randint(0, enigma_cat.shape[0])
+
     riddle_name = enigma_cat['Title'].iloc[e]
     riddle = enigma_cat['Riddle'].iloc[e]
     solution = enigma_cat['Solution'].iloc[e]
-    return (riddle_name, riddle, solution)
+    token_solution_len = enigma_cat['Solution_length'].iloc[e]
+
+    return (riddle_name, riddle, solution, token_solution_len)
 
 def preprocess_spacy(sent: str) -> np.ndarray:
-    """string preprocessing function which returns a numpy array of tokens
+    """
+    string preprocessing function which returns a numpy array of tokens
     """
     doc = nlp(sent)
     tokens = np.char.lower(np.array([token.text for token in doc]))
@@ -90,37 +97,112 @@ def spacy_vec_sim_test(sentence_1: str, sentence_2: str) -> float:
     else:
         return (np.sort(sim)[-1] + np.sort(sim)[-2]) / 2
 
-def check_answer(solution: str, user_solution: str) -> bool:
+def answer_result(mark: int):
+    """
+    Get a int 0 <= mark <= 4
+    return:
+    0: the answer is wrong
+    1: the answer is probably wrong
+    2: not clear
+    3: the answer is probably right
+    4: the answer is right
+    """
+
+    messages = list()
+
+    if mark == 0:
+        messages.append("Dommage, c'est une mauvaise réponse !")
+        messages.append("Et non, mauvaise réponse")
+
+    elif mark == 1:
+        messages.append("J'ai bien peur que cela soit une mauvaise réponse.")
+        messages.append("Il me semble que cela soit une mauvaise réponse.")
+
+    elif mark == 2:
+        messages.append("Je ne suis pas tout à fait sûr de ta réponse.")
+        messages.append("La réponse est difficile à évaluer.")
+
+    elif mark == 3:
+        messages.append("Sans en être entièrement sûr, je crois que ta réponse est correcte.")
+        messages.append("Pas sûr et certains, mais je crois que ta réponse est correcte.")
+
+    elif mark == 4:
+        messages.append("C'est une excellente réponse !")
+        messages.append("Bravo, c'est une bonne réponse !")
+
+    message = np.random.choice(np.array(messages))
+    return message
+
+def compare_answer(solution: str, user_solution: str) -> tuple:
     """
     based on the cosine_test and spacy_vec_sim_test inicators, will returns
     wether the user answer to the riddle seems to be right or wrong.
+    Return:
+    - cosine_indicator: indicator based on cosine similarity
+    - spacy_vec_sim_indicator: indicator based on spacy vector similarity
+    - mark: mark attributed to the user solution
+    - answer_result(mark): answer do display
     """
+    # Cosine similarity indicator
     try:
-        indicator_1 = cosine_test(solution, user_solution)
+        cosine_indicator = cosine_test(solution, user_solution)
     except:
-        indicator_1 = 0
+        cosine_indicator = 0
 
-    indicator_2 = spacy_vec_sim_test(solution, user_solution)
+    # Spacy vector similarity indicator
+    spacy_vec_sim_indicator = spacy_vec_sim_test(solution, user_solution)
 
-    solution = preprocess_spacy(solution)
+    mark = int
 
-    if len(solution) == 1:
-        if indicator_1 > .6 or (indicator_1 > 0 and indicator_2 > .7):
-            return True
+    if len(solution) == 1: # Only one token in the solution
+        if cosine_indicator >= 1 and spacy_vec_sim_indicator >= 1:
+            mark = 4
+
+        if cosine_indicator > .6 or (cosine_indicator > 0 and spacy_vec_sim_indicator > .7):
+            mark = 3
+
+        if cosine_indicator > .3 or (cosine_indicator > 0 and spacy_vec_sim_indicator > .5):
+            mark = 2
+
+        elif cosine_indicator == 0 and spacy_vec_sim_indicator == 0:
+            mark = 0
+
         else:
-            return False
+            mark = 1
 
-    elif len(solution) == 2:
-        if indicator_1 > .1 or indicator_2 > .45:
-            return True
-        else:
-            return False
+    elif len(solution) == 2: # Excatly two tokens in the solution
+        if cosine_indicator >= 1 and spacy_vec_sim_indicator >= 1:
+            mark = 4
 
-    else:
-        if indicator_1 > .5 or indicator_2 > .5:
-            return True
+        elif cosine_indicator > .1 or spacy_vec_sim_indicator > .45:
+            mark = 3
+
+        elif cosine_indicator > .05 or spacy_vec_sim_indicator > .3:
+            mark = 2
+
+        elif cosine_indicator == 0 and spacy_vec_sim_indicator == 0:
+            mark = 0
+
         else:
-            return False
+            mark = 1
+
+    else: # More than two tokens in the solution
+        if cosine_indicator >= 1 and spacy_vec_sim_indicator >= 1:
+            mark = 4
+
+        elif cosine_indicator > .5 or spacy_vec_sim_indicator > .5:
+            mark = 3
+
+        elif cosine_indicator > .2 or spacy_vec_sim_indicator > .2:
+            mark = 2
+
+        elif cosine_indicator == 0 and spacy_vec_sim_indicator == 0:
+            mark = 0
+
+        else:
+            mark = 1
+
+    return cosine_indicator, spacy_vec_sim_indicator, mark, answer_result(mark)
 
 def send_mail(receiver: str, subject: str, body: str):
     msg = MIMEText(body)
@@ -137,6 +219,16 @@ def save_information(user_name: str, user_email: str):
     with open(BOT_USER_INFO, "a") as f:
         writer = csv.writer(f)
         writer.writerow([user_name, user_email])
+    return None
+
+def save_riddle_results(riddle: str, solution: str, user_solution: str, token_solution_len: int, cosine_indicator: int, spacy_vec_sim_indicator: int, mark: int):
+
+    row = [riddle, solution, user_solution, token_solution_len, cosine_indicator, spacy_vec_sim_indicator, mark]
+
+    with open(RIDDLE_RESULTS, "a") as f:
+        writer = csv.writer(f)
+        writer.writerow(row)
+
     return None
 
 class ActionWhichGame(Action):
@@ -166,7 +258,7 @@ class ActionRequestedGame(Action):
         game = tracker.get_slot("game")
 
         if game.lower() == "société mystérieuse de Strasbourg".lower():
-            dispatcher.utter_message(template="utter_societe_musterieuse")
+            dispatcher.utter_message(template="utter_societe_mysterieuse")
             dispatcher.utter_message(template="utter_next_game")
         else :
             dispatcher.utter_message(template="utter_meurtre_krutenau")
@@ -201,7 +293,7 @@ class ActionNextGame(Action):
                 dispatcher.utter_message(template="utter_meurtre_krutenau")
                 dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
             else :
-                dispatcher.utter_message(template="utter_societe_musterieuse")
+                dispatcher.utter_message(template="utter_societe_mysterieuse")
                 dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
 
         elif deny_or_affirm == 'deny':
@@ -339,13 +431,15 @@ class FormRiddle(FormAction):
                 if slot == "user_riddle_solution":
                     category = tracker.get_slot('riddle_category')
 
-                    riddle_name, riddle, solution = get_riddle(enigma_df, category[0])
+                    riddle_name, riddle, solution, token_solution_len = get_riddle(enigma_df, category[0])
+
+                    token_solution_len = str(token_solution_len)
 
                     how_to_answer = "\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
 
                     dispatcher.utter_message( "** " + riddle_name + " **" + "\n" + riddle + how_to_answer)
 
-                    return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution)]
+                    return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution), SlotSet("riddle", riddle), SlotSet("token_solution_len", token_solution_len)]
 
         """
         -------------------------------------
@@ -367,17 +461,17 @@ class FormRiddle(FormAction):
         user_answer = tracker.latest_message.get('text')
         user_riddle_solution = re.sub(r'Rep:.', '', user_answer)
         riddle_solution = tracker.get_slot('riddle_solution')
+        riddle = tracker.get_slot('riddle')
+        token_solution_len = tracker.get_slot('token_solution_len')
 
-        if check_answer(riddle_solution, user_riddle_solution):
-            message = f"Sans en être entièrement sûr, je crois que votre réponse est correcte.\
-            \nLa bonne réponse est :\n{riddle_solution}"
-        else:
-            message = f"J'ai bien peur que cela soit une mauvaise réponse.\
-            \nLa bonne réponse est :\n{riddle_solution}"
+        cosine_indicator, spacy_vec_sim_indicator, mark, message = compare_answer(riddle_solution, user_riddle_solution)
+
+        save_riddle_results(riddle, riddle_solution, user_riddle_solution, token_solution_len, cosine_indicator, spacy_vec_sim_indicator, mark)
 
         dispatcher.utter_message(message)
+        dispatcher.utter_message(f"La bonne réponse est :\n{riddle_solution}")
 
-        return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None)]
+        return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None), SlotSet("riddle", None), SlotSet("token_solution_len", None)]
 
 class FormSubscribe(FormAction):
     """Custom form action to fill the user riddle answer."""

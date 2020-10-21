@@ -52,7 +52,7 @@
 
 ## faq
 * faq/toilet
-  - Vous pourrez trouver des toilettes publiques à la place du château (cathédrale), à la place Kléber, au parking Brogli, au barage Vauban.\nVous avez aussi la liberté de faire une pause café.
+  - Vous pourrez trouver des toilettes publiques à la place du château (cathédrale), à la place Kléber, au parking Brogli, au barrage Vauban.\nVous avez aussi la liberté de faire une pause café.
 
 ## faq
 * faq/weather

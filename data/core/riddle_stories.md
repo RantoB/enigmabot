@@ -1,5 +1,5 @@
 ## enigmabot make a riddle
-> check_if_question_or_riddle
+> check_if_question_or_deny
 * ask_for_riddle OR inform_kind_of_riddle{"riddle_category": "logique"}
   - form_riddle
   - form{"name": "form_riddle"}

@@ -20,9 +20,6 @@ COPY ./actions /app/actions
 COPY ./enigma.pkl /app/enigma.pkl
 COPY ./action_data /app/action_data
 
-# Make a volume with a folder
-# VOLUME /app/action_data
-
 # Add a user and add permission to this user
 RUN useradd -u 1001 appuser && chown -R appuser:appuser /app
 

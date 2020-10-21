@@ -1,7 +1,7 @@
 ## introduction
 * greet
   - utter_greet
-> check_if_question_or_riddle
+> check_if_question_or_deny
 
 ## deny riddle proposition and suggest FAQ
 > check_answer_about_riddle
@@ -10,6 +10,7 @@
 > check_answer_about_ENIGMA_Stras_after_riddle
 
 ## deny FAQ and propose riddle
+> check_if_question_or_deny
 > check_answer_about_ENIGMA_Stras
 * deny
   - utter_propose_riddle
@@ -48,11 +49,11 @@
 * goodbye
   - utter_goodbye
 
-## Direct deny
-> check_if_question_or_riddle
-* deny
-  - utter_question
-> check_if_question_or_riddle
+## No question
+> check_if_question_or_deny
+* no_question
+  - utter_propose_riddle
+> check_answer_about_riddle_after_question_ENIGMA_Stras
 
 ## WTF
 * WTF

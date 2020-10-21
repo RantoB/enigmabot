@@ -7,6 +7,7 @@
 - Coucou
 - hello !
 - helo
+- salut
 
 ## intent:goodbye
 - au revoir
@@ -36,6 +37,18 @@
 - aller, vas-y
 - je ne dis pas non
 - vas-y
+
+## intent:looking_for_something
+- je cherche un renseignement
+- un renseignement
+- j'ai une question
+- j'ai des questions
+- je cherhe à savoir quelque chose
+
+## intent:no_question
+- non, je n'ai pas de question
+- je n'ai pas de question
+- pas de question
 
 ## intent:deny
 - non

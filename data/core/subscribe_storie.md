@@ -1,5 +1,5 @@
 ## subscribe
-> check_if_question_or_riddle
+> check_if_question_or_deny
 > check_answer_about_subscribe
 * affirm OR how_to_subscribe
   - form_subscribe
