@@ -37,6 +37,7 @@
 - aller, vas-y
 - je ne dis pas non
 - vas-y
+- carrément
 
 ## intent:looking_for_something
 - je cherche un renseignement

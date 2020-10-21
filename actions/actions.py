@@ -97,7 +97,7 @@ def spacy_vec_sim_test(sentence_1: str, sentence_2: str) -> float:
     else:
         return (np.sort(sim)[-1] + np.sort(sim)[-2]) / 2
 
-def answer_result(mark: int):
+def bot_riddle_answer_message(mark: int):
     """
     Get a int 0 <= mark <= 4
     return:
@@ -117,14 +117,17 @@ def answer_result(mark: int):
     elif mark == 1:
         messages.append("J'ai bien peur que cela soit une mauvaise réponse.")
         messages.append("Il me semble que cela soit une mauvaise réponse.")
+        messages.append("Je crois que c'est une mauvaise réponse, désolé si je fais erreur, je suis encore en phase d'apprentissage.")
 
     elif mark == 2:
         messages.append("Je ne suis pas tout à fait sûr de ta réponse.")
         messages.append("La réponse est difficile à évaluer.")
+        messages.append("Je n'arrive pas à évaluer la répopnse, excusez-moi, il me faut encore un peu de temps pour que je peaufine mon apprentissage.")
 
     elif mark == 3:
         messages.append("Sans en être entièrement sûr, je crois que ta réponse est correcte.")
         messages.append("Pas sûr et certains, mais je crois que ta réponse est correcte.")
+        messages.append("Il me semble que la réponse est exacte. Je suis encore en phase d'apprentissage, merci de votre indulgnce en cas d'erreur de ma part.")
 
     elif mark == 4:
         messages.append("C'est une excellente réponse !")
@@ -141,7 +144,7 @@ def compare_answer(solution: str, user_solution: str) -> tuple:
     - cosine_indicator: indicator based on cosine similarity
     - spacy_vec_sim_indicator: indicator based on spacy vector similarity
     - mark: mark attributed to the user solution
-    - answer_result(mark): answer do display
+    - bot_riddle_answer_message(mark): answer message to display
     """
     # Cosine similarity indicator
     try:
@@ -202,10 +205,9 @@ def compare_answer(solution: str, user_solution: str) -> tuple:
         else:
             mark = 1
 
-    return cosine_indicator, spacy_vec_sim_indicator, mark, answer_result(mark)
+    return cosine_indicator, spacy_vec_sim_indicator, mark, bot_riddle_answer_message(mark)
 
-def send_mail(receiver: str, subject: str, body: str):
-    msg = MIMEText(body)
+def send_mail(receiver: str, subject: str, msg):
     msg['Subject'] = subject
     msg['From'] = SENDER
     msg['To'] = receiver
@@ -540,9 +542,20 @@ class ActionSaveInformation(Action):
             user_email = user_email[0]
 
         subject = "ENIGMA Strasbourg"
+
+        msg = MIMEText(f'<html><body><h1>\nBienvenue {user_name} !</h1>' + \
+        '<p>Votre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d\'ENIGMA Strasbourg.</p>' + \
+        '<p>Merci d\'avoir tester Enigmabot 🤖, cela permet d\'améliorer sa robustesse.</p>' + \
+        '<a href="https://enigmastrasbourg.com/"> ENIGMA Strasbourg</a>' + \
+        '<p>Mystérieusement...</p>' + \
+        '</body></html>', 'html', 'utf-8')
+#         msg.attach(MIMEText('<html><body><h1>Hello</h1>' +
+# '<p><img src="cid:0"></p>' +
+# '</body></html>', 'html', 'utf-8'))
+
         body = f"\nBienvenue {user_name} !\nVotre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d'ENIGMA Strasbourg.\n\nMystérieusement..."
 
-        send_mail(user_email, subject, body)
+        send_mail(user_email, subject, msg)
 
         save_information(user_name, user_email)
 
