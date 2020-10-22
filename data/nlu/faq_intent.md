@@ -195,7 +195,6 @@
 
 ## intent:faq/animal
 - je peux venir avec mon animal
-- je peux être accompagné d'un animal ?
 - je peux être accompagné d'un chien ?
 - j'ai un chien
 

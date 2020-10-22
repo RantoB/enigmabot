@@ -15,7 +15,9 @@ import csv
 import os
 
 import smtplib
+from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
 
 import spacy
 # import fr_core_news_md
@@ -32,6 +34,7 @@ SERVER = 'ssl0.ovh.net'
 PORT = 465
 SENDER = os.environ.get('LOGIN_ENIGMASTRAS_MAILBOX')
 PSW = os.environ.get('PASSWORD_ENIGMASTRAS_MAILBOX')
+LOGO_SIGNATURE = os.path.join("action_data", "logo_signature.jpg")
 
 def get_riddle(enigma_df: pd.core.frame.DataFrame, category: str):
     """
@@ -206,16 +209,6 @@ def compare_answer(solution: str, user_solution: str) -> tuple:
             mark = 1
 
     return cosine_indicator, spacy_vec_sim_indicator, mark, bot_riddle_answer_message(mark)
-
-def send_mail(receiver: str, subject: str, msg):
-    msg['Subject'] = subject
-    msg['From'] = SENDER
-    msg['To'] = receiver
-
-    with smtplib.SMTP_SSL(SERVER, PORT) as smtp:
-        smtp.login(SENDER, PSW)
-        smtp.sendmail(SENDER, receiver, msg.as_string())
-    return None
 
 def save_information(user_name: str, user_email: str):
     with open(BOT_USER_INFO, "a") as f:
@@ -541,21 +534,45 @@ class ActionSaveInformation(Action):
         if type(user_email) == list:
             user_email = user_email[0]
 
-        subject = "ENIGMA Strasbourg"
+        # Create the root message and fill in the from, to, and subject headers
+        msgRoot = MIMEMultipart('related')
+        msgRoot['Subject'] = 'ENIGMA Strasbourg - merci d\'avoir testé Enigmabot'
+        msgRoot['From'] = SENDER
+        msgRoot['To'] = user_email
 
-        msg = MIMEText(f'<html><body><h1>\nBienvenue {user_name} !</h1>' + \
-        '<p>Votre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d\'ENIGMA Strasbourg.</p>' + \
-        '<p>Merci d\'avoir tester Enigmabot 🤖, cela permet d\'améliorer sa robustesse.</p>' + \
-        '<a href="https://enigmastrasbourg.com/"> ENIGMA Strasbourg</a>' + \
-        '<p>Mystérieusement...</p>' + \
-        '</body></html>', 'html', 'utf-8')
-#         msg.attach(MIMEText('<html><body><h1>Hello</h1>' +
-# '<p><img src="cid:0"></p>' +
-# '</body></html>', 'html', 'utf-8'))
+        # Encapsulate the plain and HTML versions of the message body in an
+        # 'alternative' part, so message agents can decide which they want to display.
+        msgAlternative = MIMEMultipart('alternative')
+        msgRoot.attach(msgAlternative)
 
-        body = f"\nBienvenue {user_name} !\nVotre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d'ENIGMA Strasbourg.\n\nMystérieusement..."
+        # We reference the image in the IMG SRC attribute by the ID we give it below
+        body = f"""\
+        <html>
+            <body>
+                <h2>Bienvenue {user_name} !</h2>
+                <p>Votre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d\'ENIGMA Strasbourg.</p>
+                <p>Merci d\'avoir tester Enigmabot 🤖, cela permet d\'améliorer ses capacités.</p>
+                <p>Mystérieusement...</p>
+                <a href="https://enigmastrasbourg.com/"> <img src="cid:image1" alt="logo_signature" style="width:320px;height:120px;"></a>
+            </body>
+        </html>
+        """
+        msgText = MIMEText(body, 'html')
+        msgAlternative.attach(msgText)
 
-        send_mail(user_email, subject, msg)
+        # This example assumes the image is in the current directory
+        fp = open(LOGO_SIGNATURE, 'rb')
+        msgImage = MIMEImage(fp.read())
+        fp.close()
+
+        # Define the image's ID as referenced above
+        msgImage.add_header('Content-ID', '<image1>')
+        msgRoot.attach(msgImage)
+
+        # Send the email (this example assumes SMTP authentication is required)
+        with smtplib.SMTP_SSL(SERVER, PORT) as smtp:
+            smtp.login(SENDER, PSW)
+            smtp.sendmail(SENDER, user_email, msgRoot.as_string())
 
         save_information(user_name, user_email)
 
