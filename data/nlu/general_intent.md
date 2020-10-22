@@ -8,6 +8,7 @@
 - hello !
 - helo
 - salut
+- hola
 
 ## intent:goodbye
 - au revoir
@@ -18,6 +19,7 @@
 - a bientôt
 - a+
 - à toute
+- allez ciao
 
 ## intent:affirm
 - oui
@@ -66,6 +68,7 @@
 - pas du tout
 - pas maintenant
 - non merci
+- j'ai pas envie
 
 ## intent:bot_challenge
 - es-tu un chatbot ?

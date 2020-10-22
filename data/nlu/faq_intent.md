@@ -25,6 +25,7 @@
 - le prix ?
 - fric
 - combien ca coute
+- Quel prix ?
 
 ## intent:faq/general_sequence_of_the_game
 - Comment est-ce que cela se déroule ?
@@ -46,6 +47,7 @@
 - où irons-nous ?
 - c'est où ?
 - j'aimerais savoir où est-ce que cela se passe
+- C'est ou ?
 
 ## intent:faq/how_much_time
 - Combien de temps est-ce que cela dure ?
@@ -58,6 +60,7 @@
 - Est-ce qu'il faut marcher longtemps ?
 - il faut marcher beaucoup
 - combien de temps dure le jeu ?
+- Combien de temps ça prend ?
 
 ## intent:faq/who
 - Qui peut faire les jeux de piste ?
@@ -84,6 +87,7 @@
 - aura-t-on une assistance ?
 - pour se faire aider
 - nous avons besoin d'aide
+- OK cool. Je suis bloqué. Peux tu m'aider ?
 
 ## intent:faq/how_many_people
 - Combien de participants ?
@@ -96,6 +100,7 @@
 - Est-il possible de jouer à 2 ?
 - j'aimerais venir avec 4 amis c'est possible ?
 - quel est le nombre maximum pour un groupe ?
+- à combien maximum ?
 
 ## intent:faq/smartphone
 - Je n’ai pas de smartphone, est-ce que je peux jouer ?
@@ -178,6 +183,7 @@
 - il fait mauvais temps
 - le temps est mauvais
 - la météo
+- Le temps est mauvais. Puis je annuler ?
 
 ## intent:faq/cancel
 - Est-il possible d'annuler ?
@@ -192,11 +198,13 @@
 - Remboursement ?
 - J'aimerais être rembourser
 - est ce que si j'annule je peux être remboursé ?
+- Le jeu ne me plaît pas. Tu peux me rembourser ?
 
 ## intent:faq/animal
 - je peux venir avec mon animal
 - je peux être accompagné d'un chien ?
 - j'ai un chien
+- puis je venir avec mon lapin ?
 
 ## intent:faq/kids
 - avec une poussette ?
@@ -215,6 +223,9 @@
 - pour les enfants
 - mes enfants m'accompagnent
 - je suis avec les mômes
+- Es ce interdit au mineur ?
+- à partir de quel age est ce conseillé ?
+- puis-je venir avec un bébé ?
 
 ## intent:faq/booking
 - quand est-ce qu'on peut jouer ?
@@ -274,6 +285,7 @@
 - faut-il prévoir à manger
 - si nous avons faim
 - chou croute
+- OK merci. Peux on faire une pause pour manger durant le jeu ?
 
 ## intent:faq/equipment
 - est ce qu'il faut prévoir une tenue sportive ?
@@ -289,12 +301,32 @@
 - soirée
 - quels sont les créneaux horaire de jeux
 - quelle heure
+- à quelle heure puis je jouer
 
 ## intent:faq/reduced_fee
 - y a til un tarif réduit pour les personnes a mobilité réduite ?
 - tarif réduit tarif étudiant
 - demandeur d'emploi
 - demi-tarif
+
+## intent:out_of_scope/sex
+- Tu suces ?
+
+## intent:faq/other_language_games
+- avez vous une version anglaise ?
+- est ce difficile ? *
+
+## intent:faq/team_building
+- puis je organiser une sortie d'entreprise ?
+
+## intent:faq/alcohol
+- Pourrais-je picoler pendant le parcours ?
+
+## intent:laugh
+- je rigole
+
+## intent:chitchat/how_are_you
+- Coucou, ça va ?
 
 ## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau

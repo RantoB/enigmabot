@@ -13,6 +13,8 @@
 - quel type de jeu
 - combien y a t'il d'histoires ?
 - j'aimerais connaître les jeux
+- peux-tu me présenter les jeux ?
+- quels sont les différents scénarios ?
 
 ## intent:societe_mysterieuse
 - C'est quoi  [société mystérieuse de Strasbourg](game)

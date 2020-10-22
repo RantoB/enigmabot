@@ -5,9 +5,10 @@
 - devinettes
 - pose moi une énigme
 - t'aurais une bonne énigme ?
+- pourrais-je avoir une nouvelle enigme ?
+- énigme
 
 ## intent:inform_kind_of_riddle
-
 - [logique](riddle_category)
 - [devinettes](riddle_category)
 - [charade](riddle_category)
@@ -18,7 +19,6 @@
 - [lois naturelles](riddle_category)
 - [stéréotypes](riddle_category)
 - [junior](riddle_category)
-- [devinettes](riddle_category)
 - fais moi une [devinette](riddle_category)
 - j'ai envie de faire une énigme [classique](riddle_category)
 - j'ai envie de faire une énigme [logique](riddle_category)
@@ -47,14 +47,14 @@
 - [Rep:](user_riddle_solution) 28...
 - [Rep:](user_riddle_solution) On ne peut pas doubler le dernier, car par définition il n'y a personne derrière le dernier...
 
+## synonym:Rep:
+- rep:
+- rep :
+- Rep :
+- réponse:
+- Réponse :
+- re :
+- Re:
+
 ## synonym:devinettes
 - devinette
-
-## synonym:Rep:
-  - rep:
-  - rep :
-  - Rep :
-  - réponse:
-  - Réponse :
-  - re :
-  - Re:
