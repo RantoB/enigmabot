@@ -45,6 +45,7 @@
 - vas-y
 - carrément
 - exact
+- Ouiiii
 
 ## intent:looking_for_something
 - je cherche un renseignement
@@ -78,3 +79,6 @@
 ## intent:thanks
 - merci
 - merci beaucoup
+
+## intent:ask_for_riddle
+- Une autre

@@ -3,6 +3,7 @@
 - Comment tu t'appelles ?
 - comment tu t'appelle ?
 - C'est quoi ton blaze ?
+- comment tu tappelles
 
 ## intent:how_are_you
 - Coucou, ça va ?
@@ -41,3 +42,21 @@
 - qu'est-ce que tu sais faire ?
 - quelle est ta spécialité ?
 - qu'est-ce que tu es capable de faire ?
+
+## intent:faq/ENIGMA_Strasbourg
+- Est ce que c’est sur l’histoire de Strasbourg ou une histoire fictive ?
+- Cela permet il de découvrir Strasbourg ?
+- Permet t’il d’appendre l’histoire de Strasbourg ?
+
+## intent:out_of_scope/other
+- Plutôt cuir ou moustache ?
+
+## intent:faq/walk_bike
+- On peut le faire en vélo?
+
+## intent:faq/day_night
+- Est ce c’est mieux de le faire la nuit ou le jour?
+- Est ce possible de faire le jeu de nuit ?
+
+## intent:faq/present
+- Offres tu un cadeau à la fin
