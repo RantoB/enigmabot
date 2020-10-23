@@ -14,6 +14,7 @@
 - salut
 - hola
 - Ouaich
+- Yo
 
 ## intent:goodbye
 - au revoir
