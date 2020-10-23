@@ -1,5 +1,15 @@
 ## faqs
-> check_if_question_or_deny
+* faq
+  - action_check_active_form
+  - respond_faq
+  - utter_one_more_question
+> check_answer_about_ENIGMA_Stras
+
+## Greetings then FAQ
+* greet
+  - utter_greet
+* affirm
+  - utter_question
 * faq
   - action_check_active_form
   - respond_faq
@@ -7,7 +17,6 @@
 > check_answer_about_ENIGMA_Stras
 
 ## affirm FAQ without riddle before
-> check_if_question_or_deny
 > check_answer_about_ENIGMA_Stras
 * affirm OR looking_for_something
   - utter_question

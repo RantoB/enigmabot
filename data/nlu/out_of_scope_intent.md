@@ -31,3 +31,23 @@
 
 ## intent:out_of_scope/sex
 - Tu suces ?
+- bite
+- penis
+- sex
+- sexe
+- sucer des bites
+- voulez-vous coucher avec moi ?
+- c'est combien pour une pipe ?
+- j'aime le sexe
+- tu prends par derrière ?
+- sodomie
+- félation 
+
+## intent:insults
+- connard
+- t'es con
+- bouffon
+- enculé
+- je t'emmerde
+- fils de pute
+- petite pute

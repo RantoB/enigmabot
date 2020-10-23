@@ -1,3 +1,7 @@
+## intent:ENIGMA_bot_presentation
+- introduction
+- intro
+
 ## intent:greet
 - hey
 - hello
@@ -15,7 +19,6 @@
 - au revoir
 - ciao
 - tcho
-- salut
 - à bientôt
 - a bientôt
 - a+
@@ -41,13 +44,14 @@
 - je ne dis pas non
 - vas-y
 - carrément
+- exact
 
 ## intent:looking_for_something
 - je cherche un renseignement
 - un renseignement
 - j'ai une question
 - j'ai des questions
-- je cherhe à savoir quelque chose
+- je cherche à savoir quelque chose
 
 ## intent:no_question
 - non, je n'ai pas de question
@@ -70,14 +74,6 @@
 - pas maintenant
 - non merci
 - j'ai pas envie
-
-## intent:bot_challenge
-- es-tu un chatbot ?
-- es-tu un robot ?
-- es-tu un humain ?
-- est-ce que je parle à un robot ?
-- est-ce que je parle à une machine ?
-- est-ce que je parle à un humain ?
 
 ## intent:thanks
 - merci

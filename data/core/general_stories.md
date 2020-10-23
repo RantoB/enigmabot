@@ -1,7 +1,10 @@
 ## introduction
+* ENIGMA_bot_presentation
+- utter_presentation
+
+## Greetings
 * greet
   - utter_greet
-> check_if_question_or_deny
 
 ## deny riddle proposition and suggest FAQ
 > check_answer_about_riddle
@@ -10,7 +13,6 @@
 > check_answer_about_ENIGMA_Stras_after_riddle
 
 ## deny FAQ and propose riddle
-> check_if_question_or_deny
 > check_answer_about_ENIGMA_Stras
 * deny
   - utter_propose_riddle
@@ -50,7 +52,6 @@
   - utter_goodbye
 
 ## No question
-> check_if_question_or_deny
 * no_question
   - utter_propose_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
@@ -66,6 +67,10 @@
 * goodbye
   - utter_goodbye
 
-## bot challenge
-* bot_challenge
-  - utter_iamabot
+## insults
+* insults
+  - utter_keep_calm
+* insults
+  - utter_keep_calm
+* insults 
+  - utter_goodbye

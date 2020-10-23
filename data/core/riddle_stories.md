@@ -1,6 +1,6 @@
 ## enigmabot make a riddle
-> check_if_question_or_deny
 * ask_for_riddle OR inform_kind_of_riddle{"riddle_category": "logique"}
+  - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
   - form{"name": null}
@@ -10,6 +10,7 @@
 ## Bot proposed a riddle and user affirm without FAQ
 > check_answer_about_riddle
 * affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+  - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
   - form{"name": null}
@@ -19,6 +20,7 @@
 ## Bot proposed a riddle and user affirm after FAQ
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 * affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+  - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
   - form{"name": null}

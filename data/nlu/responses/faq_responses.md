@@ -20,7 +20,7 @@
 
 ## faq
   * faq/how_difficult
-    - Un système d'indice est mis en place si la difficulté est insurmontable. Les jeux sont donc accessibles à tous. \nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
+    - Un système d'indice est mis en place si la difficulté est insurmontable.\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
 
 ## faq
   * faq/how_many_people
@@ -44,7 +44,7 @@
 
 ## faq
 * faq/payment
-  - Le paiement se fait un ligne, par carte bancaire. \n[lien à créer...]\nAprès avoir payer, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].
+  - Le paiement se fait un ligne, par carte bancaire. \n[lien à créer...]\nAprès avoir payé, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].
 
 ## faq
 * faq/start
@@ -63,10 +63,6 @@
   - Si vous avez réservé une date, alors vous pouvez éventuellement la modifier et reporter. En revanche, il n'est pas possible de se faire rembourser.
 
 ## faq
-* faq/who_is_bertrand
-  - Bertrand est le concepteur des jeux de piste ENIGMA Strasbourg. Il est aussi le développeur de ce chatbot et de bien d'autres choses... [Pour en savoir plus à son sujet](https://www.linkedin.com/in/bertrand-burcker-a6192655/)
-
-## faq
 * faq/cancel
   - Il est possible d'annuler et de reporter, notamment si la météo est mauvaise.
 
@@ -80,7 +76,7 @@
 
 ## faq
 * faq/booking
-- La réservation n'a pas encore été mise en place, il faudra attendre encore un peu que le bot Enigmabot soit déployé sur www.enigmastrasbourg.com et interfacé avec un calendrier qui n'existe pas encore !
+- Les jeux peuvent avoir lieu à partir du 15 mars 2021. La réservation n'a pas encore été ouverte. Un calendrier sera bientôt mis en place !
 
 ## faq
 * faq/reduced_fee
@@ -101,3 +97,15 @@
 ## faq
 * faq/when
 -  Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h.
+
+## faq
+* faq/team_building
+- Il est possible de faire les jeux de piste ENIGMA Strasbourg dans le cadre d'une sortie Team Building de votre entreprise pour des petits groupes (15 - 18 personnes). En effet, vous pourrez vous répartir en 3 groupes, chaque groupe aura son propre set de matériel et vous pourrez mener le jeu en compétition. Faites votre demande particulière en écrivant à contact@enigmastrasbourg.com
+
+## faq
+* faq/other_language_games
+- Il sera bientôt possible de faire le jeu en anglais.
+
+## faq
+* faq/alcohol
+- Pour boire de l'alcool, vous vous doutez bien que vous n'avez pas besoin de ma permission ! En revanche, moi ENIGMA-Bot, je préfère décliner toute responsabilité...

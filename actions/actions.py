@@ -468,6 +468,14 @@ class FormRiddle(FormAction):
 
         return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None), SlotSet("riddle", None), SlotSet("token_solution_len", None)]
 
+class ActionResetRiddleSlots(Action):
+
+    def name(self):
+        return "action_reset_riddle_slots"
+
+    def run(self, dispatcher, tracker, domain):
+        return [SlotSet("category", None)]
+
 class FormSubscribe(FormAction):
     """Custom form action to fill the user riddle answer."""
 

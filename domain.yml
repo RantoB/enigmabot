@@ -2,11 +2,11 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- ENIGMA_bot_presentation
 - greet
 - goodbye
 - affirm
 - deny
-- bot_challenge
 - thanks
 - question_pitch
 - societe_mysterieuse
@@ -26,6 +26,14 @@ intents:
 - WTF
 - no_question
 - looking_for_something
+- who_are_you
+- how_are_you
+- joke
+- fine
+- you_re_a_bot
+- who_is_bertrand
+- what_can_you_do
+- insults
 entities:
 - user_name
 - user_email
@@ -55,11 +63,20 @@ slots:
   user_riddle_solution:
     type: unfeaturized
 responses:
+  utter_presentation:
+  - text: "Bienvenue, je suis ENIGMA-Bot et je peux répondre à vos questions concernant les jeux de piste ENIGMA Strasbourg.\
+    \ \nJe peux aussi vous proposer de résoudre l'une ou l'autre énigmes.\nRestez indulgent s'il vous plaît car
+    je suis encore en formation. Et pour l'amélioration de mes performances, nos conversations sont enregistrées.\n"
+  utter_what_I_do:
+  - text: "Je peux répondre, autant se fair que peux, à vos questions sur les jeux de piste ENIGMA Strasbourg.\
+  \ \nJe peux aussi vous soumettre une énigme pour vous entrainer !"
+  - text: "Je réponds aux questions concernant les jeux de piste ENIGMA Strasbourg et je peux vous proposer \
+  \ de résoudre des énigmes."
   utter_greet:
-  - text: Bonjour, je peux vous aider à trouver une info sur les activités d'ENIGMA Strasbourg, posez-moi vos questions  ?
+  - text: Bonjour, je peux vous aider à trouver une info, posez-moi vos questions !
   - text: Bonjour, cherchez-vous un renseigner sur les activités proposées par ENIGMA Strasbourg ?
   - text: Hello, que souhaitez-vous savoir sur les activités proposées par ENIGMA Strasbourg ?
-  - text: Bienvenue, comment est-ce que je peux vous renseigner sur les jeux de piste d'ENIGMA Strasbourg ?
+  - text: Hello, comment est-ce que je peux vous renseigner sur les jeux de piste d'ENIGMA Strasbourg ?
   utter_question:
   - text: Quelle est votre question ?
   - text: Que souhaitez-vous savoir ?
@@ -87,8 +104,33 @@ responses:
   - text: À bientôt.
   - text: Au revoir.
   - text: À la prochaine !
+  utter_i_m_fine:
+  - text: Je vais bien merci.
+  - text: Aujourd'hui ça va bien.
+  - text: Tout roule, merci !
+  - text: J'ai connu pire, ça va merci !
+  utter_iam_ENIGMA_Bot:
+  - text: Je suis ENIGMA-Bot, je travaille pour ENIGMA Strasbourg.
+  - text: J'e m'appelle ENIGMA-Bot et j'ai rejoins ENIGMA Strasbourg il y a peu de temps
+  utter_what_s_your_name:
+  - text: Et vous, comment-vous appelez-vous ?
+  - text: Et vous, quel est votre nom ?
+  utter_glad_to_meet_you:
+  - text: Très enchanté de faire votre connaissance {user_name}.
+  - text: Bienvenue {user_name}, je suis enchanté.
   utter_iamabot:
   - text: Je suis un robot développé par Monsieur Bertrand !
+  utter_bertrand:
+  - text: "Bertrand est le concepteur des jeux de piste ENIGMA Strasbourg. Il est aussi le \
+  \ développeur de ce chatbot et de bien d'autres choses... \
+  \ [Pour en savoir plus à son sujet](https://www.linkedin.com/in/bertrand-burcker-a6192655/)"
+  utter_laugh:
+  - text: Quel humour !
+  - text: Quest-ce qu'on se marre !
+  - text: J'ai jamais autant ri de ma vie !
+  utter_keep_calm:
+  - text: S'il vous plaît, restez poli !
+  - text: Surveillez votre langague !
   utter_societe_mysterieuse:
   - text: "La Société Mystérieuse de Strasbourg compte de nombreux érudits qui ont\
       \ façonné la ville de Strasbourg. Ils vous ont laissé quelques énigmes afin\
@@ -133,6 +175,7 @@ actions:
 - action_save_information
 - action_reset_subscribe_slots
 - action_check_active_form
+- action_reset_riddle_slots
 forms:
 - form_riddle
 - form_subscribe

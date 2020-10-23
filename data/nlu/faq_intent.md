@@ -271,10 +271,6 @@
 - J’aimerais réserver pour deux personnes demain soir
 - Y a t il de la disponibilité ?
 
-## intent:faq/who_is_bertrand
-- c'est qui monsieur Bertrand ?
-- Qui est bertrand
-
 ## intent:faq/lost
 - si je suis perdue
 - si je suis perdue quelqu'un viendra m'aider ?
