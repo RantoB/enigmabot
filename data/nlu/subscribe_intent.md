@@ -13,12 +13,19 @@ data/nlu/lookup_tables/prenoms.txt
 
 ## intent:inform_name
 - [Bertrand](user_name)
-- je m'appelle [Damien](user_name)
+- [je m'appelle](name_prompt) [Damien](user_name)
+- [je m'appelle](name_prompt) [Margaux](user_name)
+- [je m'appelle](name_prompt) [Margot](user_name)
+- [je m'appelle](name_prompt) [Adeline](user_name)
+- [je m'appelle](name_prompt) [Hélène](user_name)
+- [je m'appelle](name_prompt) [Guillaume](user_name)
+- [je m'appelle](name_prompt) [Louison](user_name)
+- [je m'appelle](name_prompt) [Maël](user_name)
 - je suis [Clémence](user_name)
 - mon nom est [Jean](user_name)
 - je suis [Georges](user_name)
 - C'est [Nicolas](user_name)
-- on m'appelle [Arthur]
+- on m'appelle [Arthur](user_name)
 - [Alain](user_name)
 - [Mathieu](user_name)
 - [Léo](user_name)

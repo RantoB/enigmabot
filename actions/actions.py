@@ -305,6 +305,10 @@ class ActionDefaultFallback(Action):
 
         active_form = tracker.active_form.get("name")
 
+        for element in tracker.events:
+            print("-----------")
+            print(element)
+
         if active_form == "form_riddle":
             logger.debug("The form '{}' is active".format(active_form))
             message = "Je n'ai pas pu interprêter votre réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
@@ -329,6 +333,19 @@ class ActionDefaultFallback(Action):
                 dispatcher.utter_message(message)
 
             return[]
+
+        # elif tracker.events[-4].get('name') == 'utter_what_s_your_name' and tracker.get_slot('prompt_name') is not None :
+        #
+        #     previous_user_message = tracker.latest_message.get('text')
+        #     prompt_name = tracker.get_slot('prompt_name')
+        #     user_name = re.sub(prompt_name, '', previous_user_message)
+        #     user_name = "".join(preprocess_spacy(user_name)).capitalize()
+        #
+        #     SlotSet("user_name", user_name)
+        #
+        #     dispatcher.utter_message(template="utter_glad_to_meet_you")
+        #
+        #     return []
 
         else:
             logger.debug("There is no active form")
