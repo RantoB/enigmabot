@@ -1,6 +1,6 @@
 ## out_of_scope
 * out_of_scope/other
-  - Mhm, là c'est chaud ! Moi mon domaine c'est ENIGMA Strasbourg, je ne suis pas sûr de pouvoir vous aider pour ça. \nD'autres questions ?
+  - Mhm, je ne suis pas sûr d'avoir compris, pourriez-vous reformuler ?
 
 ## out_of_scope
 * out_of_scope/sex
