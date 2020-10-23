@@ -315,13 +315,24 @@
 
 ## intent:faq/other_language_games
 - avez vous une version anglaise ?
-- est ce difficile ? *
+- est-il possible de jouer dans une autre langue
+- est-ce que le jeux existe en allemand ?
+- est-ce que le jeu existe en anglais ?
 
 ## intent:faq/team_building
 - puis je organiser une sortie d'entreprise ?
+- team building
+- est-ce qu'on peut faire cette activité en guise de teeam building ?
+- je cherche une sorti corpo pour mon entreprise
+- je cherche une activité à faire entre collègues
+
 
 ## intent:faq/alcohol
 - Pourrais-je picoler pendant le parcours ?
+- peut-on boire de l'alcool ?
+- avons nous le droite de boire de la bière ?
+- boire du vin ?
+- être saoul
 
 ## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau
