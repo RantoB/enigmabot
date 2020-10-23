@@ -10,6 +10,15 @@
 - médias
 - jupyter
 - Qu'est ce que tu fais pour nouvel an ?
+- Qui de l’œuf ou de là poulet est venu en premier ?
+- Est ce que tu proposes des réponses différentes ?
+- Est ce que nico est capable d’y arriver ?
+- Quelle est la réponse ?
+- Qui est gutemberg
+- Tu la connais ???
+- Ok Google .. raconte moi une blague
+- Ramène moi un bug mac de préférence merci
+- Ramène moi à manger
 
 ## intent:out_of_scope/other_language
 - english speaking ?
@@ -41,7 +50,9 @@
 - j'aime le sexe
 - tu prends par derrière ?
 - sodomie
-- félation 
+- félation
+- baiser
+- il y a  til des putes a strasbour
 
 ## intent:insults
 - connard

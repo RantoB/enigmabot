@@ -28,6 +28,7 @@
 - Quel prix ?
 - C'est cher ?
 - Combien coûte l’activité ?
+- Quel tarif
 
 ## intent:faq/general_sequence_of_the_game
 - Comment est-ce que cela se déroule ?
@@ -92,6 +93,7 @@
 - pour se faire aider
 - nous avons besoin d'aide
 - OK cool. Je suis bloqué. Peux tu m'aider ?
+- Je ne trouve pas le premier enigmz
 
 ## intent:faq/how_many_people
 - Combien de participants ?
@@ -105,6 +107,7 @@
 - j'aimerais venir avec 4 amis c'est possible ?
 - quel est le nombre maximum pour un groupe ?
 - à combien maximum ?
+- Combien de joueurs?
 
 ## intent:faq/smartphone
 - Je n’ai pas de smartphone, est-ce que je peux jouer ?
@@ -118,6 +121,7 @@
 - Je n'ai plus de téléphone.
 - faut-il un téléphone
 - on peut utiliser son téléphone ?
+- A ton besoin d’un smartphone ?
 
 ## intent:faq/not_from_Strasbourg
 - Je ne suis pas strasbourgeois, est-ce que je vais m’en sortir ?
@@ -233,6 +237,9 @@
 - Es ce interdit au mineur ?
 - à partir de quel age est ce conseillé ?
 - puis-je venir avec un bébé ?
+- Est ce possible de le faire avec des enfants
+- Est-ce que c’est accessible aux enfants?
+- Et est-ce adapté aux enfants ?
 
 ## intent:faq/booking
 - quand est-ce qu'on peut jouer ?
@@ -276,6 +283,10 @@
 - Y a t il de la disponibilité ?
 - Comment s’inscrire pour participer à jeu de piste ?
 - Je souhaiterais participer à un jeu comment m’y prendre ?
+- Comment reserver ?
+- Bonjour le jeu est il disponible en ce moment?
+- quels sont vos disponibilités pour ce weekend
+- Avez-vous de la disponibilité demain après-midi?
 
 ## intent:faq/lost
 - si je suis perdue
@@ -337,7 +348,6 @@
 - être saoul
 
 ## intent:faq/contact
-- Avez vous un contzct
 - Avez vous un contzct
 - Comment puis je vois joindre
 
