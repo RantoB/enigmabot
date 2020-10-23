@@ -58,6 +58,10 @@ pipeline:
     epochs: 100
     retrieval_intent: faq
     scale_loss: false
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: chitchat
+    scale_loss: false
 
 
 # Configuration for Rasa Core.

@@ -166,7 +166,7 @@
 - WC
 - aller aux toilettes
 - comment on fait pour aller aux toilettes
-- - si je veux chier un coup ?
+- si je veux chier un coup ?
 
 ## intent:faq/weather
 - et s'il pleut
@@ -309,9 +309,6 @@
 - demandeur d'emploi
 - demi-tarif
 
-## intent:out_of_scope/sex
-- Tu suces ?
-
 ## intent:faq/other_language_games
 - avez vous une version anglaise ?
 - est ce difficile ? *
@@ -321,12 +318,6 @@
 
 ## intent:faq/alcohol
 - Pourrais-je picoler pendant le parcours ?
-
-## intent:laugh
-- je rigole
-
-## intent:chitchat/how_are_you
-- Coucou, ça va ?
 
 ## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau
