@@ -66,13 +66,13 @@ responses:
     \ \n**Je peux aussi vous proposer de résoudre des énigmes**, n'hésitez pas à me le demander\nRestez indulgent s'il vous plaît car
     je suis encore en formation 🎓. Et pour l'amélioration de mes performances, nos conversations sont enregistrées.\n"
   utter_what_I_do:
-  - text: "Je peux répondre, autant se fair que peux, à vos questions sur les jeux de piste ENIGMA Strasbourg.\
+  - text: "Je peux répondre, autant se faire que peux, à vos questions sur les jeux de piste ENIGMA Strasbourg.\
   \ \nJe peux aussi vous soumettre une énigme pour vous entrainer !"
   - text: "Je réponds aux questions concernant les jeux de piste ENIGMA Strasbourg et je peux vous proposer \
   \ de résoudre des énigmes."
   utter_greet:
-  - text: Bonjour, je peux vous aider à trouver une info, posez-moi vos questions !
-  - text: Bonjour, cherchez-vous un renseigner sur les activités proposées par ENIGMA Strasbourg ?
+  - text: Bonjour, je peux vous aider à trouver une info ℹ️ posez-moi vos questions !
+  - text: Bonjour, cherchez-vous un renseigner ℹ️ sur les activités proposées par ENIGMA Strasbourg ?
   - text: Hello, que souhaitez-vous savoir sur les activités proposées par ENIGMA Strasbourg ?
   - text: Hello, comment est-ce que je peux vous renseigner sur les jeux de piste d'ENIGMA Strasbourg ?
   utter_question:
@@ -95,9 +95,9 @@ responses:
   - text: Une énigme de plus ❓
   - text: Encore une énigme ?
   utter_thanks:
-  - text: Merci à vous de m'avoir sollicité.
+  - text: Merci à vous de m'avoir sollicité 🙏
   - text: J'espre avoir répondu à toutes vos questions.
-  - text: Très bien, je vous remercie.
+  - text: Très bien, je vous remercie 🙏
   utter_goodbye:
   - text: À bientôt.
   - text: Au revoir.

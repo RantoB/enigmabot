@@ -1,10 +1,10 @@
 ## faq
   * faq/ENIGMA_Strasbourg
-    - Les jeux proposés par ENIGMA Strasbourg sont des jeux de piste au centre-ville de Strasbourg. Immergé dans un scénario qui vous replonge dans l'histoire de la ville de Strasbourg, vous aurez à résoudre un certain nombre d'énigmes afin d'arriver au bout de votre quête.  
+    - 📜 Les jeux proposés par ENIGMA Strasbourg sont des jeux de piste au centre-ville de Strasbourg. Immergé dans un scénario qui vous replonge dans l'histoire de la ville de Strasbourg, vous aurez à résoudre un certain nombre d'énigmes afin d'arriver au bout de votre quête.  
 
 ## faq
   * faq/general_sequence_of_the_game
-    - Un set de matériel de jeu vous est confié au départ. Vous disposez de la première énigmes qui vous mènera à un endroit où vous pourrez trouver les informations qui vous permettrons de débloquer les étapes suivantes et ainsi de suite jusqu'à l'énigme finale.
+    - Un set de matériel de jeu vous est confié au départ 💼 Vous disposez de la première énigmes qui vous mènera à un endroit où vous pourrez trouver les informations qui vous permettrons de débloquer les étapes suivantes et ainsi de suite jusqu'à l'énigme finale.
 
 ## faq
   * faq/where
@@ -12,15 +12,15 @@
 
 ## faq
   * faq/how_much_time
-    - Comptez 2h à 3h et parcourez environ 3 km pour arriver au bout d’une quête.
+    - ⌚ Comptez 2h à 3h et parcourez environ 3 km pour arriver au bout d’une quête.
 
 ## faq
   * faq/who
-    - Accessibles aux familles, aux amis et aux autres. \nL’ensemble des parcours est accessible aux personnes à mobilité réduite.
+    - Accessibles aux familles, aux amis et aux autres. \nL’ensemble des parcours est accessible aux personnes à mobilité réduite ♿.
 
 ## faq
   * faq/how_difficult
-    - Un système d'indice est mis en place si la difficulté est insurmontable.\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
+    - Un système d'indice est mis en place si la difficulté est insurmontable 🧩.\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
 
 ## faq
   * faq/how_many_people
@@ -28,7 +28,7 @@
 
 ## faq
   * faq/smartphone
-    - Vous pouvez vous servir de votre téléphone puisque nous ne pouvons pas vous en empêcher ! Cependant, les internets ne vous seront d'aucune aide pour résoudre les énigmes, éventuellement pour localiser certains lieux que vous ne connaîtriez pas. Par ailleurs, un carte de la ville vous sera fournie et un système d'indice est mis en place afin que vous puissiez réaliser chaque jeu sans votre téléphone futé.
+    - Vous pouvez vous servir de votre téléphone 📱 puisque nous ne pouvons pas vous en empêcher ! Cependant, les internets ne vous seront d'aucune aide pour résoudre les énigmes, éventuellement pour localiser certains lieux que vous ne connaîtriez pas. Par ailleurs, un carte de la ville vous sera fournie et un système d'indice est mis en place afin que vous puissiez réaliser chaque jeu sans votre téléphone futé.
 
 ## faq
   * faq/not_from_Strasbourg
@@ -36,7 +36,7 @@
 
 ## faq
   * faq/price
-  - Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcours.
+  - 🤑 Les jeux de piste coûtent 50€ par groupe 🤑. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcours.
 
 ## faq
 * faq/break
@@ -44,11 +44,11 @@
 
 ## faq
 * faq/payment
-  - Le paiement se fait un ligne, par carte bancaire. \n[lien à créer...]\nAprès avoir payé, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].
+  - Le paiement se fait un ligne, par carte bancaire 💳 \n[lien à créer...]\nAprès avoir payé, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].
 
 ## faq
 * faq/start
-  - Le point de départ se fait quelque part à la Krutenau. Le jour où vous jouerez, la première énigmes vous sera envoyé, ensuite laissez-vous guider.
+  - 🏁 Le point de départ se fait quelque part à la Krutenau. Le jour où vous jouerez, la première énigmes vous sera envoyé, ensuite laissez-vous guider.
 
 ## faq
 * faq/toilet
@@ -56,7 +56,7 @@
 
 ## faq
 * faq/weather
-  - Si la météo est mauvaise le jour où vous avez réservé, vous pourrez alors reporter à une autre date. Il suffira de nous prévenir à contact@enigmastrasbourg.com.
+  - Si la météo est mauvaise le jour où vous avez réservé 🌧️ vous pourrez alors reporter à une autre date. Il suffira de nous prévenir à contact@enigmastrasbourg.com.
 
 ## faq
 * faq/reimbursment
@@ -68,11 +68,11 @@
 
 ## faq
 * faq/kids
-  - Il est possible de faire le jeux avec des enfants. Les énigmes peuvent s'avérer plutôt difficiles pour eux, mais avec votre aides ils arriveront à en venir à bout. Le parcours se fait entièrement au centre ville, il est donc aussi possible de se déplacer avec une poussette.
+  - Il est possible de faire le jeux avec des enfants 🚸 Les énigmes peuvent s'avérer plutôt difficiles pour eux, mais avec votre aides ils arriveront à en venir à bout. Le parcours se fait entièrement au centre ville, il est donc aussi possible de se déplacer avec une poussette.
 
 ## faq
 * faq/animal
-- Vous pouvez évidemment être accompagné de vos animaux de compagnie !
+- Vous pouvez évidemment être accompagné de vos animaux de compagnie 🐕
 
 ## faq
 * faq/booking
@@ -80,15 +80,15 @@
 
 ## faq
 * faq/reduced_fee
-- Le prix de 50€ est un prix unique pour un groupe. Pour le moment il n'y a pas encore de tarif particulier.
+- Le prix de 50€ est un prix unique pour un groupe 💰 Pour le moment il n'y a pas encore de tarif particulier.
 
 ## faq
 * faq/lost
-- A priori si vous savez lire un plan vous ne devriez pas vous perdre. Si vous n'êtes plus sur le plan c'est que vous êtes parti déjà trop loin ! \nQuoi qu'il en soit, n'ayez pas peur, c'est en se perdant qu'on fait les meilleurs rencontres...
+- A priori si vous savez lire un plan vous ne devriez pas vous perdre 🗺️ Si vous n'êtes plus sur le plan c'est que vous êtes parti déjà trop loin ! \nQuoi qu'il en soit, n'ayez pas peur, c'est en se perdant qu'on fait les meilleurs rencontres...
 
 ## faq
 * faq/food
-- Nous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt salivante concernant la restauration, n'hésitez pas à en profiter.
+- Nous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt salivante concernant la restauration, n'hésitez pas à en profiter 🍛
 
 ## faq
 * faq/equipment
@@ -96,7 +96,7 @@
 
 ## faq
 * faq/when
--  Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h.
+-  Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h 🕰️
 
 ## faq
 * faq/team_building
@@ -108,20 +108,20 @@
 
 ## faq
 * faq/alcohol
-- Pour boire de l'alcool, vous vous doutez bien que vous n'avez pas besoin de ma permission ! En revanche, moi ENIGMA-Bot, je préfère décliner toute responsabilité...
+- Pour boire de l'alcool, vous vous doutez bien que vous n'avez pas besoin de ma permission 🍷 En revanche, moi ENIGMA-Bot, je préfère décliner toute responsabilité...
 
 ## faq
 * faq/contact
-- Pour nous contacter, vous pouvez écrire à l'adresse suivante: contact@enigmastrasbourg.com
+- Pour nous contacter, vous pouvez écrire à l'adresse suivante: contact@enigmastrasbourg.com ☎️
 
 ## faq
 * faq/bike
-- Vous pouvez faire le jeu à pied ou à bicyclette. Il n'y a que 3 km à parcourir et tout est accessible à vélo. A vous de choisir votre moyen de transport favoris.
+- Vous pouvez faire le jeu 🚶‍♀️ à pied ou à bicyclette 🚴‍♂️. Il n'y a que 3 km à parcourir et tout est accessible à vélo. A vous de choisir votre moyen de transport favoris.
 
 ## faq
 * faq/day_night
-- Il est préférable de jouer de jour, peut-être que vous passerez à côté de certains détails une fois la nuit tombée. Par ailleurs, le matériel devra être rendu à un endroit qui ferme à minuit.
+- Il est préférable de jouer de jour ☀️, peut-être que vous passerez à côté de certains détails une fois la nuit tombée. Par ailleurs, le matériel devra être rendu à un endroit qui ferme à minuit 🌃.
 
 ## faq
 * faq/end_of_the_game
-- Je ne révèle pas la fin du jeu voyons... La seule chose que je peux dire c'est que l'arrivée est sur l'île de Strasbourg.
+- Je ne révèle pas la fin du jeu voyons... La seule chose que je peux dire c'est que l'arrivée est sur l'île de Strasbourg 🏁.

@@ -47,6 +47,10 @@
 - carrément
 - exact
 - Ouiiii
+- Ouii
+- Ouiii
+- ouiiiii
+- yes
 
 ## intent:looking_for_something
 - je cherche un renseignement
