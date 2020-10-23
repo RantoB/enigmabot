@@ -27,6 +27,7 @@
 - combien ca coute
 - Quel prix ?
 - C'est cher ?
+- Combien coûte l’activité ?
 
 ## intent:faq/general_sequence_of_the_game
 - Comment est-ce que cela se déroule ?
@@ -334,6 +335,11 @@
 - avons nous le droite de boire de la bière ?
 - boire du vin ?
 - être saoul
+
+## intent:faq/contact
+- Avez vous un contzct
+- Avez vous un contzct
+- Comment puis je vois joindre
 
 ## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau

@@ -76,7 +76,7 @@
 
 ## faq
 * faq/booking
-- Les jeux peuvent avoir lieu à partir du 15 mars 2021. La réservation n'a pas encore été ouverte. Un calendrier sera bientôt mis en place !
+- Les jeux peuvent avoir lieu à partir du 15 mars 2021. La réservation n'a pas encore été ouverte. Un calendrier sera bientôt mis en place et les étapes de réservation seront détaillées.
 
 ## faq
 * faq/reduced_fee
@@ -109,3 +109,7 @@
 ## faq
 * faq/alcohol
 - Pour boire de l'alcool, vous vous doutez bien que vous n'avez pas besoin de ma permission ! En revanche, moi ENIGMA-Bot, je préfère décliner toute responsabilité...
+
+## faq
+* faq/contact
+- Pour nous contacter, vous pouvez écrire à l'adresse suivante: contact@enigmastrasbourg.com
