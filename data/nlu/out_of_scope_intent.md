@@ -10,6 +10,7 @@
 - médias
 - jupyter
 - Qu'est ce que tu fais pour nouvel an ?
+- Tu as des fautes d'orthographe dans ton chatbot. Allez bisous
 
 ## intent:out_of_scope/other_language
 - english speaking ?
@@ -41,7 +42,7 @@
 - j'aime le sexe
 - tu prends par derrière ?
 - sodomie
-- félation 
+- félation
 
 ## intent:insults
 - connard
