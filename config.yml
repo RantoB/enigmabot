@@ -73,6 +73,6 @@ policies:
   - name: FallbackPolicy
     nlu_threshold: 0.85
     ambiguity_threshold: 0.5
-    core_threshold: 0.65
+    core_threshold: 0.6
     fallback_action_name: action_default_fallback
   - name: FormPolicy
