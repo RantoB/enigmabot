@@ -1,6 +1,7 @@
 ## intent:who_are_you
 - Qui es-tu ?
 - Comment tu t'appelles ?
+- comment tu t'appelle ?
 - C'est quoi ton blaze ?
 
 ## intent:how_are_you
@@ -29,11 +30,12 @@
 - est-ce que je parle à une machine ?
 - est-ce que je parle à un humain ?
 
-## who_is_bertrand
+## intent:who_is_bertrand
 - c'est qui monsieur Bertrand ?
 - Qui est bertrand
 
-## what_can_you_do
+## intent:what_can_you_do
 - Que sais tu faire ?
 - qu'est-ce que tu sais faire ?
 - quelle est ta spécialité ?
+- qu'est-ce que tu es capable de faire ?
