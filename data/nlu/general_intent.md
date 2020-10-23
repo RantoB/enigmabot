@@ -82,3 +82,4 @@
 
 ## intent:ask_for_riddle
 - Une autre
+- Bonsoir, pouvez-vous me donner une énigme?

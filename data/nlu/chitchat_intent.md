@@ -50,6 +50,8 @@
 
 ## intent:out_of_scope/other
 - Plutôt cuir ou moustache ?
+- Bonjour. C’est quoi la réponse à la deuxième énigme de la société mystérieuse de Strasbourg ?
+- Quelle est la réponse à la première énigme?
 
 ## intent:faq/walk_bike
 - On peut le faire en vélo?
