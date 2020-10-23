@@ -21,6 +21,8 @@
 - Ramène moi à manger
 - Tu as des fautes d'orthographe dans ton chatbot. Allez bisous
 - Plutôt cuir ou moustache ?
+- Bonjour. C’est quoi la réponse à la deuxième énigme de la société mystérieuse de Strasbourg ?
+- Quelle est la réponse à la première énigme?
 
 ## intent:out_of_scope/other_language
 - english speaking ?

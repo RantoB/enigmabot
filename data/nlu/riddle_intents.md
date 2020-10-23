@@ -8,6 +8,7 @@
 - pourrais-je avoir une nouvelle enigme ?
 - énigme
 - Cest marrant une autre stp
+- Bonsoir, pouvez-vous me donner une énigme?
 
 ## intent:inform_kind_of_riddle
 - [logique](riddle_category)
