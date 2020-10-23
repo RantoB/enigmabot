@@ -63,6 +63,7 @@
 - non, je n'ai pas de question
 - je n'ai pas de question
 - pas de question
+- Pas d’autre question
 
 ## intent:deny
 - non
@@ -80,6 +81,7 @@
 - pas maintenant
 - non merci
 - j'ai pas envie
+- Non
 
 ## intent:thanks
 - merci

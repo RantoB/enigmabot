@@ -16,6 +16,9 @@
 - Est ce que c’est sur l’histoire de Strasbourg ou une histoire fictive ?
 - Cela permet il de découvrir Strasbourg ?
 - Permet t’il d’appendre l’histoire de Strasbourg ?
+- A toi de me le dire
+- Qu’est ce que c’est ?
+- Est ce instructif ?
 
 ## intent:faq/price
 - Combien ca coûte
