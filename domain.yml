@@ -15,8 +15,6 @@ intents:
     use_entities: []
 - out_of_scope:
     use_entities: []
-- chitchat:
-    use_entities: []
 - ask_for_riddle
 - inform_kind_of_riddle
 - answer_the_riddle
