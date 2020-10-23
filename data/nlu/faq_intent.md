@@ -154,6 +154,9 @@
 - ou est le début
 - d'où partons-nous
 - où commençons nous ?
+- Où est le point de rdv
+- Mais ou au centre ville ?
+- Où est le pont de départ ?
 
 ## intent:faq/toilet
 - où peut on faire pipi ?
@@ -270,6 +273,8 @@
 - est-ce qu'il est possible de réserver ?
 - J’aimerais réserver pour deux personnes demain soir
 - Y a t il de la disponibilité ?
+- Comment s’inscrire pour participer à jeu de piste ?
+- Je souhaiterais participer à un jeu comment m’y prendre ?
 
 ## intent:faq/lost
 - si je suis perdue

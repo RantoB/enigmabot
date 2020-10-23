@@ -8,6 +8,8 @@
 - Coucou, ça va ?
 - Ca va ?
 - comment ca va
+- Bonjour comment vas-tu ?
+- Bonjour comment allez vous ?
 
 ## intent:joke
 - je rigole
@@ -39,3 +41,10 @@
 - qu'est-ce que tu sais faire ?
 - quelle est ta spécialité ?
 - qu'est-ce que tu es capable de faire ?
+
+## intent:faq
+- Combien coûte l’activité ?
+
+## intent:faq/contact
+- Avez vous un contzct
+- Comment puis je vois joindre
