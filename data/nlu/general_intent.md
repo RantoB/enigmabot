@@ -9,6 +9,7 @@
 - helo
 - salut
 - hola
+- Ouaich
 
 ## intent:goodbye
 - au revoir

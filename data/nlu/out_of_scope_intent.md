@@ -9,6 +9,7 @@
 - politique
 - médias
 - jupyter
+- Qu'est ce que tu fais pour nouvel an ?
 
 ## intent:out_of_scope/other_language
 - english speaking ?

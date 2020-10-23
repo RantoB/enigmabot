@@ -26,6 +26,7 @@
 - fric
 - combien ca coute
 - Quel prix ?
+- C'est cher ?
 
 ## intent:faq/general_sequence_of_the_game
 - Comment est-ce que cela se déroule ?
@@ -325,7 +326,6 @@
 - est-ce qu'on peut faire cette activité en guise de teeam building ?
 - je cherche une sorti corpo pour mon entreprise
 - je cherche une activité à faire entre collègues
-
 
 ## intent:faq/alcohol
 - Pourrais-je picoler pendant le parcours ?
