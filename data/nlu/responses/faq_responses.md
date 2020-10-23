@@ -113,3 +113,15 @@
 ## faq
 * faq/contact
 - Pour nous contacter, vous pouvez écrire à l'adresse suivante: contact@enigmastrasbourg.com
+
+## faq
+* faq/bike
+- Vous pouvez faire le jeu à pied ou à bicyclette. Il n'y a que 3 km à parcourir et tout est accessible à vélo. A vous de choisir votre moyen de transport favoris.
+
+## faq
+* faq/day_night
+- Il est préférable de jouer de jour, peut-être que vous passerez à côté de certains détails une fois la nuit tombée. Par ailleurs, le matériel devra être rendu à un endroit qui ferme à minuit.
+
+## faq
+* faq/end_of_the_game
+- Je ne révèle pas la fin du jeu voyons... La seule chose que je peux dire c'est que l'arrivée est sur l'île de Strasbourg.

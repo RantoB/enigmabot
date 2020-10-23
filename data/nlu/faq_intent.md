@@ -13,6 +13,9 @@
 - de quoi s'agit-il ?
 - il s'agit de quoi ?
 - est ce que nous visiterons des monuments remarquables ?
+- Est ce que c’est sur l’histoire de Strasbourg ou une histoire fictive ?
+- Cela permet il de découvrir Strasbourg ?
+- Permet t’il d’appendre l’histoire de Strasbourg ?
 
 ## intent:faq/price
 - Combien ca coûte
@@ -349,7 +352,28 @@
 
 ## intent:faq/contact
 - Avez vous un contzct
+- Avez vous un contact
 - Comment puis je vois joindre
+
+## intent:faq/bike
+- On peut le faire en vélo?
+- est-il possible de faire le jeu en vélo
+- je suis à vélo
+- est-ce que je peux être à vélo ?
+
+## intent:faq/day_night
+- Est ce c’est mieux de le faire la nuit ou le jour?
+- Est ce possible de faire le jeu de nuit ?
+- jour ou nuit ?
+
+## intent:faq/end_of_the_game
+- Offres tu un cadeau à la fin
+- avons-nous un cadeau à la fin du jeu ?
+- que se passe-t-il à la fin ?
+- où est la fin
+- où est l'arrivée
+- ou est la fin
+- ou est l'arrivée
 
 ## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau

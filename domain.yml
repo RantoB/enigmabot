@@ -62,9 +62,9 @@ slots:
     type: unfeaturized
 responses:
   utter_presentation:
-  - text: "Bienvenue, je suis ENIGMA-Bot et je peux répondre à vos questions concernant les jeux de piste ENIGMA Strasbourg.\
-    \ \nJe peux aussi vous proposer de résoudre l'une ou l'autre énigmes.\nRestez indulgent s'il vous plaît car
-    je suis encore en formation. Et pour l'amélioration de mes performances, nos conversations sont enregistrées.\n"
+  - text: "Bienvenue, je suis ENIGMA-Bot 🤖 et je peux répondre à vos questions concernant les jeux de piste ENIGMA Strasbourg.\
+    \ \n**Je peux aussi vous proposer de résoudre des énigmes**, n'hésitez pas à me le demander\nRestez indulgent s'il vous plaît car
+    je suis encore en formation 🎓. Et pour l'amélioration de mes performances, nos conversations sont enregistrées.\n"
   utter_what_I_do:
   - text: "Je peux répondre, autant se fair que peux, à vos questions sur les jeux de piste ENIGMA Strasbourg.\
   \ \nJe peux aussi vous soumettre une énigme pour vous entrainer !"
@@ -77,14 +77,14 @@ responses:
   - text: Hello, comment est-ce que je peux vous renseigner sur les jeux de piste d'ENIGMA Strasbourg ?
   utter_question:
   - text: Quelle est votre question ?
-  - text: Que souhaitez-vous savoir ?
+  - text: Que souhaitez-vous savoir ❓
   - text: Comment est-ce que je peux vous renseigner ?
   utter_question_on_ENIGMA_Stras:
   - text: Souhaitez-vous avoir une renseignement au sujet d'ENIGMA Strasbourg ?
-  - text: Avez-vous une question concernant ENIGMA Strasbourg ?
+  - text: Avez-vous une question concernant ENIGMA Strasbourg ❓
   utter_one_more_question:
   - text: Souhaitez-vous savoir autre chose ?
-  - text: Avez-vous une autre question ?
+  - text: Avez-vous une autre question ❓
   - text: Avez-vous encore une question ?
   utter_propose_riddle:
   - text: souhaitez-vous faire une énigme ?
@@ -92,7 +92,7 @@ responses:
   - text: Est-ce que vous souhaitez répondre à une énigme ?
   utter_one_more_riddle:
   - text: Est-ce que vous souhaitez faire encore une énigme ?
-  - text: Une énigme de plus ?
+  - text: Une énigme de plus ❓
   - text: Encore une énigme ?
   utter_thanks:
   - text: Merci à vous de m'avoir sollicité.

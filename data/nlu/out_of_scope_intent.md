@@ -20,6 +20,7 @@
 - Ramène moi un bug mac de préférence merci
 - Ramène moi à manger
 - Tu as des fautes d'orthographe dans ton chatbot. Allez bisous
+- Plutôt cuir ou moustache ?
 
 ## intent:out_of_scope/other_language
 - english speaking ?
