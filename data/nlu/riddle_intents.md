@@ -9,6 +9,9 @@
 - énigme
 - Cest marrant une autre stp
 - Bonsoir, pouvez-vous me donner une énigme?
+- Une autre
+- J’ai besoin d'énigme
+- Hop balance moi un énigme
 
 ## intent:inform_kind_of_riddle
 - [logique](riddle_category)

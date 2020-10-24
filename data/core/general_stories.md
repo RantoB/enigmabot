@@ -67,10 +67,17 @@
 * goodbye
   - utter_goodbye
 
+## kiss and goodbye
+* kiss
+  - utter_thanks
+  - utter_goodbye
+* goodbye
+  - utter_goodbye
+
 ## insults
 * insults
   - utter_keep_calm
 * insults
   - utter_keep_calm
-* insults 
+* insults
   - utter_goodbye

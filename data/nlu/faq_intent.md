@@ -341,6 +341,8 @@
 - est-il possible de jouer dans une autre langue
 - est-ce que le jeux existe en allemand ?
 - est-ce que le jeu existe en anglais ?
+- Existe t’il une. Version anglaise du jeu
+- Existe il une version russe ?
 
 ## intent:faq/team_building
 - puis je organiser une sortie d'entreprise ?

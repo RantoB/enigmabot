@@ -92,8 +92,3 @@
 ## intent:thanks
 - merci
 - merci beaucoup
-
-## intent:ask_for_riddle
-- Une autre
-- J’ai besoin d’aide sur une énigme
-- Hop balance moi un énigme

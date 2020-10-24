@@ -32,6 +32,7 @@ intents:
 - who_is_bertrand
 - what_can_you_do
 - insults
+- kiss
 entities:
 - user_name
 - user_email

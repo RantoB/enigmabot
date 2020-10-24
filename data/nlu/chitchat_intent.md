@@ -43,9 +43,6 @@
 - quelle est ta spécialité ?
 - qu'est-ce que tu es capable de faire ?
 
-## intent:faq/other_language_games
-- Existe t’il une. Version anglaise du jeu
-- Existe il une version russe ?
-
 ## intent:kiss
 - Bisous
+- la bises

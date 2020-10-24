@@ -56,7 +56,7 @@
 - sodomie
 - félation
 - baiser
-- il y a  til des putes a strasbour
+- il y a-t-il des putes a strasbourg
 
 ## intent:insults
 - connard
