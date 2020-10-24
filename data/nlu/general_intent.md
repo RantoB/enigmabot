@@ -15,7 +15,7 @@
 - hola
 - Ouaich
 - Yo
-- ola 
+- ola
 
 ## intent:goodbye
 - au revoir
@@ -26,6 +26,9 @@
 - a+
 - à toute
 - allez ciao
+- non, ciao
+- Tchao
+- Bonne nuit
 
 ## intent:affirm
 - oui
@@ -52,6 +55,7 @@
 - Ouiii
 - ouiiiii
 - yes
+- Je confirme
 
 ## intent:looking_for_something
 - je cherche un renseignement
@@ -83,6 +87,7 @@
 - non merci
 - j'ai pas envie
 - Non
+- Stop la
 
 ## intent:thanks
 - merci
@@ -90,3 +95,5 @@
 
 ## intent:ask_for_riddle
 - Une autre
+- J’ai besoin d’aide sur une énigme
+- Hop balance moi un énigme

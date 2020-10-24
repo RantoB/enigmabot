@@ -310,6 +310,9 @@
 - si nous avons faim
 - chou croute
 - OK merci. Peux on faire une pause pour manger durant le jeu ?
+- manger
+- pour manger
+- si on a faim
 
 ## intent:faq/equipment
 - est ce qu'il faut prévoir une tenue sportive ?

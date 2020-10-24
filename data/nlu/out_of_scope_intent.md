@@ -58,7 +58,6 @@
 - baiser
 - il y a  til des putes a strasbour
 
-
 ## intent:insults
 - connard
 - t'es con
@@ -67,3 +66,4 @@
 - je t'emmerde
 - fils de pute
 - petite pute
+- Stefu
