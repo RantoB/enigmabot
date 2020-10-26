@@ -33,6 +33,7 @@ intents:
 - what_can_you_do
 - insults
 - kiss
+- man_or_woman
 entities:
 - user_name
 - user_email
@@ -117,7 +118,13 @@ responses:
   - text: J'ai connu pire, ça va merci !
   utter_iam_ENIGMA_Bot:
   - text: Je suis ENIGMA-Bot, je travaille pour ENIGMA Strasbourg.
-  - text: J'e m'appelle ENIGMA-Bot et j'ai rejoins ENIGMA Strasbourg il y a peu de temps
+  - text: Je m'appelle ENIGMA-Bot et j'ai rejoins ENIGMA Strasbourg il y a peu de temps
+  utter_man_or_woman:
+  - text: Quelle question ! C'est pourtant évident !
+  - text: A ton avis ?
+  - text: En quoi est-ce important ?
+  - text: Qu'est-ce que ca change ?
+  - text: Vous vous fourvoyez de bot, on n'est pas sur Tinder là !
   utter_what_s_your_name:
   - text: Et vous, comment-vous appelez-vous ?
   - text: Et vous, quel est votre nom ?
@@ -183,6 +190,7 @@ actions:
 - action_save_information
 - action_reset_subscribe_slots
 - action_reset_riddle_slots
+- action_deactivate_form
 forms:
 - form_riddle
 - form_subscribe

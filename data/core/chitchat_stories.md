@@ -82,3 +82,7 @@
 ## chichat_joke
 * joke
   - utter_laugh
+
+## man or woman
+* man_or_woman
+  - utter_man_or_woman

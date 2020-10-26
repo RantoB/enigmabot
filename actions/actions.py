@@ -358,48 +358,13 @@ class ActionDefaultFallback(Action):
             messages.append("Excusez-moi mais je n'ai pas compris ce que vous demandez, est-ce que vous pourriez reformuler ?")
             messages.append("Attends voir... \nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si vous reformulez, ça pourrait m'aider.")
             messages.append("J'ai bien peur de ne pas avoir compris... Est-ce bien en rapport avec ENIGMA Strasbourg ?")
-            messages.append("Mhm, j'essaie pourtant de comprendre mais je ne suis pas sûr de bien sairir ce que vous cherchez à me demander. Peut-être qu'en reformulant j'arriverais à comprendre.")
+            messages.append("Mhm, j'essaie pourtant de comprendre mais je ne suis pas sûr de bien saisir ce que vous cherchez à me demander. Peut-être qu'en reformulant j'arriverais à comprendre.")
 
             message = np.random.choice(np.array(messages))
 
             dispatcher.utter_message(message)
 
             return []
-
-# class ActionCheckActiveForm(Action):
-#
-#     def name(self) -> Text:
-#         return "action_check_active_form"
-#
-#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         active_form = tracker.active_form.get("name")
-#
-#         if active_form is not None:
-#             if active_form == "form_riddle":
-#                 logger.debug("The form '{}' is active".format(active_form))
-#                 message = "Je n'ai pas bien compris la réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
-#                 dispatcher.utter_message(message)
-#                 return [FollowupAction("action_listen")]
-#
-#             elif active_form == "form_subscribe":
-#                 requested_slot = tracker.get_slot("requested_slot")
-#
-#                 if requested_slot == user_name:
-#                     logger.debug("The form '{}' is active".format(active_form))
-#                     message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
-#
-#                     dispatcher.utter_message(message)
-#                     return [FollowupAction("action_listen")]
-#
-#                 elif requested_slot == user_email:
-#                     logger.debug("The form '{}' is active".format(active_form))
-#                     message = "Je ne reconnais pas le format de l'adresse mail, pourriez-vous écrire \"e-mail:\" puis taper votre adresse e-mail, afni que je puisse la reconnaître?"
-#
-#                     dispatcher.utter_message(message)
-#                     return [FollowupAction("action_listen")]
-#
-#             return []
 
 class FormRiddle(FormAction):
     """Custom form action to fill the user riddle answer."""

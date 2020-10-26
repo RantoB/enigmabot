@@ -4,7 +4,12 @@
 - comment tu t'appelle ?
 - C'est quoi ton blaze ?
 - comment tu tappelles
+
+## intent:man_or_woman
 - tu es un homme ou une femme ?
+- quel est ton sexe ?
+- tu es de quel sexe ?
+- t'es une fille ou un garçon ?
 
 ## intent:how_are_you
 - Coucou, ça va ?
@@ -47,11 +52,8 @@
 ## intent:kiss
 - Bisous
 - la bises
-- [kiss kiss bang bang](email_prompt)
+- kiss kiss bang bang
 
 ## intent:maybe
 - peut être
 - qui sait
-
-## intent:faq/data
-- efface mes données

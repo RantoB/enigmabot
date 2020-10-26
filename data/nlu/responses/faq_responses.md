@@ -125,3 +125,7 @@
 ## faq
 * faq/end_of_the_game
 - Je ne révèle pas la fin du jeu voyons... La seule chose que je peux dire c'est que l'arrivée est sur l'île de Strasbourg 🏁.
+
+## faq
+* faq/data
+- Vous consentez à ce que les conversations soient enregistrées avant de commencer à échanger des messages avec le chatbot. Les conversations ne sont pas vendu et ne servent à rien d'autre qu'à améliorer les performances de réponses du chatbot. Aucune autre donnée n'est collectée à l'exception de votre nom ou pseudo ainsi que votre adresse e-mail si vous souhaitez rester informé des actualités d'ENIGMA Strasbourg. A tout moment vous pouvez écrire à contact@enigmastrasbourg.com pour demander à ce que vos coordonnées soient effacées de la base de données.

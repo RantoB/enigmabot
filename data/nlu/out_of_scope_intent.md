@@ -50,7 +50,7 @@
 - ça c'est un beaeau nomù
 - rantobot
 - sairir
-- [poil](email_prompt)
+- poil
 
 ## intent:out_of_scope/sex
 - Tu suces ?

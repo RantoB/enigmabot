@@ -387,6 +387,12 @@
 - ou est la fin
 - ou est l'arrivée
 
+## intent:faq/data
+- efface mes données
+- que fait-tu avec les données
+- que deviennent mes données
+- les données
+
 ## synonym:meurtre à la Krutenau
 - 1913, meurtre à la Krutenau
 - meurtre a la Krutenau

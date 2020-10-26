@@ -36,6 +36,7 @@
   - respond_faq
   - utter_ask_leave_subscribe_form
 * affirm
+  - action_deactivate_form
   - form{"name": null}
   - utter_ok
   - utter_question_on_ENIGMA_Stras
@@ -64,6 +65,7 @@
   - respond_out_of_scope
   - utter_ask_leave_subscribe_form
 * affirm
+  - action_deactivate_form
   - form{"name": null}
   - utter_ok
   - utter_question_on_ENIGMA_Stras
@@ -100,6 +102,7 @@
   - action_next_game
   - utter_ask_leave_subscribe_form
 * affirm
+  - action_deactivate_form
   - form{"name": null}
   - utter_ok
   - utter_question_on_ENIGMA_Stras
