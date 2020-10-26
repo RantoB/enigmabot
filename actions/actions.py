@@ -286,13 +286,8 @@ class ActionNextGame(Action):
 
             if game.lower() == "société mystérieuse de Strasbourg".lower():
                 dispatcher.utter_message(template="utter_meurtre_krutenau")
-                dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
             else :
                 dispatcher.utter_message(template="utter_societe_mysterieuse")
-                dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
-
-        elif deny_or_affirm == 'deny':
-            dispatcher.utter_message(template="utter_question_on_ENIGMA_Stras")
 
         return []
 
@@ -305,47 +300,53 @@ class ActionDefaultFallback(Action):
 
         active_form = tracker.active_form.get("name")
 
-        for element in tracker.events:
-            print("-----------")
-            print(element)
-
         if active_form == "form_riddle":
             logger.debug("The form '{}' is active".format(active_form))
-            message = "Je n'ai pas pu interprêter votre réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
 
-            dispatcher.utter_message(message)
+            # Riddle form is active, reask for the solution
+
+            if tracker.events[-5].get('name') == 'utter_ask_leave_riddle_form':
+
+                # case if user asked a faq or oos question in the time being
+
+                logger.debug("The form '{}' is active".format(active_form))
+                riddle = tracker.get_slot('riddle')
+                message = f"je vous rappelle l'énigme:\n{riddle}"
+                dispatcher.utter_message(message)
+
+            else:
+                message = "Je n'ai pas pu interprêter votre réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
+                dispatcher.utter_message(message)
 
             return []
 
         elif active_form == "form_subscribe":
             requested_slot = tracker.get_slot("requested_slot")
 
-            if requested_slot == "user_name":
+            # Subscribe form is active, reask for the requested slots
+
+            if tracker.events[-5].get('name') == 'utter_ask_leave_subscribe_form':
+
+                # case if user asked a faq or oos question in the time being
+
                 logger.debug("The form '{}' is active".format(active_form))
-                message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
+                dispatcher.utter_message(template=f'utter_ask_{requested_slot}')
 
-                dispatcher.utter_message(message)
+            else:
+                if requested_slot == "user_name":
+                    logger.debug("The form '{}' is active".format(active_form))
 
-            elif requested_slot == "user_email":
-                logger.debug("The form '{}' is active".format(active_form))
-                message = "Je ne reconnais pas le format de l'adresse mail, pourriez-vous écrire \"e-mail:\" puis taper votre adresse e-mail, afni que je puisse la reconnaître?"
+                    message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
+                    dispatcher.utter_message(message)
 
-                dispatcher.utter_message(message)
+                elif requested_slot == "user_email":
+                    logger.debug("The form '{}' is active".format(active_form))
+
+                    message = "Je ne reconnais pas le format de l'adresse mail, pourriez-vous écrire \"e-mail:\" puis taper votre adresse e-mail, afni que je puisse la reconnaître?"
+
+                    dispatcher.utter_message(message)
 
             return[]
-
-        # elif tracker.events[-4].get('name') == 'utter_what_s_your_name' and tracker.get_slot('prompt_name') is not None :
-        #
-        #     previous_user_message = tracker.latest_message.get('text')
-        #     prompt_name = tracker.get_slot('prompt_name')
-        #     user_name = re.sub(prompt_name, '', previous_user_message)
-        #     user_name = "".join(preprocess_spacy(user_name)).capitalize()
-        #
-        #     SlotSet("user_name", user_name)
-        #
-        #     dispatcher.utter_message(template="utter_glad_to_meet_you")
-        #
-        #     return []
 
         else:
             logger.debug("There is no active form")
@@ -365,40 +366,40 @@ class ActionDefaultFallback(Action):
 
             return []
 
-class ActionCheckActiveForm(Action):
-
-    def name(self) -> Text:
-        return "action_check_active_form"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        active_form = tracker.active_form.get("name")
-
-        if active_form is not None:
-            if active_form == "form_riddle":
-                logger.debug("The form '{}' is active".format(active_form))
-                message = "Je n'ai pas bien compris la réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
-                dispatcher.utter_message(message)
-                return [FollowupAction("action_listen")]
-
-            elif active_form == "form_subscribe":
-                requested_slot = tracker.get_slot("requested_slot")
-
-                if requested_slot == user_name:
-                    logger.debug("The form '{}' is active".format(active_form))
-                    message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
-
-                    dispatcher.utter_message(message)
-                    return [FollowupAction("action_listen")]
-
-                elif requested_slot == user_email:
-                    logger.debug("The form '{}' is active".format(active_form))
-                    message = "Je ne reconnais pas le format de l'adresse mail, pourriez-vous écrire \"e-mail:\" puis taper votre adresse e-mail, afni que je puisse la reconnaître?"
-
-                    dispatcher.utter_message(message)
-                    return [FollowupAction("action_listen")]
-
-            return []
+# class ActionCheckActiveForm(Action):
+#
+#     def name(self) -> Text:
+#         return "action_check_active_form"
+#
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         active_form = tracker.active_form.get("name")
+#
+#         if active_form is not None:
+#             if active_form == "form_riddle":
+#                 logger.debug("The form '{}' is active".format(active_form))
+#                 message = "Je n'ai pas bien compris la réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
+#                 dispatcher.utter_message(message)
+#                 return [FollowupAction("action_listen")]
+#
+#             elif active_form == "form_subscribe":
+#                 requested_slot = tracker.get_slot("requested_slot")
+#
+#                 if requested_slot == user_name:
+#                     logger.debug("The form '{}' is active".format(active_form))
+#                     message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
+#
+#                     dispatcher.utter_message(message)
+#                     return [FollowupAction("action_listen")]
+#
+#                 elif requested_slot == user_email:
+#                     logger.debug("The form '{}' is active".format(active_form))
+#                     message = "Je ne reconnais pas le format de l'adresse mail, pourriez-vous écrire \"e-mail:\" puis taper votre adresse e-mail, afni que je puisse la reconnaître?"
+#
+#                     dispatcher.utter_message(message)
+#                     return [FollowupAction("action_listen")]
+#
+#             return []
 
 class FormRiddle(FormAction):
     """Custom form action to fill the user riddle answer."""
@@ -440,7 +441,7 @@ class FormRiddle(FormAction):
                     dispatcher.utter_button_message(message, buttons)
                     return [SlotSet("requested_slot", slot)]
 
-                if slot == "user_riddle_solution":
+                if slot == "user_riddle_solution" and tracker.get_slot('riddle') is None:
                     category = tracker.get_slot('riddle_category')
 
                     riddle_name, riddle, solution, token_solution_len = get_riddle(enigma_df, category[0])
@@ -452,6 +453,16 @@ class FormRiddle(FormAction):
                     dispatcher.utter_message( "** " + riddle_name + " **" + "\n" + riddle + how_to_answer)
 
                     return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution), SlotSet("riddle", riddle), SlotSet("token_solution_len", token_solution_len)]
+
+                else:
+                    riddle = tracker.get_slot('riddle')
+                    message = f"je vous rappelle l'énigme:\n{riddle}"
+                    how_to_answer = "\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
+
+                    dispatcher.utter_message(message)
+                    dispatcher.utter_message(how_to_answer)
+
+                    return []
 
         """
         -------------------------------------
@@ -491,7 +502,7 @@ class ActionResetRiddleSlots(Action):
         return "action_reset_riddle_slots"
 
     def run(self, dispatcher, tracker, domain):
-        return [SlotSet("category", None)]
+        return [SlotSet("riddle_category", None)]
 
 class FormSubscribe(FormAction):
     """Custom form action to fill the user riddle answer."""

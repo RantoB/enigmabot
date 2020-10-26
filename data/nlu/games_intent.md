@@ -1,6 +1,7 @@
 ## intent:question_pitch
 - Quels sont les jeux
 - quels sont les scénario
+- quels sont les scénarios
 - quels sont les scénari
 - c'est quoi l'histoire
 - le pitch
@@ -15,6 +16,7 @@
 - j'aimerais connaître les jeux
 - peux-tu me présenter les jeux ?
 - quels sont les différents scénarios ?
+- présentation des jeux
 
 ## intent:societe_mysterieuse
 - C'est quoi  [société mystérieuse de Strasbourg](game)

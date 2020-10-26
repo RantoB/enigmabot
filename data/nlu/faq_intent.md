@@ -219,9 +219,10 @@
 
 ## intent:faq/animal
 - je peux venir avec mon animal
-- je peux être accompagné d'un chien ?
+- je peux être avec un chien ?
 - j'ai un chien
 - puis je venir avec mon lapin ?
+- je peux en profiter pour promener mon chien ?
 
 ## intent:faq/kids
 - avec une poussette ?

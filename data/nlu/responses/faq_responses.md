@@ -20,7 +20,7 @@
 
 ## faq
   * faq/how_difficult
-    - Un système d'indice est mis en place si la difficulté est insurmontable 🧩.\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
+    - Un système d'indices est mis en place si la difficulté est insurmontable 🧩.\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
 
 ## faq
   * faq/how_many_people
@@ -36,7 +36,7 @@
 
 ## faq
   * faq/price
-  - 🤑 Les jeux de piste coûtent 50€ par groupe 🤑. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcours.
+  - 💶 Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcours.
 
 ## faq
 * faq/break
@@ -116,7 +116,7 @@
 
 ## faq
 * faq/bike
-- Vous pouvez faire le jeu 🚶‍♀️ à pied ou à bicyclette 🚴‍♂️. Il n'y a que 3 km à parcourir et tout est accessible à vélo. A vous de choisir votre moyen de transport favoris.
+- Vous pouvez faire le jeu à pied 🚶‍♀️ ou à bicyclette 🚴‍♂️. Il n'y a que 3 km à parcourir et tout est accessible à vélo. A vous de choisir votre moyen de transport favoris.
 
 ## faq
 * faq/day_night

@@ -95,6 +95,13 @@ responses:
   - text: Est-ce que vous souhaitez faire encore une énigme ?
   - text: Une énigme de plus ❓
   - text: Encore une énigme ?
+  utter_ask_leave_riddle_form:
+  - text: Souhaitez-vous abandonner l'énigme que je vous ai proposée ?
+  - text: On laisse tombé l'énigme que je viens de vous proposer ?
+  utter_ok:
+  - text: Ok
+  - text: Très bien.
+  - text: Pas de problème.
   utter_thanks:
   - text: Merci à vous de m'avoir sollicité 🙏
   - text: J'espre avoir répondu à toutes vos questions.
@@ -152,6 +159,8 @@ responses:
   - text: Souhaitez-vous rester informé par e-mail des prochaines actualités d'ENIGMA Strasbourg ?
   - text: Souhaitez-vous recevoir par e-mail les dernières infos d'ENIGMA Strasbourg ?
   - text: Vous-pouvez nous laissez votre adresse e-mail afin de rester informé des prochaines actualités.
+  utter_ask_leave_subscribe_form:
+  - text: Souhaitez-vous interrompre votre enregistrement ?
   utter_ask_user_name:
   - text: 'Entrez votre prénom:'
   utter_ask_user_email:
@@ -173,7 +182,6 @@ actions:
 - action_set_faq_slot
 - action_save_information
 - action_reset_subscribe_slots
-- action_check_active_form
 - action_reset_riddle_slots
 forms:
 - form_riddle

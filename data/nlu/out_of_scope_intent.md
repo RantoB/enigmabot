@@ -56,7 +56,7 @@
 - sodomie
 - félation
 - baiser
-- il y a-t-il des putes a strasbourg
+- il y a-t-il des putes
 
 ## intent:insults
 - connard
@@ -67,3 +67,10 @@
 - fils de pute
 - petite pute
 - Stefu
+- merde
+- c'est de la merde
+- putain
+- tu fais chier
+- gros con
+- nique ta mère
+- idiot
