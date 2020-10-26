@@ -23,6 +23,12 @@
 - Plutôt cuir ou moustache ?
 - Bonjour. C’est quoi la réponse à la deuxième énigme de la société mystérieuse de Strasbourg ?
 - Quelle est la réponse à la première énigme?
+- damien est passé par là
+- c'est pas un peu ambitieux le 15 mars ?
+- enigam bot c'set quand même un peu un nom tout pourri non ?
+- faute d'orthographe
+- fungus
+- dj
 
 ## intent:out_of_scope/other_language
 - english speaking ?
@@ -41,6 +47,10 @@
 - blablabla
 - bnvjukijre
 - di doud
+- ça c'est un beaeau nomù
+- rantobot
+- sairir
+- [poil](email_prompt)
 
 ## intent:out_of_scope/sex
 - Tu suces ?
@@ -57,6 +67,7 @@
 - félation
 - baiser
 - il y a-t-il des putes
+- quel coquinou ce bot
 
 ## intent:insults
 - connard
@@ -74,3 +85,4 @@
 - gros con
 - nique ta mère
 - idiot
+- non tu pues du cul

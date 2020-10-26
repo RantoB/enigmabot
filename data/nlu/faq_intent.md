@@ -141,6 +141,7 @@
 - je suis un touriste
 - je suis de passage à strasbourgeois
 - si on connaît pas la ville c'est grave
+- dois-je connaître Strasbourg pour participer à Enigme ?
 
 ## intent:faq/break
 - est-il possible de faire une pause ?
@@ -294,6 +295,8 @@
 - Bonjour le jeu est il disponible en ce moment?
 - quels sont vos disponibilités pour ce weekend
 - Avez-vous de la disponibilité demain après-midi?
+- à partir de quelle date pourra-t-on faire les activités ?
+- peut-on réserver pour demain ?
 
 ## intent:faq/lost
 - si je suis perdue

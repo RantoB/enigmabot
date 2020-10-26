@@ -29,6 +29,7 @@
 - non, ciao
 - Tchao
 - Bonne nuit
+- aller cciao
 
 ## intent:affirm
 - oui
@@ -88,6 +89,7 @@
 - j'ai pas envie
 - Non
 - Stop la
+- non je ne souhaite pas rcevoir la newsletter
 
 ## intent:thanks
 - merci
