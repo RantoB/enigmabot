@@ -20,6 +20,8 @@
 - comment ca va
 - Bonjour comment vas-tu ?
 - Bonjour comment allez vous ?
+- tu vas bien ?
+- estce que ca va ?
 
 ## intent:joke
 - je rigole
@@ -63,4 +65,4 @@
 - va savoir
 - probable
 - probablement
-- éventuellement 
+- éventuellement

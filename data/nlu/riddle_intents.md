@@ -57,7 +57,8 @@
 - plus d'énimge
 - arrête avec les énigmes
 - je ne veux pas d'énigme
-- je ne veux plus d'énigme 
+- je ne veux plus d'énigme
+- pas d'autre énigme
 
 ## synonym:Rep:
 - rep:
