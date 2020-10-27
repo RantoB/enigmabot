@@ -30,20 +30,7 @@
   - utter_subscribe
 > check_answer_about_subscribe
 
-## deny FAQ, suggest subscribe
-> check_answer_about_ENIGMA_Stras_after_riddle
-* deny
-  - utter_subscribe
-> check_answer_about_subscribe
-
-## deny riddle proposition, suggest subscribe
-> check_answer_about_riddle_after_question_ENIGMA_Stras
-* deny
-  - utter_subscribe
-> check_answer_about_subscribe
-
 ## End
-> check_answer_about_ENIGMA_Stras_after_subscribe
 > check_answer_about_subscribe
 * deny
   - utter_thanks
