@@ -178,7 +178,7 @@ responses:
   utter_subscribe:
   - text: Souhaitez-vous rester informé par e-mail des prochaines actualités d'ENIGMA Strasbourg ?
   - text: Souhaitez-vous recevoir par e-mail les dernières infos d'ENIGMA Strasbourg ?
-  - text: Vous-pouvez nous laissez votre adresse e-mail afin de rester informé des prochaines actualités.
+  - text: Souhaitez-vous nous laissez votre adresse e-mail afin de rester informé des prochaines actualités ?
   utter_ask_leave_subscribe_form:
   - text: Souhaitez-vous interrompre votre enregistrement ?
   utter_ask_user_name:

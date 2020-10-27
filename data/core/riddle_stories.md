@@ -9,7 +9,11 @@
 
 ## User accepted riddle without FAQ
 > check_answer_about_riddle
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+* affirm OR ask_for_riddle OR inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
+
+## User accepted riddle without FAQ
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -19,7 +23,11 @@
 
 ## User accepted riddle after FAQ
 > check_answer_about_riddle_after_question_ENIGMA_Stras
-* ask_for_riddle OR inform_kind_of_riddle{"riddle_category": "logique"}
+* affirm OR ask_for_riddle OR inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
+
+## User accepted riddle after FAQ
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -29,7 +37,7 @@
 
 
 ## User accepted riddle without FAQ - user ask to stop but then continue
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -42,7 +50,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - user ask to stop but then continue
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -55,7 +63,7 @@
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
 ## User accepted riddle without FAQ - user ask to stop but then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -68,7 +76,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - user ask to stop but then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -82,7 +90,7 @@
 
 
 ## User accepted riddle without FAQ - interruption with FAQ and stay
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -96,7 +104,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - interruption with FAQ and stay
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -110,7 +118,7 @@
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
 ## User accepted riddle without FAQ - interruption with FAQ then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -124,7 +132,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - interruption with FAQ then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -138,7 +146,7 @@
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
 ## User accepted riddle without FAQ - interruption with OOS and stay
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -152,7 +160,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - interruption with OOS and stay
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -166,7 +174,7 @@
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
 ## User accepted riddle without FAQ - interruption with OOS then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -180,7 +188,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - interruption with OOS then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -194,7 +202,7 @@
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
 ## User accepted riddle without FAQ - interruption with game presentation and stay
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -212,7 +220,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - interruption with game presentation and stay
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -230,7 +238,7 @@
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
 ## User accepted riddle without FAQ - interruption with game presentation then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_1
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -248,7 +256,7 @@
 > check_answer_about_riddle
 
 ## User accepted riddle after FAQ - interruption with game presentation then leave
-* inform_kind_of_riddle{"riddle_category": "logique"}
+>to_riddle_2
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}

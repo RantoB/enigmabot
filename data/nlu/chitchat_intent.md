@@ -22,6 +22,7 @@
 - Bonjour comment allez vous ?
 - tu vas bien ?
 - estce que ca va ?
+- est-ce que tout roule ?
 
 ## intent:joke
 - je rigole
@@ -32,6 +33,7 @@
 - Tout va bien merci
 - je vais bien
 - ca va bien
+- tout roule
 
 ## intent:you_re_a_bot
 - tu es un chatbot ?
