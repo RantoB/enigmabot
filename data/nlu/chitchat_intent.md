@@ -4,12 +4,15 @@
 - comment tu t'appelle ?
 - C'est quoi ton blaze ?
 - comment tu tappelles
+- quel est ton nom
+- comment tu nommes-tu ?
 
 ## intent:man_or_woman
 - tu es un homme ou une femme ?
 - quel est ton sexe ?
 - tu es de quel sexe ?
 - t'es une fille ou un garçon ?
+- t'es un graçon ou un fille
 
 ## intent:how_are_you
 - Coucou, ça va ?
@@ -57,3 +60,7 @@
 ## intent:maybe
 - peut être
 - qui sait
+- va savoir
+- probable
+- probablement
+- éventuellement 

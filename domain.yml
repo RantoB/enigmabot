@@ -36,6 +36,7 @@ intents:
 - insults
 - kiss
 - man_or_woman
+- maybe
 entities:
 - user_name
 - user_email
@@ -136,6 +137,10 @@ responses:
   utter_what_s_your_name:
   - text: Et vous, comment-vous appelez-vous ?
   - text: Et vous, quel est votre nom ?
+  utter_dont_know:
+  - text: Moi je en sais pas
+  - text: Je ne saurai pas dire.
+  - text: A vous de me dire !
   utter_glad_to_meet_you:
   - text: Très enchanté de faire votre connaissance {user_name}.
   - text: Bienvenue {user_name}, je suis enchanté.

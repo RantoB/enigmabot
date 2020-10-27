@@ -4,7 +4,14 @@
 
 ## intent:greet
 - hey
+- hay
 - hello
+- helloo
+- hellooo
+- helloooo
+- hellooooo
+- helllo
+- helo
 - hi
 - bonjour
 - bonsoir
@@ -12,10 +19,15 @@
 - hello !
 - helo
 - salut
+- salu
 - hola
 - Ouaich
 - Yo
 - ola
+- olah
+- holaa
+- holaaa
+- wesh
 
 ## intent:goodbye
 - au revoir
@@ -70,6 +82,7 @@
 - je n'ai pas de question
 - pas de question
 - Pas d’autre question
+- je n'ai plus de question
 
 ## intent:deny
 - non
@@ -98,6 +111,10 @@
 - Stop la
 - arrête
 - on arrête
+- stopez
+- arrêtez
+- arrete
+
 
 ## intent:thanks
 - merci

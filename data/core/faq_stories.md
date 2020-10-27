@@ -14,6 +14,18 @@
   - utter_one_more_question
 > check_answer_about_ENIGMA_Stras
 
+## Greetings then FAQ
+* greet
+  - utter_greet
+* affirm
+  - utter_question
+* maybe 
+  - utter_dont_know
+* faq
+  - respond_faq
+  - utter_one_more_question
+> check_answer_about_ENIGMA_Stras
+
 ## affirm FAQ without riddle before
 > check_answer_about_ENIGMA_Stras
 * affirm OR looking_for_something
