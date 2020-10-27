@@ -2,7 +2,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered, FollowupAction
+from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered, FollowupAction, EventType, Form
 from rasa_sdk.forms import FormAction
 import logging
 logger = logging.getLogger(__name__)
@@ -315,8 +315,12 @@ class ActionDefaultFallback(Action):
                 dispatcher.utter_message(message)
 
             else:
-                message = "Je n'ai pas pu interprêter votre réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
-                dispatcher.utter_message(message)
+                if not tracker.latest_message.get('text').startswith("rep"):
+                    message = "Je n'ai pas pu interprêter votre réponse, pourriez-vous écrire \"Rep:\" puis écrire votre réponse ?"
+                    dispatcher.utter_message(message)
+                else:
+                    message = "Je n'ai pas pu interprêter votre réponse, pourriez-vous écrire \"Rep:[espace]\" puis écrire votre réponse ?"
+                    dispatcher.utter_message(message)
 
             return []
 
@@ -393,9 +397,21 @@ class FormRiddle(FormAction):
         """
         -------------------------------------
         """
+        # if tracker.get_slot("deactivate_form") == True:
+        #     result = list()
+        #     for slot in self.required_slots(tracker):
+        #         result.append(SlotSet(slot, None))
+        #
+        #     result.append(SlotSet("deactivate_form", None))
+        #
+        #     result.extend(self.deactivate())
+        #
+        #     return result
+
         for slot in self.required_slots(tracker):
             if self._should_request_slot(tracker, slot):
                 logger.debug("Request next slot '{}'".format(slot))
+
                 if slot == "riddle_category":
                     messages = list()
                     messages.append("Quelle genre d'énigme aimez-vous ?\n")
@@ -419,15 +435,14 @@ class FormRiddle(FormAction):
 
                     return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution), SlotSet("riddle", riddle), SlotSet("token_solution_len", token_solution_len)]
 
-                else:
+                if slot == "user_riddle_solution" and tracker.get_slot('riddle') is not None:
                     riddle = tracker.get_slot('riddle')
-                    message = f"je vous rappelle l'énigme:\n{riddle}"
+
                     how_to_answer = "\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
 
-                    dispatcher.utter_message(message)
-                    dispatcher.utter_message(how_to_answer)
+                    dispatcher.utter_message(f"Je vous rappelle l'énigme:\n{riddle}" + how_to_answer)
 
-                    return []
+                    return [SlotSet("requested_slot", slot)]
 
         """
         -------------------------------------
@@ -459,7 +474,7 @@ class FormRiddle(FormAction):
         dispatcher.utter_message(message)
         dispatcher.utter_message(f"La bonne réponse est :\n{riddle_solution}")
 
-        return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None), SlotSet("riddle", None), SlotSet("token_solution_len", None)]
+        return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None), SlotSet("riddle", None), SlotSet("token_solution_len", None), SlotSet("deactivate_form", None)]
 
 class ActionResetRiddleSlots(Action):
 
@@ -582,3 +597,11 @@ class ActionSaveInformation(Action):
         dispatcher.utter_message(message)
 
         return []
+
+class ActionDeactivateForm(Action):
+
+    def name(self):
+        return "action_deactivate_form"
+
+    def run(self, dispatcher, tracker, domain):
+        return [Form(None), SlotSet("requested_slot", None)]

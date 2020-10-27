@@ -7,7 +7,7 @@
   - utter_propose_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm without FAQ
+## User accepted riddle without FAQ
 > check_answer_about_riddle
 * affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
@@ -17,7 +17,7 @@
   - utter_propose_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after FAQ
+## User accepted riddle after FAQ
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 * ask_for_riddle OR inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
@@ -27,9 +27,62 @@
   - utter_propose_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
-## Bot proposed a riddle and user affirm without FAQ - interruption with FAQ then leave
+
+## User accepted riddle without FAQ - user ask to stop but then continue
+* inform_kind_of_riddle{"riddle_category": "logique"}
+  - action_reset_riddle_slots
+  - form_riddle
+  - form{"name": "form_riddle"}
+* stop OR no_more_riddle OR deny
+  - utter_ask_leave_riddle_form
+* deny
+  - form_riddle
+  - form{"name": null}
+  - utter_propose_riddle
 > check_answer_about_riddle
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+
+## User accepted riddle after FAQ - user ask to stop but then continue
+* inform_kind_of_riddle{"riddle_category": "logique"}
+  - action_reset_riddle_slots
+  - form_riddle
+  - form{"name": "form_riddle"}
+* stop OR no_more_riddle OR deny
+  - utter_ask_leave_riddle_form
+* deny
+  - form_riddle
+  - form{"name": null}
+  - utter_propose_riddle
+> check_answer_about_riddle_after_question_ENIGMA_Stras
+
+## User accepted riddle without FAQ - user ask to stop but then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
+  - action_reset_riddle_slots
+  - form_riddle
+  - form{"name": "form_riddle"}
+* stop OR no_more_riddle OR deny
+  - utter_ask_leave_riddle_form
+* affirm
+  - action_deactivate_form
+  - utter_ok
+  - utter_an_other_riddle
+> check_answer_about_riddle
+
+## User accepted riddle after FAQ - user ask to stop but then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
+  - action_reset_riddle_slots
+  - form_riddle
+  - form{"name": "form_riddle"}
+* stop OR no_more_riddle OR deny
+  - utter_ask_leave_riddle_form
+* affirm
+  - action_deactivate_form
+  - utter_ok
+  - utter_an_other_riddle
+> check_answer_about_riddle_after_question_ENIGMA_Stras
+
+
+## User accepted riddle without FAQ - interruption with FAQ and stay
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -42,9 +95,8 @@
   - utter_propose_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after FAQ - interruption with FAQ then leave
-> check_answer_about_riddle_after_question_ENIGMA_Stras
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle after FAQ - interruption with FAQ and stay
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -57,9 +109,8 @@
   - utter_propose_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
-## Bot proposed a riddle and user affirm without FAQ - interruption with FAQ and stay
-> check_answer_about_riddle
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle without FAQ - interruption with FAQ then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -68,14 +119,12 @@
   - utter_ask_leave_riddle_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
-  - utter_question_on_ENIGMA_Stras
+  - utter_an_other_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after FAQ - interruption with FAQ and stay
-> check_answer_about_riddle_after_question_ENIGMA_Stras
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle after FAQ - interruption with FAQ then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -84,14 +133,12 @@
   - utter_ask_leave_riddle_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
-  - utter_question_on_ENIGMA_Stras
+  - utter_an_other_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
-## Bot proposed a riddle and user affirm without FAQ - interruption with OOS then leave
-> check_answer_about_riddle
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle without FAQ - interruption with OOS and stay
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -104,9 +151,8 @@
   - utter_propose_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after FAQ - interruption with OOS then leave
-> check_answer_about_riddle_after_question_ENIGMA_Stras
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle after FAQ - interruption with OOS and stay
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -119,9 +165,8 @@
   - utter_propose_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
-## Bot proposed a riddle and user affirm without FAQ - interruption with OOS and stay
-> check_answer_about_riddle
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle without FAQ - interruption with OOS then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -130,14 +175,12 @@
   - utter_ask_leave_riddle_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
-  - utter_question_on_ENIGMA_Stras
+  - utter_an_other_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after FAQ - interruption with OOS and stay
-> check_answer_about_riddle_after_question_ENIGMA_Stras
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle after FAQ - interruption with OOS then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -146,14 +189,12 @@
   - utter_ask_leave_riddle_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
-  - utter_question_on_ENIGMA_Stras
+  - utter_an_other_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
-## Bot proposed a riddle and user affirm without FAQ - interruption with game presentation then leave
-> check_answer_about_riddle
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle without FAQ - interruption with game presentation and stay
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -170,9 +211,8 @@
   - utter_propose_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after FAQ - interruption with game presentation then leave
-> check_answer_about_riddle_after_question_ENIGMA_Stras
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle after FAQ - interruption with game presentation and stay
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -189,9 +229,8 @@
   - utter_propose_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 
-## Bot proposed a riddle and user affirm without FAQ - interruption with game presentation and stay
-> check_answer_about_riddle
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle without FAQ - interruption with game presentation then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -204,14 +243,12 @@
   - utter_ask_leave_riddle_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
-  - utter_question_on_ENIGMA_Stras
+  - utter_an_other_riddle
 > check_answer_about_riddle
 
-## Bot proposed a riddle and user affirm after FAQ - interruption with game presentation and stay
-> check_answer_about_riddle_after_question_ENIGMA_Stras
-* affirm OR inform_kind_of_riddle{"riddle_category": "logique"}
+## User accepted riddle after FAQ - interruption with game presentation then leave
+* inform_kind_of_riddle{"riddle_category": "logique"}
   - action_reset_riddle_slots
   - form_riddle
   - form{"name": "form_riddle"}
@@ -224,7 +261,6 @@
   - utter_ask_leave_riddle_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
-  - utter_question_on_ENIGMA_Stras
+  - utter_an_other_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras

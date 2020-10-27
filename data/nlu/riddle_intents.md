@@ -52,6 +52,13 @@
 - [Rep:](user_riddle_solution) 28...
 - [Rep:](user_riddle_solution) On ne peut pas doubler le dernier, car par définition il n'y a personne derrière le dernier...
 
+## intent:no_more_riddle
+- pas d'énimge
+- plus d'énimge
+- arrête avec les énigmes
+- je ne veux pas d'énigme
+- je ne veux plus d'énigme 
+
 ## synonym:Rep:
 - rep:
 - rep :

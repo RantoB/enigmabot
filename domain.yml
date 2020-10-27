@@ -7,6 +7,7 @@ intents:
 - goodbye
 - affirm
 - deny
+- stop
 - thanks
 - question_pitch
 - societe_mysterieuse
@@ -18,6 +19,7 @@ intents:
 - ask_for_riddle
 - inform_kind_of_riddle
 - answer_the_riddle
+- no_more_riddle
 - how_to_subscribe
 - inform_name
 - inform_email
@@ -62,6 +64,8 @@ slots:
     type: unfeaturized
   user_riddle_solution:
     type: unfeaturized
+  deactivate_form:
+    type: bool
 responses:
   utter_presentation:
   - text: "Bienvenue, je suis ENIGMA-Bot 🤖 et je peux répondre à vos questions concernant les jeux de piste ENIGMA Strasbourg.\
@@ -96,6 +100,10 @@ responses:
   - text: Est-ce que vous souhaitez faire encore une énigme ?
   - text: Une énigme de plus ❓
   - text: Encore une énigme ?
+  utter_an_other_riddle:
+  - text: Souhaitez-vous avoir une autre énigme ?
+  - text: Voulez-vous que je vous trouve une autre énigme ?
+  - text: Est-ce qu'on change d'énigme ?
   utter_ask_leave_riddle_form:
   - text: Souhaitez-vous abandonner l'énigme que je vous ai proposée ?
   - text: On laisse tombé l'énigme que je viens de vous proposer ?
@@ -186,7 +194,6 @@ actions:
 - respond_out_of_scope
 - action_make_riddle
 - action_check_answer
-- action_set_faq_slot
 - action_save_information
 - action_reset_subscribe_slots
 - action_reset_riddle_slots

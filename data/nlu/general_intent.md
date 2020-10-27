@@ -88,8 +88,16 @@
 - non merci
 - j'ai pas envie
 - Non
+- non je ne souhaite pas recevoir la newsletter
+- non ca suffit
+- je ne veux pas
+- je refuse
+
+## intent:stop
+- stop
 - Stop la
-- non je ne souhaite pas rcevoir la newsletter
+- arrête
+- on arrête
 
 ## intent:thanks
 - merci

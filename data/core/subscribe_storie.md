@@ -1,21 +1,48 @@
-## subscribe 1
+## subscribe request from user
 * how_to_subscribe
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
   - form{"name": null}
 > user_check_information
 
-## subscribe 2
+## Check answer about subscribe
 > check_answer_about_subscribe
-* affirm OR how_to_subscribe
+* affirm
+> start_subscribe_form
+
+## Normal subscribe
+> start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
   - form{"name": null}
 > user_check_information
 
 ## subscribe & FAQ & continue form
-> check_answer_about_subscribe
-* affirm OR how_to_subscribe
+> start_subscribe_form
+  - form_subscribe
+  - form_subscribe{"name": "form_subscribe"}
+* stop OR deny
+  - utter_ask_leave_subscribe_form
+* deny
+  - form_subscribe
+  - form_subscribe{"name": "form_subscribe"}
+  - form{"name": null}
+> user_check_information
+
+## subscribe & FAQ & leave form
+> start_subscribe_form
+  - form_subscribe
+  - form_subscribe{"name": "form_subscribe"}
+* stop OR deny
+  - utter_ask_leave_subscribe_form
+* affirm
+  - action_deactivate_form
+  - utter_ok
+  - utter_question_on_ENIGMA_Stras
+> check_answer_about_ENIGMA_Stras_after_subscribe
+
+## subscribe & FAQ & continue form
+> start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
 * faq
@@ -28,8 +55,7 @@
 > user_check_information
 
 ## subscribe & FAQ & leave form
-> check_answer_about_subscribe
-* affirm OR how_to_subscribe
+> start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
 * faq
@@ -37,14 +63,12 @@
   - utter_ask_leave_subscribe_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
   - utter_question_on_ENIGMA_Stras
 > check_answer_about_ENIGMA_Stras_after_subscribe
 
-## subscribe & Out of scope & continue form
-> check_answer_about_subscribe
-* affirm OR how_to_subscribe
+## subscribe & OOS & continue form
+> start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
 * out_of_scope
@@ -56,9 +80,8 @@
   - form{"name": null}
 > user_check_information
 
-## subscribe & Out of scope & leave form
-> check_answer_about_subscribe
-* affirm OR how_to_subscribe
+## subscribe & OOS & leave form
+> start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
 * out_of_scope
@@ -66,14 +89,12 @@
   - utter_ask_leave_subscribe_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
   - utter_question_on_ENIGMA_Stras
 > check_answer_about_ENIGMA_Stras_after_subscribe
 
 ## subscribe & game presentation & continue form
-> check_answer_about_subscribe
-* affirm OR how_to_subscribe
+> start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
 * question_pitch
@@ -90,8 +111,7 @@
 > user_check_information
 
 ## subscribe & game presentation & leave form
-> check_answer_about_subscribe
-* affirm OR how_to_subscribe
+> start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
 * question_pitch
@@ -103,7 +123,6 @@
   - utter_ask_leave_subscribe_form
 * affirm
   - action_deactivate_form
-  - form{"name": null}
   - utter_ok
   - utter_question_on_ENIGMA_Stras
 > check_answer_about_ENIGMA_Stras_after_subscribe

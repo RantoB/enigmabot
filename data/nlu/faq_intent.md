@@ -19,6 +19,8 @@
 - A toi de me le dire
 - Qu’est ce que c’est ?
 - Est ce instructif ?
+- c'est quoi les bails ?
+- c'est quoi les bail ?
 
 ## intent:faq/price
 - Combien ca coûte
@@ -35,6 +37,8 @@
 - C'est cher ?
 - Combien coûte l’activité ?
 - Quel tarif
+- c'est quoi le prix ?
+- c'est quoi le tarif
 
 ## intent:faq/general_sequence_of_the_game
 - Comment est-ce que cela se déroule ?
@@ -99,7 +103,8 @@
 - pour se faire aider
 - nous avons besoin d'aide
 - OK cool. Je suis bloqué. Peux tu m'aider ?
-- Je ne trouve pas le premier enigmz
+- Je ne trouve pas le premier enigma
+- c'est comliqué ?
 
 ## intent:faq/how_many_people
 - Combien de participants ?
@@ -248,6 +253,7 @@
 - Est ce possible de le faire avec des enfants
 - Est-ce que c’est accessible aux enfants?
 - Et est-ce adapté aux enfants ?
+- je suis accompagné
 
 ## intent:faq/booking
 - quand est-ce qu'on peut jouer ?
