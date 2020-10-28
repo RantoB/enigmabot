@@ -311,7 +311,7 @@ class ActionDefaultFallback(Action):
 
                 logger.debug("The form '{}' is active".format(active_form))
                 riddle = tracker.get_slot('riddle')
-                message = f"je vous rappelle l'énigme:\n{riddle}"
+                message = f"je vous rappelle l'énigme:\n\n{riddle}"
                 dispatcher.utter_message(message)
 
             else:
@@ -340,7 +340,7 @@ class ActionDefaultFallback(Action):
                 if requested_slot == "user_name":
                     logger.debug("The form '{}' is active".format(active_form))
 
-                    message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afni que je puisse le reconnaître?"
+                    message = "Je ne connais pas ce prénom, pourriez-vous écrire \"prénom:\" puis taper votre prénom, afin que je puisse le reconnaître?"
                     dispatcher.utter_message(message)
 
                 elif requested_slot == "user_email":
@@ -360,9 +360,9 @@ class ActionDefaultFallback(Action):
             messages.append("Je ne suis pas sûr de comprendre, pourriez-vous reformuler ?")
             messages.append("Je suis désolé, je n'ai pas compris. Est-il possible de reformuler la quesion ?")
             messages.append("Excusez-moi mais je n'ai pas compris ce que vous demandez, est-ce que vous pourriez reformuler ?")
-            messages.append("Attends voir... \nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si vous reformulez, ça pourrait m'aider.")
+            messages.append("Attends voir... \n\nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si vous reformulez, ça pourrait m'aider.")
             messages.append("J'ai bien peur de ne pas avoir compris... Est-ce bien en rapport avec ENIGMA Strasbourg ?")
-            messages.append("Mhm, j'essaie pourtant de comprendre mais je ne suis pas sûr de bien saisir ce que vous cherchez à me demander. Peut-être qu'en reformulant j'arriverais à comprendre.")
+            messages.append("Mhm, je ne suis pas sûr de bien saisir ce que vous cherchez à me demander. \n\nPeut-être qu'en reformulant j'arriverais à comprendre.")
 
             message = np.random.choice(np.array(messages))
 
@@ -429,18 +429,18 @@ class FormRiddle(FormAction):
 
                     token_solution_len = str(token_solution_len)
 
-                    how_to_answer = "\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
+                    how_to_answer = "\n\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
 
-                    dispatcher.utter_message( "** " + riddle_name + " **" + "\n" + riddle + how_to_answer)
+                    dispatcher.utter_message( "**" + riddle_name + "**" + "\n\n" + riddle + how_to_answer)
 
                     return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution), SlotSet("riddle", riddle), SlotSet("token_solution_len", token_solution_len)]
 
                 if slot == "user_riddle_solution" and tracker.get_slot('riddle') is not None:
                     riddle = tracker.get_slot('riddle')
 
-                    how_to_answer = "\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
+                    how_to_answer = "\n\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
 
-                    dispatcher.utter_message(f"Je vous rappelle l'énigme:\n{riddle}" + how_to_answer)
+                    dispatcher.utter_message(f"Je vous rappelle l'énigme:\n\n{riddle}" + how_to_answer)
 
                     return [SlotSet("requested_slot", slot)]
 
@@ -472,7 +472,7 @@ class FormRiddle(FormAction):
         save_riddle_results(riddle, riddle_solution, user_riddle_solution, token_solution_len, cosine_indicator, spacy_vec_sim_indicator, mark)
 
         dispatcher.utter_message(message)
-        dispatcher.utter_message(f"La bonne réponse est :\n{riddle_solution}")
+        dispatcher.utter_message(f"La bonne réponse est :\n\n{riddle_solution}")
 
         return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None), SlotSet("riddle", None), SlotSet("token_solution_len", None), SlotSet("deactivate_form", None)]
 
@@ -496,9 +496,14 @@ class FormSubscribe(FormAction):
         """A list of required slots that the form has to fill"""
         return ["user_name", "user_email"]
 
-    # def slot_mappings(self) -> Dict[Text, Any]:
-    #     return {"riddle_category": self.from_entity(entity="riddle_category",
-    #             intent=["inform_kind_of_riddle"])}
+    def slot_mappings(self) -> Dict[Text, Any]:
+        return {"user_name": self.from_entity(
+                    entity="user_name",
+                    intent=["inform_name"]),
+                "user_email": self.from_entity(
+                    entity="user_email",
+                    intent=["inform_email"])
+                }
 
     def submit(self,
                dispatcher: CollectingDispatcher,
@@ -507,21 +512,17 @@ class FormSubscribe(FormAction):
                ) -> List[Dict]:
         """Once required slots are filled, print the message"""
 
-        user_name = tracker.get_slot('user_name')
-        if type(user_name) == list:
-            user_name = user_name[0]
+        name = tracker.get_slot('user_name')
+        if type(name) == list:
+            name = name[0]
 
-        user_email = tracker.get_slot('user_email')
-        if type(user_email) == list:
-            user_email = user_email[0]
+        email = tracker.get_slot('user_email')
+        if type(email) == list:
+            email = email[0]
 
-        # if tracker.get_slot('user_name') == None:
-        #     user_answer = tracker.latest_message.get('text')
-        #     user_name = re.sub(r'prénom:.', '', user_answer)
-        # else:
-        #     user_name = tracker.get_slot('user_name')[0]
-
-        message = "name: {}\nemail: {}\nPouvez-vous confirmez que ces informations sont correctes ?".format(user_name, user_email)
+        message = f"\n* **Prénom :** {name.capitalize()}\n\
+        \n* **e-mail :** {email}\n\
+        \nPouvez-vous confirmez que ces informations sont correctes ?"
 
         dispatcher.utter_message(message)
 

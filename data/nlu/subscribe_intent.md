@@ -50,6 +50,15 @@ data/nlu/lookup_tables/prenoms.txt
 - [prenom:](name_prompt) [Frédéric](user_name)
 - [prenom:](name_prompt) [Raphaël](user_name)
 - [nom:](name_prompt) [Sylvie](user_name)
+- [prénom](name_prompt) [Marc](user_name)
+- [prénom](name_prompt) [Mathieu](user_name)
+- [prénom](name_prompt) [Aziz](user_name)
+- [prénom](name_prompt) [Mehdi](user_name)
+- [prénom](name_prompt) [Pierre](user_name)
+- [nom](name_prompt) [Lily](user_name)
+- [prenom](name_prompt) [Henriette](user_name)
+- [prenom](name_prompt) [Raymond](user_name)
+- [nom](name_prompt) [Lisa](user_name)
 
 ## intent:inform_email
 - [email@example.com](user_email)
@@ -68,6 +77,9 @@ data/nlu/lookup_tables/prenoms.txt
 ## synonym:prénom
 - prenom
 - nom
+- prénom:
+- nom:
+- prenom:
 
 ## synonym:email
 - e-mail

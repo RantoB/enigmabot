@@ -17,7 +17,18 @@
   - form{"name": null}
 > user_check_information
 
-## subscribe & FAQ & continue form
+## subscribe & Fallback action & continue form
+> start_subscribe_form
+  - form_subscribe
+  - form_subscribe{"name": "form_subscribe"}
+  - action_default_fallback
+* inform_name OR inform_email
+  - form_subscribe
+  - form_subscribe{"name": "form_subscribe"}
+  - form{"name": null}
+> user_check_information
+
+## subscribe & stop & continue form
 > start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}
@@ -29,7 +40,7 @@
   - form{"name": null}
 > user_check_information
 
-## subscribe & FAQ & leave form
+## subscribe & stop & leave form
 > start_subscribe_form
   - form_subscribe
   - form_subscribe{"name": "form_subscribe"}

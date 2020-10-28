@@ -39,7 +39,7 @@
   - utter_goodbye
 
 ## No question
-* no_question
+* deny OR no_question
   - utter_propose_riddle
 > check_answer_about_riddle_after_question_ENIGMA_Stras
 

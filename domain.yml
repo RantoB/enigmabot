@@ -49,15 +49,17 @@ entities:
 - token_solution_len
 - riddle
 slots:
+  deactivate_form:
+    type: bool
   game:
     type: text
   riddle:
     type: unfeaturized
-  token_solution_len:
-    type: unfeaturized
   riddle_category:
     type: unfeaturized
   riddle_solution:
+    type: unfeaturized
+  token_solution_len:
     type: unfeaturized
   user_email:
     type: unfeaturized
@@ -65,23 +67,28 @@ slots:
     type: unfeaturized
   user_riddle_solution:
     type: unfeaturized
-  deactivate_form:
-    type: bool
 responses:
   utter_presentation:
-  - text: "Bienvenue, je suis ENIGMA-Bot 🤖 et je peux répondre à vos questions concernant les jeux de piste ENIGMA Strasbourg.\
-    \ \n**Je peux aussi vous proposer de résoudre des énigmes**, n'hésitez pas à me le demander\nRestez indulgent s'il vous plaît car
-    je suis encore en formation 🎓. Et pour l'amélioration de mes performances, nos conversations sont enregistrées.\n"
+  - text: "Bienvenue, je suis **ENIGMA-Bot** et je peux répondre à vos questions\
+      \ concernant les jeux de piste ENIGMA Strasbourg. \n\n**Je peux aussi vous proposer\
+      \ de résoudre des énigmes**, n'hésitez pas à me le demander\n\nRestez indulgent\
+      \ s'il vous plaît car je suis encore en formation. Et pour l'amélioration\
+      \ de mes performances, nos conversations sont enregistrées.\n"
   utter_what_I_do:
-  - text: "Je peux répondre, autant se faire que peux, à vos questions sur les jeux de piste ENIGMA Strasbourg.\
-  \ \nJe peux aussi vous soumettre une énigme pour vous entrainer !"
-  - text: "Je réponds aux questions concernant les jeux de piste ENIGMA Strasbourg et je peux vous proposer \
-  \ de résoudre des énigmes."
+  - text: "Je peux répondre, autant se faire que peux, à vos questions sur les jeux\
+      \ de piste **ENIGMA Strasbourg**. \n\nJe peux aussi vous soumettre une énigme pour\
+      \ vous entrainer !"
+  - text: Je réponds aux questions concernant les jeux de piste **ENIGMA Strasbourg**
+      et je peux vous proposer de résoudre des énigmes.
   utter_greet:
-  - text: Bonjour, je peux vous aider à trouver une info ℹ️ posez-moi vos questions !
-  - text: Bonjour, cherchez-vous un renseigner ℹ️ sur les activités proposées par ENIGMA Strasbourg ?
-  - text: Hello, que souhaitez-vous savoir sur les activités proposées par ENIGMA Strasbourg ?
-  - text: Hello, comment est-ce que je peux vous renseigner sur les jeux de piste d'ENIGMA Strasbourg ?
+  - text: Bonjour, je peux vous aider à trouver une info ℹ️ posez-moi vos questions
+      !
+  - text: Bonjour, cherchez-vous un renseigner ℹ️ sur les activités proposées par
+      ENIGMA Strasbourg ?
+  - text: Hello, que souhaitez-vous savoir sur les activités proposées par ENIGMA
+      Strasbourg ?
+  - text: Hello, comment est-ce que je peux vous renseigner sur les jeux de piste
+      d'ENIGMA Strasbourg ?
   utter_question:
   - text: Quelle est votre question ?
   - text: Que souhaitez-vous savoir ❓
@@ -127,7 +134,8 @@ responses:
   - text: J'ai connu pire, ça va merci !
   utter_iam_ENIGMA_Bot:
   - text: Je suis ENIGMA-Bot, je travaille pour ENIGMA Strasbourg.
-  - text: Je m'appelle ENIGMA-Bot et j'ai rejoins ENIGMA Strasbourg il y a peu de temps
+  - text: Je m'appelle ENIGMA-Bot et j'ai rejoins ENIGMA Strasbourg il y a peu de
+      temps
   utter_man_or_woman:
   - text: Quelle question ! C'est pourtant évident !
   - text: A ton avis ?
@@ -147,9 +155,9 @@ responses:
   utter_iamabot:
   - text: Je suis un robot développé par Monsieur Bertrand !
   utter_bertrand:
-  - text: "Bertrand est le concepteur des jeux de piste ENIGMA Strasbourg. Il est aussi le \
-  \ développeur de ce chatbot et de bien d'autres choses... \
-  \ [Pour en savoir plus à son sujet](https://www.linkedin.com/in/bertrand-burcker-a6192655/)"
+  - text: Bertrand est le concepteur des jeux de piste **ENIGMA Strasbourg**. Il est aussi
+      le  développeur de ce chatbot et de bien d'autres choses...  [Pour en savoir
+      plus à son sujet](https://www.linkedin.com/in/bertrand-burcker-a6192655/)
   utter_laugh:
   - text: Quel humour !
   - text: Quest-ce qu'on se marre !
@@ -161,24 +169,27 @@ responses:
   - text: "La Société Mystérieuse de Strasbourg compte de nombreux érudits qui ont\
       \ façonné la ville de Strasbourg. Ils vous ont laissé quelques énigmes afin\
       \ de rencontrer les meilleurs d’entre vous, de vous tester et peut-être même\
-      \ de les rejoindre. \nSerez-vous de taille à résoudre les énigmes des grandes\
+      \ de les rejoindre. \n\nSerez-vous de taille à résoudre les énigmes des grandes\
       \ figures qui ont contribué au prestige de Strasbourg ?"
   utter_meurtre_krutenau:
   - text: "\"Mon arrière grand-père est un assassin selon les archives historiques.\
-      \ Aidez-moi à fouiller le passé pour le prouver ou le démentir !\"\nJean est\
+      \ Aidez-moi à fouiller le passé pour le prouver ou le démentir !\"\n\nJean est\
       \ en possession d’une lettre d’un aïeul contredisant les archives historiques\
       \ qui font de son arrière-grand père l’auteur du Meurtre qui a eu lieu à la\
       \ Krutenau en 1913. Il vous sollicite pour investiguer et connaître la vérité.\
-      \ \nUne Machine à Immersion Spatio-Temporelle sera mise à votre disposition\
+      \ \n\nUne Machine à Immersion Spatio-Temporelle sera mise à votre disposition\
       \ pour vous permettre de revoir certaines scènes et de comprendre ce qu’il s’est\
       \ vraiment passé."
   utter_next_game:
   - text: souhaitez-vous connaître le pitch du second jeu ?
   - text: Je vous donne le pitch de l'autre jeu ?
   utter_subscribe:
-  - text: Souhaitez-vous rester informé par e-mail des prochaines actualités d'ENIGMA Strasbourg ?
-  - text: Souhaitez-vous recevoir par e-mail les dernières infos d'ENIGMA Strasbourg ?
-  - text: Souhaitez-vous nous laissez votre adresse e-mail afin de rester informé des prochaines actualités ?
+  - text: Souhaitez-vous rester informé par e-mail des prochaines actualités d'ENIGMA
+      Strasbourg ?
+  - text: Souhaitez-vous recevoir par e-mail les dernières infos d'ENIGMA Strasbourg
+      ?
+  - text: Souhaitez-vous nous laissez votre adresse e-mail afin de rester informé
+      des prochaines actualités ?
   utter_ask_leave_subscribe_form:
   - text: Souhaitez-vous interrompre votre enregistrement ?
   utter_ask_user_name:
