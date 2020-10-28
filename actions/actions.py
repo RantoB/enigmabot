@@ -2,7 +2,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered, FollowupAction, EventType, Form
+from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered, FollowupAction, EventType, Form, AllSlotsReset
 from rasa_sdk.forms import FormAction
 import logging
 logger = logging.getLogger(__name__)
@@ -604,4 +604,5 @@ class ActionDeactivateForm(Action):
         return "action_deactivate_form"
 
     def run(self, dispatcher, tracker, domain):
-        return [Form(None), SlotSet("requested_slot", None)]
+        #SlotSet("requested_slot", None),
+        return [Form(None), AllSlotsReset()]

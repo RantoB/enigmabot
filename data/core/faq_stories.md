@@ -7,7 +7,7 @@
 ## Greetings then FAQ
 * greet
   - utter_greet
-* affirm
+* affirm OR looking_for_something
   - utter_question
 * faq
   - respond_faq
@@ -19,7 +19,7 @@
   - utter_greet
 * affirm
   - utter_question
-* maybe 
+* maybe
   - utter_dont_know
 * faq
   - respond_faq
@@ -44,7 +44,7 @@
 
 ## affirm FAQ after riddle
 > check_answer_about_ENIGMA_Stras_after_riddle
-* affirm
+* affirm OR looking_for_something
   - utter_question
 * faq
   - respond_faq
@@ -67,7 +67,7 @@
 
 ## affirm FAQ after subscribe
 > check_answer_about_ENIGMA_Stras_after_subscribe
-* affirm
+* affirm OR looking_for_something
   - utter_question
 * faq
   - respond_faq

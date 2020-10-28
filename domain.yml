@@ -138,7 +138,7 @@ responses:
   - text: Et vous, comment-vous appelez-vous ?
   - text: Et vous, quel est votre nom ?
   utter_dont_know:
-  - text: Moi je en sais pas
+  - text: Moi je ne sais pas
   - text: Je ne saurai pas dire.
   - text: A vous de me dire !
   utter_glad_to_meet_you:
