@@ -17,7 +17,6 @@
 - bonsoir
 - Coucou
 - hello !
-- helo
 - salut
 - salu
 - hola
@@ -105,6 +104,7 @@
 - non ca suffit
 - je ne veux pas
 - je refuse
+- je ne peux pas donner mon nom
 
 ## intent:stop
 - stop
@@ -114,7 +114,6 @@
 - stopez
 - arrêtez
 - arrete
-
 
 ## intent:thanks
 - merci
