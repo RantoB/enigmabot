@@ -18,6 +18,7 @@ RUN python -m spacy download fr_core_news_md
 # Copy actions folder to working directory
 COPY ./actions /app/actions
 COPY ./enigma.pkl /app/enigma.pkl
+# COPY ./logo_signature.jpg /app/logo_signature.jpg - already on the Google VM  volume
 COPY ./action_data /app/action_data
 
 # Add a user and add permission to this user

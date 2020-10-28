@@ -429,18 +429,23 @@ class FormRiddle(FormAction):
 
                     token_solution_len = str(token_solution_len)
 
-                    how_to_answer = "\n\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
+                    how_to_answer = "(Commencez par \"rep:\" puis écrivez votre réponse.)"
+                    message = f"**{riddle_name}** \n\
+                            \n{riddle}\n\
+                            \n{how_to_answer}\n"
 
-                    dispatcher.utter_message( "**" + riddle_name + "**" + "\n\n" + riddle + how_to_answer)
+                    dispatcher.utter_message(message)
 
                     return [SlotSet("requested_slot", slot), SlotSet("riddle_solution", solution), SlotSet("riddle", riddle), SlotSet("token_solution_len", token_solution_len)]
 
                 if slot == "user_riddle_solution" and tracker.get_slot('riddle') is not None:
                     riddle = tracker.get_slot('riddle')
 
-                    how_to_answer = "\n\n(Commencez par \"rep:\" puis écrivez votre réponse.)"
+                    how_to_answer = "(Commencez par \"rep:\" puis écrivez votre réponse.)"
 
-                    dispatcher.utter_message(f"Je vous rappelle l'énigme:\n\n{riddle}" + how_to_answer)
+                    dispatcher.utter_message(f"Je vous rappelle l'énigme:\n\
+                        \n{riddle}\n\
+                        \n{how_to_answer}\n")
 
                     return [SlotSet("requested_slot", slot)]
 
@@ -566,7 +571,7 @@ class ActionSaveInformation(Action):
         body = f"""\
         <html>
             <body>
-                <h2>Bienvenue {user_name} !</h2>
+                <h2>Bienvenue {user_name.capitalize()} !</h2>
                 <p>Votre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d\'ENIGMA Strasbourg.</p>
                 <p>Merci d\'avoir tester Enigmabot 🤖, cela permet d\'améliorer ses capacités.</p>
                 <p>Mystérieusement...</p>
