@@ -28,6 +28,15 @@
 - je rigole
 - c'est un blague
 - c'était une blague
+- lol
+- lool 
+- loool
+- mdr
+- ptdr
+- xptdr
+- trop drôle
+- trop drole
+- c'est marrant
 
 ## intent:fine
 - Tout va bien merci

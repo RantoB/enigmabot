@@ -49,8 +49,8 @@ entities:
 - token_solution_len
 - riddle
 slots:
-  deactivate_form:
-    type: bool
+  trick_slot:
+    type: unfeaturized
   game:
     type: text
   riddle:
@@ -160,8 +160,11 @@ responses:
       plus à son sujet](https://www.linkedin.com/in/bertrand-burcker-a6192655/)
   utter_laugh:
   - text: Quel humour !
-  - text: Quest-ce qu'on se marre !
+  - text: Qu'est-ce qu'on se marre !
   - text: J'ai jamais autant ri de ma vie !
+  - text: Vous trouvez ça marrant ?
+  - text: Vous trouvez ça drôle ?
+  - text: Qu'est-ce qu'on rigole !
   utter_keep_calm:
   - text: S'il vous plaît, restez poli !
   - text: Surveillez votre langague !
