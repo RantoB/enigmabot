@@ -49,8 +49,6 @@ entities:
 - token_solution_len
 - riddle
 slots:
-  trick_slot:
-    type: unfeaturized
   game:
     type: text
   riddle:
@@ -69,15 +67,15 @@ slots:
     type: unfeaturized
 responses:
   utter_presentation:
-  - text: "Bienvenue, je suis **ENIGMA-Bot** et je peux répondre à vos questions\
-      \ concernant les jeux de piste ENIGMA Strasbourg. \n\n**Je peux aussi vous proposer\
-      \ de résoudre des énigmes**, n'hésitez pas à me le demander\n\nRestez indulgent\
+  - text: "\nBienvenue, je suis **ENIGMA-Bot** et je peux répondre à vos questions\
+      \ concernant les jeux de piste ENIGMA Strasbourg. \n**Je peux aussi vous proposer\
+      \ de résoudre des énigmes**, n'hésitez pas à me le demander. \nRestez indulgent\
       \ s'il vous plaît car je suis encore en formation. Et pour l'amélioration\
       \ de mes performances, nos conversations sont enregistrées.\n"
   utter_what_I_do:
-  - text: "Je peux répondre, autant se faire que peux, à vos questions sur les jeux\
-      \ de piste **ENIGMA Strasbourg**. \n\nJe peux aussi vous soumettre une énigme pour\
-      \ vous entrainer !"
+  - text: "\nJe peux répondre, autant se faire que peux, à vos questions sur les jeux\
+      \ de piste **ENIGMA Strasbourg**. \nJe peux aussi vous soumettre une énigme pour\
+      \ vous entrainer !\n"
   - text: Je réponds aux questions concernant les jeux de piste **ENIGMA Strasbourg**
       et je peux vous proposer de résoudre des énigmes.
   utter_greet:
@@ -169,20 +167,20 @@ responses:
   - text: S'il vous plaît, restez poli !
   - text: Surveillez votre langague !
   utter_societe_mysterieuse:
-  - text: "La Société Mystérieuse de Strasbourg compte de nombreux érudits qui ont\
+  - text: "\nLa Société Mystérieuse de Strasbourg compte de nombreux érudits qui ont\
       \ façonné la ville de Strasbourg. Ils vous ont laissé quelques énigmes afin\
       \ de rencontrer les meilleurs d’entre vous, de vous tester et peut-être même\
-      \ de les rejoindre. \n\nSerez-vous de taille à résoudre les énigmes des grandes\
-      \ figures qui ont contribué au prestige de Strasbourg ?"
+      \ de les rejoindre. \nSerez-vous de taille à résoudre les énigmes des grandes\
+      \ figures qui ont contribué au prestige de Strasbourg ?\n"
   utter_meurtre_krutenau:
-  - text: "\"Mon arrière grand-père est un assassin selon les archives historiques.\
-      \ Aidez-moi à fouiller le passé pour le prouver ou le démentir !\"\n\nJean est\
+  - text: "\n\"Mon arrière grand-père est un assassin selon les archives historiques.\
+      \ Aidez-moi à fouiller le passé pour le prouver ou le démentir !\"\nJean est\
       \ en possession d’une lettre d’un aïeul contredisant les archives historiques\
       \ qui font de son arrière-grand père l’auteur du Meurtre qui a eu lieu à la\
       \ Krutenau en 1913. Il vous sollicite pour investiguer et connaître la vérité.\
-      \ \n\nUne Machine à Immersion Spatio-Temporelle sera mise à votre disposition\
+      \ \nUne Machine à Immersion Spatio-Temporelle sera mise à votre disposition\
       \ pour vous permettre de revoir certaines scènes et de comprendre ce qu’il s’est\
-      \ vraiment passé."
+      \ vraiment passé.\n"
   utter_next_game:
   - text: souhaitez-vous connaître le pitch du second jeu ?
   - text: Je vous donne le pitch de l'autre jeu ?
@@ -217,6 +215,8 @@ actions:
 - action_reset_subscribe_slots
 - action_reset_riddle_slots
 - action_deactivate_form
+- action_ask_user_to_check_infomration
+- action_check_if_already_subscribed
 forms:
 - form_riddle
 - form_subscribe

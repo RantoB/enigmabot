@@ -1,20 +1,41 @@
 [
   {
     "text": "devinettes",
-    "entities": [
-      {
-        "start": 0,
-        "end": 10,
-        "value": "devinettes",
-        "entity": "riddle_category"
-      }
-    ],
+    "entities": [],
     "predicted_entities": [
       {
         "entity": "riddle_category",
         "start": 0,
         "end": 10,
+        "confidence_entity": 0.6104162600555281,
         "value": "devinettes",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "riddle_category",
+        "start": 0,
+        "end": 10,
+        "value": "devinettes",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "mon nom est Jean",
+    "entities": [
+      {
+        "start": 12,
+        "end": 16,
+        "value": "Jean",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "user_name",
+        "start": 12,
+        "end": 16,
+        "value": "Jean",
         "extractor": "DIETClassifier"
       }
     ]

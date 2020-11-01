@@ -30,11 +30,16 @@
   - utter_subscribe
 > check_answer_about_subscribe
 
-## End
+## End 1
+> check_answer_about_ENIGMA_Stras_after_subscribe
 > check_answer_about_subscribe
 * deny
   - utter_thanks
   - utter_goodbye
+* goodbye
+  - utter_goodbye
+
+## End 2
 * goodbye
   - utter_goodbye
 

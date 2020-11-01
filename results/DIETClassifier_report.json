@@ -1,27 +1,15 @@
 {
-  "riddle_category": {
-    "precision": 0.9545454545454546,
+  "user_name": {
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9767441860465117,
-    "support": 21
+    "f1-score": 1.0,
+    "support": 49
   },
   "name_prompt": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 18
-  },
-  "game": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 34
-  },
-  "email_prompt": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 12
+    "support": 43
   },
   "user_email": {
     "precision": 1.0,
@@ -29,34 +17,46 @@
     "f1-score": 1.0,
     "support": 9
   },
+  "riddle_category": {
+    "precision": 0.9615384615384616,
+    "recall": 1.0,
+    "f1-score": 0.9803921568627451,
+    "support": 25
+  },
+  "game": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 34
+  },
   "user_riddle_solution": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 24
   },
-  "user_name": {
+  "email_prompt": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 30
+    "support": 16
   },
   "micro avg": {
-    "precision": 0.9932885906040269,
+    "precision": 0.9950248756218906,
     "recall": 1.0,
-    "f1-score": 0.9966329966329966,
-    "support": 148
+    "f1-score": 0.9975062344139651,
+    "support": 200
   },
   "macro avg": {
-    "precision": 0.9935064935064936,
+    "precision": 0.9945054945054945,
     "recall": 1.0,
-    "f1-score": 0.9966777408637874,
-    "support": 148
+    "f1-score": 0.9971988795518207,
+    "support": 200
   },
   "weighted avg": {
-    "precision": 0.9935503685503686,
+    "precision": 0.9951923076923077,
     "recall": 1.0,
-    "f1-score": 0.9967001885606537,
-    "support": 148
+    "f1-score": 0.9975490196078431,
+    "support": 200
   }
 }

@@ -1,95 +1,16 @@
 {
-  "La réservation n'a pas encore été mise en place, il faudra attendre encore un peu que le bot Enigmabot soit déployé sur www.enigmastrasbourg.com et interfacé avec un calendrier qui n'existe pas encore !": {
+  "\"\nNous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt salivante concernant la restauration, n'hésitez pas à en profiter 🍛\n\"": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 37,
-    "confused_with": {}
-  },
-  " Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h.": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 6,
-    "confused_with": {
-      "Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h.": 6
-    }
-  },
-  "Les visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème.": {
-    "precision": 0.8461538461538461,
-    "recall": 1.0,
-    "f1-score": 0.9166666666666666,
     "support": 11,
     "confused_with": {}
   },
-  "Il est possible de s'arrêter pour faire une pause au cour du jeu. Vous avancez au rythme qui vous convient. Si vous souhaitez interrompre définitivement le jeu alors vous pouvez rapporter le matériel au point de départ.": {
+  "Vous pouvez évidemment être accompagné de vos animaux de compagnie 🐕": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
-    "confused_with": {}
-  },
-  "Nous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt salivante concernant la restauration, n'hésitez pas à en profiter.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "Vous pouvez évidemment être accompagné de vos animaux de compagnie !": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "Accessibles aux familles, aux amis et aux autres. \nL’ensemble des parcours est accessible aux personnes à mobilité réduite.": {
-    "precision": 0.9166666666666666,
-    "recall": 1.0,
-    "f1-score": 0.9565217391304348,
-    "support": 11,
-    "confused_with": {}
-  },
-  "Si la météo est mauvaise le jour où vous avez réservé, vous pourrez alors reporter à une autre date. Il suffira de nous prévenir à contact@enigmastrasbourg.com.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 14,
-    "confused_with": {}
-  },
-  "Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcours.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
-    "confused_with": {}
-  },
-  "Un set de matériel de jeu vous est confié au départ. Vous disposez de la première énigmes qui vous mènera à un endroit où vous pourrez trouver les informations qui vous permettrons de débloquer les étapes suivantes et ainsi de suite jusqu'à l'énigme finale.": {
-    "precision": 0.8888888888888888,
-    "recall": 1.0,
-    "f1-score": 0.9411764705882353,
-    "support": 8,
-    "confused_with": {}
-  },
-  "Prévoyez exactement la même chose que lorsque vous faites une après-midi en ville.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "Tout se déroule au cœur du centre-ville.": {
-    "precision": 0.9,
-    "recall": 1.0,
-    "f1-score": 0.9473684210526316,
-    "support": 9,
-    "confused_with": {}
-  },
-  "Un système d'indice est mis en place si la difficulté est insurmontable. Les jeux sont donc accessibles à tous. \nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11,
     "confused_with": {}
   },
   "Il est possible d'annuler et de reporter, notamment si la météo est mauvaise.": {
@@ -99,106 +20,233 @@
     "support": 5,
     "confused_with": {}
   },
-  "Bertrand est le concepteur des jeux de piste ENIGMA Strasbourg. Il est aussi le développeur de ce chatbot et de bien d'autres choses... [Pour en savoir plus à son sujet](https://www.linkedin.com/in/bertrand-burcker-a6192655/)": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2,
-    "confused_with": {
-      "Accessibles aux familles, aux amis et aux autres. \nL’ensemble des parcours est accessible aux personnes à mobilité réduite.": 1,
-      "Tout se déroule au cœur du centre-ville.": 1
-    }
-  },
-  "Vous pouvez vous servir de votre téléphone puisque nous ne pouvons pas vous en empêcher ! Cependant, les internets ne vous seront d'aucune aide pour résoudre les énigmes, éventuellement pour localiser certains lieux que vous ne connaîtriez pas. Par ailleurs, un carte de la ville vous sera fournie et un système d'indice est mis en place afin que vous puissiez réaliser chaque jeu sans votre téléphone futé.": {
+  "Les jeux peuvent avoir lieu à partir du 15 mars 2021. La réservation n'a pas encore été ouverte. Un calendrier sera bientôt mis en place et les étapes de réservation seront détaillées.": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 11,
+    "support": 47,
     "confused_with": {}
   },
-  "Si vous avez réservé une date, alors vous pouvez éventuellement la modifier et reporter. En revanche, il n'est pas possible de se faire rembourser.": {
+  "Il sera bientôt possible de faire le jeu en anglais.": {
     "precision": 1.0,
-    "recall": 0.6,
-    "f1-score": 0.7499999999999999,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "Je ne révèle pas la fin du jeu voyons... La seule chose que je peux dire c'est que l'arrivée est sur l'île de Strasbourg 🏁.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "\"\nLes visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème.\n\"": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "Pour boire de l'alcool, vous vous doutez bien que vous n'avez pas besoin de ma permission 🍷 En revanche, moi ENIGMA-Bot, je préfère décliner toute responsabilité...": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 5,
-    "confused_with": {
-      "Un set de matériel de jeu vous est confié au départ. Vous disposez de la première énigmes qui vous mènera à un endroit où vous pourrez trouver les informations qui vous permettrons de débloquer les étapes suivantes et ainsi de suite jusqu'à l'énigme finale.": 1,
-      "Les visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème.": 1
-    }
+    "confused_with": {}
   },
-  "Le paiement se fait un ligne, par carte bancaire. \n[lien à créer...]\nAprès avoir payer, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].": {
+  "Vous pouvez vous servir de votre téléphone 📱 puisque nous ne pouvons pas vous en empêcher ! Cependant, les internets ne vous seront d'aucune aide pour résoudre les énigmes, éventuellement pour localiser certains lieux que vous ne connaîtriez pas. Par ailleurs, un carte de la ville vous sera fournie et un système d'indice est mis en place afin que vous puissiez réaliser chaque jeu sans votre téléphone futé.": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 8,
+    "support": 12,
     "confused_with": {}
   },
-  "Mhm, là c'est chaud ! Moi mon domaine c'est ENIGMA Strasbourg, je ne suis pas sûr de pouvoir vous aider pour ça. \nD'autres questions ?": {
+  "Il est possible de s'arrêter pour faire une pause au cour du jeu. Vous avancez au rythme qui vous convient. Si vous souhaitez interrompre définitivement le jeu alors vous pouvez rapporter le matériel au point de départ.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "🤔 Mhm, je ne suis pas sûr d'avoir compris, pourriez-vous reformuler ?": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 30,
+    "confused_with": {}
+  },
+  "Un set de matériel de jeu vous est confié au départ 💼 Vous disposez de la première énigmes qui vous mènera à un endroit où vous pourrez trouver les informations qui vous permettrons de débloquer les étapes suivantes et ainsi de suite jusqu'à l'énigme finale.": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 10,
     "confused_with": {}
   },
-  "Les jeux proposés par ENIGMA Strasbourg sont des jeux de piste au centre-ville de Strasbourg. Immergé dans un scénario qui vous replonge dans l'histoire de la ville de Strasbourg, vous aurez à résoudre un certain nombre d'énigmes afin d'arriver au bout de votre quête.": {
+  "Pour nous contacter, vous pouvez écrire à l'adresse suivante: contact@enigmastrasbourg.com ☎️": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 14,
+    "support": 3,
     "confused_with": {}
   },
-  "Le point de départ se fait quelque part à la Krutenau. Le jour où vous jouerez, la première énigmes vous sera envoyé, ensuite laissez-vous guider.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "Comptez 2h à 3h et parcourez environ 3 km pour arriver au bout d’une quête.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
-    "confused_with": {}
-  },
-  "Il est possible de faire le jeux avec des enfants. Les énigmes peuvent s'avérer plutôt difficiles pour eux, mais avec votre aides ils arriveront à en venir à bout. Le parcours se fait entièrement au centre ville, il est donc aussi possible de se déplacer avec une poussette.": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 16,
-    "confused_with": {}
-  },
-  "A priori si vous savez lire un plan vous ne devriez pas vous perdre. Si vous n'êtes plus sur le plan c'est que vous êtes parti déjà trop loin ! \nQuoi qu'il en soit, n'ayez pas peur, c'est en se perdant qu'on fait les meilleurs rencontres...": {
-    "precision": 1.0,
-    "recall": 0.8,
-    "f1-score": 0.888888888888889,
-    "support": 5,
-    "confused_with": {
-      "Les visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème.": 1
-    }
-  },
-  "Le prix de 50€ est un prix unique pour un groupe. Pour le moment il n'y a pas encore de tarif particulier.": {
+  "Le prix de 50€ est un prix unique pour un groupe 💰 Pour le moment il n'y a pas encore de tarif particulier.": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 4,
     "confused_with": {}
   },
-  "Un groupe composé de 3 à 6 personnes est l’idéal pour profiter pleinement du jeu. \nVous pouvez aussi jouer à 2. \nVous pouvez aussi être plus nombreux que 6 mais l'expérience pourrait être moins fun.": {
+  "\"\nA priori si vous savez lire un plan vous ne devriez pas vous perdre 🗺️ Si vous n'êtes plus sur le plan c'est que vous êtes parti déjà trop loin ! \nQuoi qu'il en soit, n'ayez pas peur, c'est en se perdant qu'on fait les meilleurs rencontres...\n\"": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  " Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h 🕰️": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 8,
+    "confused_with": {
+      "Le jour où vous avez prévu de jouer, vous pourrez jouer quand vous voulez de 9h à 23h 🕰️": 8
+    }
+  },
+  "⌚ Comptez 2h à 3h et parcourez environ 3 km pour arriver au bout d’une quête.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "Si la météo est mauvaise le jour où vous avez réservé 🌧️ vous pourrez alors reporter à une autre date. Il suffira de nous prévenir à contact@enigmastrasbourg.com.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15,
+    "confused_with": {}
+  },
+  "\"\nLe paiement se fait un ligne, par carte bancaire 💳 \n[lien à créer...]\nAprès avoir payé, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].\n\"": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "\"\nAccessibles aux familles, aux amis et aux autres. \nL’ensemble des parcours est accessible aux personnes à mobilité réduite ♿\n\".": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "Tout se déroule au cœur du centre-ville.": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 10,
     "confused_with": {}
   },
-  "Vous pourrez trouver des toilettes publiques à la place du château (cathédrale), à la place Kléber, au parking Brogli, au barage Vauban.\nVous avez aussi la liberté de faire une pause café.": {
+  "Prévoyez exactement la même chose que lorsque vous faites une après-midi en ville.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "\"\nVous pourrez trouver des toilettes publiques à la place du château (cathédrale), à la place Kléber, au parking Brogli, au barrage Vauban.\nVous avez aussi la liberté de faire une pause café.\n\"": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 14,
     "confused_with": {}
   },
-  "Sorry, I only speak French.": {
+  "Vous consentez à ce que les conversations soient enregistrées avant de commencer à échanger des messages avec le chatbot. Les conversations ne sont pas vendu et ne servent à rien d'autre qu'à améliorer les performances de réponses du chatbot. Aucune autre donnée n'est collectée à l'exception de votre nom ou pseudo ainsi que votre adresse e-mail si vous souhaitez rester informé des actualités d'ENIGMA Strasbourg. A tout moment vous pouvez écrire à contact@enigmastrasbourg.com pour demander à ce que vos coordonnées soient effacées de la base de données.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "📜 Les jeux proposés par ENIGMA Strasbourg sont des jeux de piste au centre-ville de Strasbourg. Immergé dans un scénario qui vous replonge dans l'histoire de la ville de Strasbourg, vous aurez à résoudre un certain nombre d'énigmes afin d'arriver au bout de votre quête.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 22,
+    "confused_with": {}
+  },
+  "C'est chaud ce que vous me dites là. Je ne suis pas sûr d'être habilité à répondre à ce genre de choses 🍆 Ne me tentez pas...": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15,
+    "confused_with": {}
+  },
+  "\"Un groupe composé de 3 à 6 personnes est l’idéal pour profiter pleinement du jeu. \nVous pouvez aussi jouer à 2. \nVous pouvez aussi être plus nombreux que 6 mais l'expérience pourrait être moins fun.\n\"": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "Il est possible de faire le jeux avec des enfants 🚸 Les énigmes peuvent s'avérer plutôt difficiles pour eux, mais avec votre aides ils arriveront à en venir à bout. Le parcours se fait entièrement au centre ville, il est donc aussi possible de se déplacer avec une poussette.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 23,
+    "confused_with": {}
+  },
+  "Il est possible de faire les jeux de piste ENIGMA Strasbourg dans le cadre d'une sortie Team Building de votre entreprise pour des petits groupes (15 -18 personnes). En effet, vous pourrez vous répartir en 3 groupes, chaque groupe aura son propre set de matériel et vous pourrez mener le jeu en compétition. Faites votre demande particulière en écrivant à contact@enigmastrasbourg.com": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "🏁 Le point de départ se fait quelque part à la Krutenau. Le jour où vous jouerez, la première énigmes vous sera envoyé, ensuite laissez-vous guider.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "Si vous avez réservé une date, alors vous pouvez éventuellement la modifier et reporter. En revanche, il n'est pas possible de se faire rembourser.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "💶 Les jeux de piste coûtent 50€ par groupe. Cela inclut le prêt du matériel pendant toute la journée où vous réaliserez le parcours.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16,
+    "confused_with": {}
+  },
+  "\"\nUn système d'indices est mis en place si la difficulté est insurmontable 🧩.\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.\n\"": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "Vous pouvez faire le jeu à pied 🚶‍♀️ ou à bicyclette 🚴‍♂️. Il n'y a que 3 km à parcourir et tout est accessible à vélo. A vous de choisir votre moyen de transport favoris.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "Il est préférable de jouer de jour ☀️, peut-être que vous passerez à côté de certains détails une fois la nuit tombée. Par ailleurs, le matériel devra être rendu à un endroit qui ferme à minuit 🌃.": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "Sorry, I only speak French 🇫🇷": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -206,21 +254,21 @@
     "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.9806201550387597,
-    "recall": 0.9583333333333334,
-    "f1-score": 0.9693486590038314,
-    "support": 264
+    "precision": 1.0,
+    "recall": 0.979381443298969,
+    "f1-score": 0.9895833333333333,
+    "support": 388
   },
   "macro avg": {
-    "precision": 0.91256105006105,
-    "recall": 0.9071428571428571,
-    "f1-score": 0.907165078083102,
-    "support": 264
+    "precision": 0.9722222222222222,
+    "recall": 0.9722222222222222,
+    "f1-score": 0.9722222222222222,
+    "support": 388
   },
   "weighted avg": {
-    "precision": 0.9530383967883967,
-    "recall": 0.9583333333333334,
-    "f1-score": 0.9539971381151218,
-    "support": 264
+    "precision": 0.979381443298969,
+    "recall": 0.979381443298969,
+    "f1-score": 0.979381443298969,
+    "support": 388
   }
 }

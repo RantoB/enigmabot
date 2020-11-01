@@ -16,15 +16,15 @@
 
 ## faq
   * faq/who
-    - Accessibles aux familles, aux amis et aux autres. \n\nL’ensemble des parcours est accessible aux personnes à mobilité réduite ♿.
+    - "\nAccessibles aux familles, aux amis et aux autres. \nL’ensemble des parcours est accessible aux personnes à mobilité réduite ♿\n".
 
 ## faq
   * faq/how_difficult
-    - Un système d'indices est mis en place si la difficulté est insurmontable 🧩.\n\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.
+    - "\nUn système d'indices est mis en place si la difficulté est insurmontable 🧩.\nNotez que la difficulté des énigmes est tout de même peu adaptée aux enfants mais ils pourront évidemment vous accompagner et contribuer à la réflexion.\n"
 
 ## faq
   * faq/how_many_people
-    - Un groupe composé de 3 à 6 personnes est l’idéal pour profiter pleinement du jeu. \n\nVous pouvez aussi jouer à 2. \n\nVous pouvez aussi être plus nombreux que 6 mais l'expérience pourrait être moins fun.
+    - "Un groupe composé de 3 à 6 personnes est l’idéal pour profiter pleinement du jeu. \nVous pouvez aussi jouer à 2. \nVous pouvez aussi être plus nombreux que 6 mais l'expérience pourrait être moins fun.\n"
 
 ## faq
   * faq/smartphone
@@ -32,7 +32,7 @@
 
 ## faq
   * faq/not_from_Strasbourg
-    - Les visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \n\nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème.
+    - "\nLes visiteurs de Strasbourg sont évidemment les bienvenus. Avec les jeux ENIGMA Strasbourg, vous faites une véritable visite guidée où vous êtes les acteurs de votre visite. Vous aurez un plan de la ville. \nCertaines épreuves peuvent toutefois être plus difficiles que pour les strasbourgeois mais un système d’indices permettra aux personnes qui connaissent peu la ville de progresser sans problème.\n"
 
 ## faq
   * faq/price
@@ -44,7 +44,7 @@
 
 ## faq
 * faq/payment
-  - Le paiement se fait un ligne, par carte bancaire 💳 \n\n[lien à créer...]\n\nAprès avoir payé, vous pourrez alors réserver le jour où vous souhaitez jouer. \n\nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].
+  - "\nLe paiement se fait un ligne, par carte bancaire 💳 \n[lien à créer...]\nAprès avoir payé, vous pourrez alors réserver le jour où vous souhaitez jouer. \nVous pouvez déjà vérifier les disponibilités à ce lien [lien à créer...].\n"
 
 ## faq
 * faq/start
@@ -52,7 +52,7 @@
 
 ## faq
 * faq/toilet
-  - Vous pourrez trouver des toilettes publiques à la place du château (cathédrale), à la place Kléber, au parking Brogli, au barrage Vauban.\n\nVous avez aussi la liberté de faire une pause café.
+  - "\nVous pourrez trouver des toilettes publiques à la place du château (cathédrale), à la place Kléber, au parking Brogli, au barrage Vauban.\nVous avez aussi la liberté de faire une pause café.\n"
 
 ## faq
 * faq/weather
@@ -84,11 +84,11 @@
 
 ## faq
 * faq/lost
-- A priori si vous savez lire un plan vous ne devriez pas vous perdre 🗺️ Si vous n'êtes plus sur le plan c'est que vous êtes parti déjà trop loin ! \n\nQuoi qu'il en soit, n'ayez pas peur, c'est en se perdant qu'on fait les meilleurs rencontres...
+- "\nA priori si vous savez lire un plan vous ne devriez pas vous perdre 🗺️ Si vous n'êtes plus sur le plan c'est que vous êtes parti déjà trop loin ! \nQuoi qu'il en soit, n'ayez pas peur, c'est en se perdant qu'on fait les meilleurs rencontres...\n"
 
 ## faq
 * faq/food
-- Nous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \n\nSinon la ville de Strasbourg a une offre plutôt salivante concernant la restauration, n'hésitez pas à en profiter 🍛
+- "\nNous ne fournissons pas de nourriture au cours du jeu. Prévoyez un casse-croûte en cas de petit creux. \nSinon la ville de Strasbourg a une offre plutôt salivante concernant la restauration, n'hésitez pas à en profiter 🍛\n"
 
 ## faq
 * faq/equipment

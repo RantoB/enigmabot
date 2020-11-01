@@ -1,46 +1,23 @@
 {
-  "goodbye": {
+  "no_question": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "how_to_subscribe": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "answer_the_riddle": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 12,
+    "support": 5,
     "confused_with": {}
   },
   "ask_for_riddle": {
-    "precision": 1.0,
-    "recall": 0.8333333333333334,
-    "f1-score": 0.9090909090909091,
-    "support": 6,
-    "confused_with": {
-      "inform_kind_of_riddle": 1
-    }
-  },
-  "WTF": {
-    "precision": 1.0,
+    "precision": 0.9285714285714286,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
+    "f1-score": 0.962962962962963,
+    "support": 13,
     "confused_with": {}
   },
-  "faq": {
+  "how_are_you": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 246,
+    "support": 8,
     "confused_with": {}
   },
   "inform_email": {
@@ -50,18 +27,11 @@
     "support": 9,
     "confused_with": {}
   },
-  "affirm": {
+  "joke": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 17,
-    "confused_with": {}
-  },
-  "inform_kind_of_riddle": {
-    "precision": 0.95,
-    "recall": 1.0,
-    "f1-score": 0.9743589743589743,
-    "support": 19,
+    "support": 12,
     "confused_with": {}
   },
   "societe_mysterieuse": {
@@ -71,11 +41,116 @@
     "support": 6,
     "confused_with": {}
   },
-  "out_of_scope": {
+  "maybe": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16,
+    "confused_with": {}
+  },
+  "you_re_a_bot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "who_are_you": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "ENIGMA_bot_presentation": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 27,
+    "confused_with": {}
+  },
+  "question_pitch": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 18,
+    "confused_with": {}
+  },
+  "insults": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16,
+    "confused_with": {}
+  },
+  "looking_for_something": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "answer_the_riddle": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 53,
+    "confused_with": {}
+  },
+  "man_or_woman": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 24,
+    "confused_with": {}
+  },
+  "stop": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "how_to_subscribe": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "kiss": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
     "confused_with": {}
   },
   "meurtre_krutenau": {
@@ -85,18 +160,32 @@
     "support": 6,
     "confused_with": {}
   },
-  "question_pitch": {
+  "who_is_bertrand": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 14,
+    "support": 2,
     "confused_with": {}
   },
-  "deny": {
+  "WTF": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 14,
+    "support": 10,
+    "confused_with": {}
+  },
+  "faq": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 335,
+    "confused_with": {}
+  },
+  "fine": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
     "confused_with": {}
   },
   "thanks": {
@@ -106,14 +195,23 @@
     "support": 2,
     "confused_with": {}
   },
-  "greet": {
+  "inform_kind_of_riddle": {
+    "precision": 1.0,
+    "recall": 0.9565217391304348,
+    "f1-score": 0.9777777777777777,
+    "support": 23,
+    "confused_with": {
+      "ask_for_riddle": 1
+    }
+  },
+  "what_can_you_do": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 8,
+    "support": 4,
     "confused_with": {}
   },
-  "bot_challenge": {
+  "no_more_riddle": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -124,20 +222,27 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 31,
+    "support": 47,
     "confused_with": {}
   },
-  "accuracy": 0.9977064220183486,
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 27,
+    "confused_with": {}
+  },
+  "accuracy": 0.9986431478968792,
   "macro avg": {
-    "precision": 0.9972222222222222,
-    "recall": 0.9907407407407409,
-    "f1-score": 0.9935249935249936,
-    "support": 436
+    "precision": 0.9978354978354979,
+    "recall": 0.9986824769433466,
+    "f1-score": 0.9982042648709314,
+    "support": 737
   },
   "weighted avg": {
-    "precision": 0.9978211009174313,
-    "recall": 0.9977064220183486,
-    "f1-score": 0.9976315733196467,
-    "support": 436
+    "precision": 0.998740065904245,
+    "recall": 0.9986431478968792,
+    "f1-score": 0.9986531986531985,
+    "support": 737
   }
 }

@@ -41,6 +41,10 @@
 - Tchao
 - Bonne nuit
 - aller cciao
+- a la prochaine
+- à la prochaine
+- bye
+- good bye 
 
 ## intent:affirm
 - oui
@@ -68,6 +72,8 @@
 - ouiiiii
 - yes
 - Je confirme
+- okok
+- ok ok
 
 ## intent:looking_for_something
 - je cherche un renseignement
@@ -85,6 +91,12 @@
 
 ## intent:deny
 - non
+- noo
+- noon
+- nooon
+- nooo
+- na
+- nop
 - jamais
 - je ne pense pas
 - pas de cette manière

@@ -1,10 +1,10 @@
 [
   {
     "text": "devinettes",
-    "intent": "ask_for_riddle",
+    "intent": "inform_kind_of_riddle",
     "intent_prediction": {
-      "name": "inform_kind_of_riddle",
-      "confidence": 0.6127734184265137
+      "name": "ask_for_riddle",
+      "confidence": 0.6235617399215698
     }
   }
 ]

@@ -2,8 +2,9 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered, FollowupAction, EventType, Form, AllSlotsReset
+from rasa_sdk.events import SlotSet, ActionExecuted, UserUttered, FollowupAction, Form, AllSlotsReset
 from rasa_sdk.forms import FormAction
+from rasa_sdk import utils
 import logging
 logger = logging.getLogger(__name__)
 
@@ -311,7 +312,7 @@ class ActionDefaultFallback(Action):
 
                 logger.debug("The form '{}' is active".format(active_form))
                 riddle = tracker.get_slot('riddle')
-                message = f"je vous rappelle l'énigme:\n\n{riddle}"
+                message = f"je vous rappelle l'énigme:\n{riddle}"
                 dispatcher.utter_message(message)
 
             else:
@@ -360,9 +361,9 @@ class ActionDefaultFallback(Action):
             messages.append("Je ne suis pas sûr de comprendre, pourriez-vous reformuler ?")
             messages.append("Je suis désolé, je n'ai pas compris. Est-il possible de reformuler la quesion ?")
             messages.append("Excusez-moi mais je n'ai pas compris ce que vous demandez, est-ce que vous pourriez reformuler ?")
-            messages.append("Attends voir... \n\nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si vous reformulez, ça pourrait m'aider.")
+            messages.append("\nAttends voir... \nNon y'a quelque chose que je n'ai pas compris. Après tout je suis encore en apprentissage. Mais si vous reformulez, ça pourrait m'aider.\n")
             messages.append("J'ai bien peur de ne pas avoir compris... Est-ce bien en rapport avec ENIGMA Strasbourg ?")
-            messages.append("Mhm, je ne suis pas sûr de bien saisir ce que vous cherchez à me demander. \n\nPeut-être qu'en reformulant j'arriverais à comprendre.")
+            messages.append("\nMhm, je ne suis pas sûr de bien saisir ce que vous cherchez à me demander. \nPeut-être qu'en reformulant j'arriverais à comprendre.\n")
 
             message = np.random.choice(np.array(messages))
 
@@ -384,8 +385,7 @@ class FormRiddle(FormAction):
 
     def request_next_slot(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         """Request the next slot and utter template if needed,
-            else return None
-            https://legacy-docs.rasa.com/docs/core/_modules/rasa_core_sdk/forms/"""
+            else return None"""
 
         with open("enigma.pkl", 'rb') as f:
             enigma_df = pickle.load(f)
@@ -394,19 +394,6 @@ class FormRiddle(FormAction):
         buttons = list()
         for cat in categories:
             buttons.append({'title':cat, 'payload': cat})
-        """
-        -------------------------------------
-        """
-        # if tracker.get_slot("deactivate_form") == True:
-        #     result = list()
-        #     for slot in self.required_slots(tracker):
-        #         result.append(SlotSet(slot, None))
-        #
-        #     result.append(SlotSet("deactivate_form", None))
-        #
-        #     result.extend(self.deactivate())
-        #
-        #     return result
 
         for slot in self.required_slots(tracker):
             if self._should_request_slot(tracker, slot):
@@ -449,10 +436,6 @@ class FormRiddle(FormAction):
 
                     return [SlotSet("requested_slot", slot)]
 
-        """
-        -------------------------------------
-        """
-
         return None
 
     # def slot_mappings(self) -> Dict[Text, Any]:
@@ -477,9 +460,9 @@ class FormRiddle(FormAction):
         save_riddle_results(riddle, riddle_solution, user_riddle_solution, token_solution_len, cosine_indicator, spacy_vec_sim_indicator, mark)
 
         dispatcher.utter_message(message)
-        dispatcher.utter_message(f"La bonne réponse est :\n\n{riddle_solution}")
+        dispatcher.utter_message(f"La bonne réponse est : \n{riddle_solution}")
 
-        return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None), SlotSet("riddle", None), SlotSet("token_solution_len", None), SlotSet("deactivate_form", None)]
+        return [SlotSet("riddle_category", None), SlotSet("riddle_solution", None), SlotSet("user_riddle_solution", None), SlotSet("riddle", None), SlotSet("token_solution_len", None)]
 
 class ActionResetRiddleSlots(Action):
 
@@ -517,6 +500,14 @@ class FormSubscribe(FormAction):
                ) -> List[Dict]:
         """Once required slots are filled, print the message"""
 
+        return []
+
+class ActionAskUserToCheckInfomration(Action):
+
+    def name(self) -> Text:
+        return "action_ask_user_to_check_infomration"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         name = tracker.get_slot('user_name')
         if type(name) == list:
             name = name[0]
@@ -572,9 +563,9 @@ class ActionSaveInformation(Action):
         <html>
             <body>
                 <h2>Bienvenue {user_name.capitalize()} !</h2>
-                <p>Votre addresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d\'ENIGMA Strasbourg.</p>
+                <p>Votre adresse e-mail a bien été enregistrée et vous recevrez prochainement les actualités d\'ENIGMA Strasbourg.</p>
                 <p>Merci d\'avoir tester Enigmabot 🤖, cela permet d\'améliorer ses capacités.</p>
-                <p>Mystérieusement...</p>
+                <p>Mystérieusement</p>
                 <a href="https://enigmastrasbourg.com/"> <img src="cid:image1" alt="logo_signature" style="width:320px;height:120px;"></a>
             </body>
         </html>
@@ -610,5 +601,19 @@ class ActionDeactivateForm(Action):
         return "action_deactivate_form"
 
     def run(self, dispatcher, tracker, domain):
-        #SlotSet("requested_slot", None),
         return [Form(None), AllSlotsReset()]
+
+class ActionCheckIfAlreadySubscribed(Action):
+
+    def name(self):
+        return "action_check_if_already_subscribed"
+
+    def run(self, dispatcher, tracker, domain):
+        if tracker.get_slot("user_email") is None:
+            return []
+
+        else:
+            dispatcher.utter_message(template="utter_ok")
+            dispatcher.utter_message(template="utter_thanks")
+            dispatcher.utter_message(template="utter_goodbye")
+            return [ActionExecuted("action_listen")]
