@@ -7,3 +7,5 @@
 - Soon: image recognition of some Strasbourg famous locations (squares, status, monuments, etc)
 
 www.enigmastrasbourg.com
+
+Enigma Strasbourg activities are suspended for the time being and so is the chat bot.
