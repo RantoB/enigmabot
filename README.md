@@ -1,11 +1,16 @@
-# enigmabot
+# Enigmabot
 
-## Chatbot which answers questions about ENIGMA Strasbourg games.
+## Chatbot for [ENIGMA Strasbourg](enigmastrasbourg.com) games
 
-- This chatbot also suggest to solve some riddle.
+- This chatbot answers to ENIGMA Strasbourg FAQ
+- It also suggests to solve some riddle.
 - Possibility to subscribe to ENIGMA Strasbourg Newsletter.
-- Soon: image recognition of some Strasbourg famous locations (squares, status, monuments, etc)
 
-www.enigmastrasbourg.com
+The purpose of this project was to develop the following skills :
+- Web scrapping for riddle collection
+- Use of RASA, conversational AI platform
+- Build and deploy docker container with docker-compose
+- Deploy on a Google Compute Engine
+- Implement CI/CD 
 
-Enigma Strasbourg activities are suspended for the time being and so is the chat bot.
+Unfortunatly, ENIGMA Strasbourg activities are suspended for the time being and so is the chat bot.
